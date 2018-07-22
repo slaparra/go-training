@@ -2,6 +2,7 @@
 - [Get started](doc/01-get-started.md)
 - [Basics](doc/02-basics.md)
 - Debug (to do)
+- Mysql (to do)
 
 
 ## Links

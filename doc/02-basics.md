@@ -19,3 +19,60 @@ https://golang.org/doc/effective_go.html#for
 - [Packages (book An Introduction to Programming in Go )](https://www.golang-book.com/books/intro/11)
 - [Package file examples](../todd-mcleod/02-package)
 - Methods and vars have to be capitalized to be visible outside the package
+
+## Variables
+
+- Default assignment to a var is zero value. Each type has its own zero value
+- [Golang: Variables](https://golang.org/ref/spec#Variables)
+- [Example: How to declare variables](../todd-mcleod/01-get-started/variables2.go)
+- [Types](https://golang.org/pkg/go/types/)
+
+Simple quote:
+```
+e := "Hello"
+f := `Do you like my hat?`
+g := 'M'
+
+fmt.Printf("%T \n", e)
+fmt.Printf("%T \n", f)
+fmt.Printf("%T \n", g)
+
+(string)
+(string)
+(int32)!!!!
+```
+
+#### Print variables
+https://godoc.org/fmt  
+
+```
+fmt.Printf("%v",aVar)  
+The default format for %v is:
+
+bool:                    %t
+int, int8 etc.:          %d
+uint, uint8 etc.:        %d, %#x if printed with %#v
+float32, complex64, etc: %g
+string:                  %s
+chan:                    %p
+pointer:                 %p
+``` 
+
+## Scope
+
+References:
+- [Scope golang-book, with great examples**](https://www.golang-book.com/books/web/01-02#scope)
+- [Golang: Declarations and scope](https://golang.org/ref/spec#Declarations_and_scope)
+- [Todd McLeod scope & closure examples](../todd-mcleod/03_block-scope)
+
+Definition:
+- The scope of a predeclared identifier is the universe block.
+- The scope of an identifier denoting a constant, type, variable, or function (but not method) declared at top level (outside any function) is the package block.
+- The scope of the package name of an imported package is the file block of the file containing the import declaration.
+- The scope of an identifier denoting a method receiver, function parameter, or result variable is the function body.
+- The scope of a constant or variable identifier declared inside a function begins at the end of the ConstSpec or VarSpec (ShortVarDecl for short variable declarations) and ends at the end of the innermost containing block.
+- The scope of a type identifier declared inside a function begins at the identifier in the TypeSpec and ends at the end of the innermost containing block.
+
+![Picture](https://www.golang-book.com/public/img/web/scopes.0.png)
+Things defined in the function scope have access to anything above them (file, package, universe), but the reverse is not true. A variable defined in a function is only accessible within that function or blocks defined inside of it.
+

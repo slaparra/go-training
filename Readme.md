@@ -1,6 +1,7 @@
 # GoLang Training
 - [Get started](doc/01-get-started.md)
 - [Basics](doc/02-fundamentals.md)
+- [Address & operators](doc/03-address-operators.md)
 - Debug (to do)
 - Mysql (to do)
 
@@ -32,7 +33,8 @@
 ** https://github.com/dariubs/GoBooks  
 
 ### Videos
-- [Learn To Code - Golang Training, youtube videos](https://www.youtube.com/playlist?list=PLSak_q1UXfPrI6D67NF8ajfeJ6f7MH83S)
+- [Learn To Code - Golang Training (youtube playlist)](https://www.youtube.com/playlist?list=PLSak_q1UXfPrI6D67NF8ajfeJ6f7MH83S)
+- [Build web apps with Golang (youtube playlist)](https://www.youtube.com/playlist?list=PLSak_q1UXfPp2VwUQ4ZdUVJdMO6pfi5v_)
 - [Go Programing, Derek Banas](https://www.youtube.com/watch?v=CF9S4QZuV30)
 - [Go-lang.cat-v.org: Talks](http://go-lang.cat-v.org/talks/)
 

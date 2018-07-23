@@ -24,7 +24,7 @@ https://golang.org/doc/effective_go.html#for
 
 - Default assignment to a var is zero value. Each type has its own zero value
 - [Golang: Variables](https://golang.org/ref/spec#Variables)
-- [Example: How to declare variables](../todd-mcleod/01-get-started/variables2.go)
+- [Example: How to declare variables](../todd-mcleod/01-fundamentals/variables2.go)
 - [Types](https://golang.org/pkg/go/types/)
 
 Simple quote:
@@ -63,7 +63,7 @@ pointer:                 %p
 References:
 - [Scope golang-book, with great examples**](https://www.golang-book.com/books/web/01-02#scope)
 - [Golang: Declarations and scope](https://golang.org/ref/spec#Declarations_and_scope)
-- [Todd McLeod scope & closure examples](../todd-mcleod/03_block-scope)
+- [Todd McLeod scope & closure examples](../todd-mcleod/03-block-scope)
 
 Definition:
 - The scope of a predeclared identifier is the universe block.
@@ -105,4 +105,4 @@ func main() {
 - [Constants: at Golang blog](https://blog.golang.org/constants)
 - [Golang Constants](https://golang.org/ref/spec#Constant_declarations)  
 - [Iota](https://golang.org/ref/spec#Iota) 
-- [Constants & Iota example](../todd-mcleod/01-get-started/constants.go)
+- [Constants & Iota example](../todd-mcleod/01-fundamentals/constants.go)

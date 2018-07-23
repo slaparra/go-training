@@ -76,3 +76,33 @@ Definition:
 ![Picture](https://www.golang-book.com/public/img/web/scopes.0.png)
 Things defined in the function scope have access to anything above them (file, package, universe), but the reverse is not true. A variable defined in a function is only accessible within that function or blocks defined inside of it.
 
+## Blank identifier
+Basically a blank identifier is like a box where you can put things if you don't need them.  
+
+It's a bit like writing to the Unix /dev/null file: it represents a write-only value to be used as a place-holder where a variable is needed but the actual value is irrelevant (in code is the underscore).
+
+[More documentation and uses of Blank identifier](https://golang.org/doc/effective_go.html#blank)
+
+```
+package main
+
+import (
+	"fmt"
+	"io/ioutil"
+	"net/http"
+)
+
+//blank identifier is the underscore _
+func main() {
+	res, _ := http.Get("http://www.geekwiseacademy.com/")
+	page, _ := ioutil.ReadAll(res.Body)
+	res.Body.Close()
+	fmt.Printf("%s", page)
+}
+```
+
+## Constants, Iota
+- [Constants: at Golang blog](https://blog.golang.org/constants)
+- [Golang Constants](https://golang.org/ref/spec#Constant_declarations)  
+- [Iota](https://golang.org/ref/spec#Iota) 
+- [Constants & Iota example](../todd-mcleod/01-get-started/constants.go)

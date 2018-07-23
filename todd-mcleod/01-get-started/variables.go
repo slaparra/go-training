@@ -10,13 +10,13 @@ func main() {
 	aBoolean := true
 	anotherFloat := 4.5
 
-	fmt.Printf("%v\n", anInteger)	// %v the value in a default format
-	fmt.Printf("%T\n", anInteger)	// %T a Go-syntax representation of the type of the value
+	fmt.Printf("%v\n", anInteger) // %v the value in a default format
+	fmt.Printf("%T\n", anInteger) // %T a Go-syntax representation of the type of the value
 	fmt.Printf("%v\n", aBoolean)
 	fmt.Printf("%T\n", aBoolean)
 	fmt.Printf("%v\n", aString)
 	fmt.Printf("%T\n", aString)
-	fmt.Printf("%v\n", aFloat)		// aFloat has the default value for floats because is not initialized
+	fmt.Printf("%v\n", aFloat) // aFloat has the default value for floats because is not initialized
 	fmt.Printf("%T\n", aFloat)
 	fmt.Printf("%v\n", anotherFloat)
 	fmt.Printf("%T\n", anotherFloat)
@@ -48,7 +48,7 @@ func main() {
 		%.2f   default width, precision 2
 		%9.2f  width 9, precision 2
 		%9.f   width 9, precision 0
-	 */
+	*/
 
 	var message = "Hello World!"
 	var d1, e1, f1 = 1, false, 3

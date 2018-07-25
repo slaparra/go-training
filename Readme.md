@@ -15,7 +15,7 @@
     - [Tips for writing clear, idiomatic Go code](https://golang.org/doc/effective_go.html)
     - [The Go Programming Language Specification](https://golang.org/ref/spec)
 - [Go By Example](https://gobyexample.com/)
-- [Go Forum](https://forum.golangbridge.org/)
+- [GolangBridge Forum](https://forum.golangbridge.org/)
 - [Pocket Gophers](https://pocketgophers.com/)
 - [ArdanLabs, Go reading](https://github.com/ardanlabs/gotraining/tree/master/reading)
 
@@ -38,13 +38,15 @@
 - [Go Programing, Derek Banas](https://www.youtube.com/watch?v=CF9S4QZuV30)
 - [Go-lang.cat-v.org: Talks](http://go-lang.cat-v.org/talks/)
 
-### Posts  
+### Posts & blogs 
 - [Go Programing tutorial, Derek Banas](http://www.newthinktank.com/2015/02/go-programming-tutorial/)
 - [Is go object oriented?](https://flaviocopes.com/golang-is-go-object-oriented/)
 - [Go build vs go install](https://pocketgophers.com/go-install-vs-go-build/)
 - [Concurrency](https://medium.com/@trevor4e/learning-gos-concurrency-through-illustrations-8c4aff603b3)
 - [Contribute your time, expertise to Go](https://medium.com/@IndianGuru/contribute-your-time-expertise-to-go-3b61760fabbc)
 - [All posts ArdanLabs blog](https://www.ardanlabs.com/all-posts/)
+- [Dave Cheney blog](https://dave.cheney.net/)
+    - [Resources for new go programmers](https://dave.cheney.net/resources-for-new-go-programmers)
 
 ### Courses
 - [Learn How To Code: Golang](https://www.udemy.com/learn-how-to-code/learn/v4/overview)

@@ -8,8 +8,8 @@ fmt.Printf("%s\n", "github.com/slaparra") #string
 ```
 
 ## Loop
-https://golang.org/ref/spec#For_statements
 https://golang.org/doc/effective_go.html#for
+https://golang.org/ref/spec#For_statements
 ```
 	for i := 32; i < 123; i++ {
 		fmt.Printf("%d \t %b \t %x \t %q\n", i, i, i, i) //%q ascii

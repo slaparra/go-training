@@ -17,10 +17,10 @@ func main() {
 }
 
 func swap(xAddress *int, yAddress *int) {
-	fmt.Printf("address of xAddress before swap: %v\n", xAddress)
-	fmt.Printf("address of yAddress before swap: %v\n", yAddress)
+	fmt.Printf("address of xAddress (type %T) before swap: %v\n", xAddress, xAddress)
+	fmt.Printf("address of yAddress (type %T) before swap: %v\n", yAddress, yAddress)
 	tmp := *xAddress
-	fmt.Printf("tmp is xAddress: %v\n", tmp)
+	fmt.Printf("tmp is xAddress content: %v\n", tmp)
 	*xAddress = *yAddress
 	*yAddress = tmp
 }

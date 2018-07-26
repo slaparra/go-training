@@ -1,4 +1,4 @@
-#Get started
+# Get started
 
 ## Install go
 https://golang.org/dl/

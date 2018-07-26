@@ -1,7 +1,8 @@
 # GoLang Training
 - [Get started](doc/01-get-started.md)
-- [Basics](doc/02-fundamentals.md)
+- [Fundamentals](doc/02-fundamentals.md)
 - [Address & operators](doc/03-address-operators.md)
+- [Control structures](doc/04-control-structures.md)
 - Debug (to do)
 - Mysql (to do)
 
@@ -18,6 +19,7 @@
 - [GolangBridge Forum](https://forum.golangbridge.org/)
 - [Pocket Gophers](https://pocketgophers.com/)
 - [ArdanLabs, Go reading](https://github.com/ardanlabs/gotraining/tree/master/reading)
+- [Golang user groups *](https://github.com/golang/go/wiki/GoUserGroups)
 
 ### Free books
 - [Book, an introduction to programming in go](https://www.golang-book.com/books/intro)
@@ -38,7 +40,7 @@
 - [Go Programing, Derek Banas](https://www.youtube.com/watch?v=CF9S4QZuV30)
 - [Go-lang.cat-v.org: Talks](http://go-lang.cat-v.org/talks/)
 
-### Posts & blogs 
+### Posts, blogs & forums 
 - [Go Programing tutorial, Derek Banas](http://www.newthinktank.com/2015/02/go-programming-tutorial/)
 - [Is go object oriented?](https://flaviocopes.com/golang-is-go-object-oriented/)
 - [Go build vs go install](https://pocketgophers.com/go-install-vs-go-build/)
@@ -47,6 +49,8 @@
 - [All posts ArdanLabs blog](https://www.ardanlabs.com/all-posts/)
 - [Dave Cheney blog](https://dave.cheney.net/)
     - [Resources for new go programmers](https://dave.cheney.net/resources-for-new-go-programmers)
+- [Google golang-dev forum](https://groups.google.com/forum/m/#!forum/golang-dev)
+- [Golang wiki](https://github.com/golang/go/wiki)
 
 ### Courses
 - [Learn How To Code: Golang](https://www.udemy.com/learn-how-to-code/learn/v4/overview)

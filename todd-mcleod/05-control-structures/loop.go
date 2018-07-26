@@ -26,7 +26,7 @@ func main() {
 		aVar++
 	}
 
-	//'continue' force a new iteration without execute the complete loop. 
+	//'continue' force a new iteration without execute the complete loop.
 	aVar = 0
 	for {
 		aVar++

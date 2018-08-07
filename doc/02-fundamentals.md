@@ -1,5 +1,7 @@
 # Fundamentals
 
+- [Code examples](../todd-mcleod/01-fundamentals): array-slice, constants, print, variables...
+
 ## Format
 https://godoc.org/fmt
 ```
@@ -19,6 +21,12 @@ fmt.Printf("%s\n", "github.com/slaparra") #string
 - [Golang: Variables](https://golang.org/ref/spec#Variables)
 - [Example: How to declare variables](../todd-mcleod/01-fundamentals/variables2.go)
 - [Types](https://golang.org/pkg/go/types/)
+    - [Array](https://golang.org/ref/spec#Array_types)
+    - [Slice](https://golang.org/ref/spec#Slice_types)
+        - [Slice usage and internals](https://blog.golang.org/go-slices-usage-and-internals)
+        - [Slice expressions](https://golang.org/ref/spec#Slice_expressions)      
+        - [Slice len & cap tour](https://tour.golang.org/moretypes/11)
+    
 
 Simple quote:
 ```

@@ -3,7 +3,9 @@
 - [Fundamentals](doc/02-fundamentals.md)
 - [Address & operators](doc/03-address-operators.md)
 - [Control structures](doc/04-control-structures.md)
+- [Functions](doc/05-functions.md)
 - Debug (to do)
+    - https://github.com/derekparker/delve
 - Mysql (to do)
 
 
@@ -20,6 +22,7 @@
 - [Pocket Gophers](https://pocketgophers.com/)
 - [ArdanLabs, Go reading](https://github.com/ardanlabs/gotraining/tree/master/reading)
 - [Golang user groups *](https://github.com/golang/go/wiki/GoUserGroups)
+- [Go group google+](https://plus.google.com/u/0/communities/114112804251407510571)
 
 ### Free books
 - [Book, an introduction to programming in go](https://www.golang-book.com/books/intro)
@@ -51,6 +54,7 @@
     - [Resources for new go programmers](https://dave.cheney.net/resources-for-new-go-programmers)
 - [Google golang-dev forum](https://groups.google.com/forum/m/#!forum/golang-dev)
 - [Golang wiki](https://github.com/golang/go/wiki)
+- [Golang code](https://golangcode.com/)
 
 ### Courses
 - [Learn How To Code: Golang](https://www.udemy.com/learn-how-to-code/learn/v4/overview)

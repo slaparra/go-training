@@ -11,8 +11,8 @@ func main() {
 
 	//like a while (while doesn't exists in Go)
 	var c string
-	for c != "exit" {
-		fmt.Print("Type 'exit' to continue:")
+	for c != "continue" {
+		fmt.Print("Type 'continue' to continue:")
 		fmt.Scan(&c)
 	}
 
@@ -34,7 +34,13 @@ func main() {
 			continue
 		}
 
-		fmt.Printf("This message should be printed once (aVar value %d)", aVar)
+		fmt.Printf("This message should be printed once (aVar value %d)\n", aVar)
 		break
+	}
+
+	//a loop with a range
+	var aSlice = []int{1, 3, 5, 6}
+	for key, value := range aSlice {
+		fmt.Printf("key: %d, value: %d\n", key, value)
 	}
 }

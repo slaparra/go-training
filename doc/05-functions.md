@@ -28,6 +28,18 @@ fmt.Print(len(aVar)) // 2
 ```
 [* length & capacity tour](https://tour.golang.org/moretypes/11)
 
+#### range
+Range iterates over elements in a variety of data structures
+```
+nums := []int{2, 3, 4}
+sum := 0
+for _, num := range nums {
+    sum += num
+}
+fmt.Println("sum:", sum)
+```
+* https://github.com/golang/go/wiki/Range
+* https://gobyexample.com/range
 
 #### make
 ```

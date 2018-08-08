@@ -1,12 +1,17 @@
-# GoLang Training
+# Go programming language Training
+
+#### Beginner
 - [Get started](doc/01-get-started.md)
 - [Fundamentals](doc/02-fundamentals.md)
 - [Address & operators](doc/03-address-operators.md)
 - [Control structures](doc/04-control-structures.md)
 - [Functions](doc/05-functions.md)
+
+#### Intermediate
 - Debug (to do)
     - https://github.com/derekparker/delve
 - Mysql (to do)
+
 
 
 ## Links
@@ -24,6 +29,12 @@
 - [Golang user groups *](https://github.com/golang/go/wiki/GoUserGroups)
 - [Go group google+](https://plus.google.com/u/0/communities/114112804251407510571)
 
+### Videos
+- [Learn To Code - Golang Training (youtube playlist)](https://www.youtube.com/playlist?list=PLSak_q1UXfPrI6D67NF8ajfeJ6f7MH83S)
+- [Build web apps with Golang (youtube playlist)](https://www.youtube.com/playlist?list=PLSak_q1UXfPp2VwUQ4ZdUVJdMO6pfi5v_)
+- [Go Programing, Derek Banas](https://www.youtube.com/watch?v=CF9S4QZuV30)
+- [Go-lang.cat-v.org: Talks](http://go-lang.cat-v.org/talks/)
+
 ### Free books
 - [Book, an introduction to programming in go](https://www.golang-book.com/books/intro)
 - [The Little Go Book](https://www.openmymind.net/The-Little-Go-Book/)
@@ -37,12 +48,6 @@
 ** https://github.com/golang/go/wiki/Books  
 ** https://github.com/dariubs/GoBooks  
 
-### Videos
-- [Learn To Code - Golang Training (youtube playlist)](https://www.youtube.com/playlist?list=PLSak_q1UXfPrI6D67NF8ajfeJ6f7MH83S)
-- [Build web apps with Golang (youtube playlist)](https://www.youtube.com/playlist?list=PLSak_q1UXfPp2VwUQ4ZdUVJdMO6pfi5v_)
-- [Go Programing, Derek Banas](https://www.youtube.com/watch?v=CF9S4QZuV30)
-- [Go-lang.cat-v.org: Talks](http://go-lang.cat-v.org/talks/)
-
 ### Posts, blogs & forums 
 - [Go Programing tutorial, Derek Banas](http://www.newthinktank.com/2015/02/go-programming-tutorial/)
 - [Is go object oriented?](https://flaviocopes.com/golang-is-go-object-oriented/)
@@ -55,9 +60,11 @@
 - [Google golang-dev forum](https://groups.google.com/forum/m/#!forum/golang-dev)
 - [Golang wiki](https://github.com/golang/go/wiki)
 - [Golang code](https://golangcode.com/)
+- [Domain driven design and Go](https://www.reddit.com/r/golang/comments/6ugzo2/domain_driven_design_and_go/)
 
 ### Courses
 - [Learn How To Code: Golang](https://www.udemy.com/learn-how-to-code/learn/v4/overview)
+    - [Github examples](https://github.com/GoesToEleven/GolangTraining/)
     - [Slides](https://drive.google.com/drive/u/0/folders/0B22KXlqHz6ZNfjNXTzk1U3JHUkJ6VjJ3dnJKNzVtNjRUM3Q2WFNqWGI2Q3RadERqUlVrOEU)
     - [Training resources](https://docs.google.com/document/d/18-0u5CvNIr83oOfMXPoM4klVFASXGl3Vvua1wBGMIoQ/edit)
 

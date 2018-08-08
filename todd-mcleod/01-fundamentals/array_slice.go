@@ -52,6 +52,11 @@ func sliceFunc() {
 
 func printSlice(s []int) {
 	fmt.Printf("len=%d cap=%d %v\n", len(s), cap(s), s)
+
+	// slices are reference types and although 's' is passed by value, the slice s has the same reference as
+	// the variable before the printSlice call. Has the same reference to the same array
+	// so if we change s[0] inside this method, it will modify the slice in this scope and in the outer scope
+	// https://golang.org/doc/effective_go.html#slices
 }
 
 func makeFunc() {

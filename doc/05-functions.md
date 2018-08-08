@@ -4,7 +4,7 @@
 - [Variadic](https://golang.org/ref/spec#Passing_arguments_to_..._parameters)
 
 
-### Go functions
+### Go functions and keywords
 
 #### fmt.Sprint
 ```
@@ -42,6 +42,7 @@ fmt.Println("sum:", sum)
 * https://gobyexample.com/range
 
 #### make
+[Allocation with *make*](https://golang.org/doc/effective_go.html#allocation_make)
 ```
 var s []byte
 

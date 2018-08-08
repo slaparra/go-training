@@ -18,14 +18,21 @@ fmt.Printf("%s\n", "github.com/slaparra") #string
 ## Variables
 
 - Default assignment to a var is zero value. Each type has its own zero value
+- All variables **are always passed by value** to another functions
+    - [Yury Pitsishin post](http://goinbigdata.com/golang-pass-by-pointer-vs-pass-by-value/)
+    - [Dave Cheney post](https://dave.cheney.net/2017/04/29/there-is-no-pass-by-reference-in-go)
 - [Golang: Variables](https://golang.org/ref/spec#Variables)
 - [Example: How to declare variables](../todd-mcleod/01-fundamentals/variables2.go)
 - [Types](https://golang.org/pkg/go/types/)
     - [Array](https://golang.org/ref/spec#Array_types)
-    - [Slice](https://golang.org/ref/spec#Slice_types)
+    - [Slice](https://golang.org/ref/spec#Slice_types)  
+    *Slices hold references to an underlying array, and if you assign one slice to another, both refer to the same array.*
+        - [Slice reference type](../todd-mcleod/01-fundamentals/slice_reference_type.go)
+        - [Value types and Reference types, The Way to Go](https://tinyurl.com/yah9vxcs)
         - [Slice usage and internals](https://blog.golang.org/go-slices-usage-and-internals)
         - [Slice expressions](https://golang.org/ref/spec#Slice_expressions)      
         - [Slice len & cap tour](https://tour.golang.org/moretypes/11)
+        - [Capacity and length post](https://www.calhoun.io/how-to-use-slice-capacity-and-length-in-go/)
     
 
 Simple quote:

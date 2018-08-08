@@ -51,3 +51,44 @@ s = make([]byte, 5, 5)
 // s == []byte{0, 0, 0, 0, 0}
 ```
 [* from golang blog](https://blog.golang.org/go-slices-usage-and-internals)
+
+
+#### Defer   
+*Deferred functions are invoked immediately before the surrounding function returns, in the reverse order they were deferred.  
+Go's defer statement schedules a function call (the deferred function) to be run immediately before the function executing the defer returns.  
+Deferred functions are executed in LIFO order.*
+
+- https://golang.org/ref/spec#Defer_statements
+- https://golang.org/doc/effective_go.html#defer
+
+```
+
+func main() {
+	b()
+}
+
+func b() {
+	defer un(trace("b"))
+	fmt.Println("in b")
+}
+
+func trace(s string) string {
+	fmt.Println("entering:", s)
+	return s
+}
+
+func un(s string) {
+	fmt.Println("leaving:", s)
+}
+
+
+
+//    entering b
+//    in b
+//    leaving b
+
+// defer executes "un" method before b() finishes 
+// but its arguments (trace("b")) are evaluated immediately
+```
+*"This is useful for many reasons, the most common of which are to close an open connection or unlock a Mutex immediately before the function ends."* [(kylewbanks.com)](https://kylewbanks.com/blog/when-to-use-defer-in-go)  
+*"A defer statement pushes a function call onto a list. The list of saved calls is executed after the surrounding function returns. Defer is commonly used to simplify functions that perform various clean-up actions."* [(golang blog)](https://blog.golang.org/defer-panic-and-recover)

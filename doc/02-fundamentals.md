@@ -32,7 +32,7 @@ fmt.Printf("%s\n", "github.com/slaparra") #string
         - [Slice usage and internals](https://blog.golang.org/go-slices-usage-and-internals)
         - [Slice expressions](https://golang.org/ref/spec#Slice_expressions)      
         - [Slice len & cap tour](https://tour.golang.org/moretypes/11)
-        - [Capacity and length post](https://www.calhoun.io/how-to-use-slice-capacity-and-length-in-go/)
+        - [How to use capacity and length post](https://www.calhoun.io/how-to-use-slice-capacity-and-length-in-go/)
     
 
 Simple quote:

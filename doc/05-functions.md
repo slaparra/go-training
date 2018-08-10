@@ -3,8 +3,67 @@
 - [Function examples](../todd-mcleod/06-functions)
 - [Variadic](https://golang.org/ref/spec#Passing_arguments_to_..._parameters)
 
+## Func expression
 
-### Go functions and keywords
+### Anonymous function
+An anonymous function (function literal, lambda abstraction, or lambda expression) 
+is a function definition that is not bound to an identifier (wiki)
+```
+func main() {
+	hypot := func(x, y float64) float64 {
+		return math.Sqrt(x*x + y*y)
+	}
+	fmt.Println(hypot(5, 12))
+}
+```
+
+### Closure
+A Closure is a technique for implementing lexically scoped name binding 
+in a language with first-class functions. Operationally, a closure is a 
+record storing a function together with an environment. (wiki)
+
+
+```
+func main() {
+    newInts := intSeq()         
+    fmt.Println(nextInt())      // 1
+    fmt.Println(nextInt())      // 2
+    fmt.Println(nextInt())      // 3
+
+    newInts := intSeq()
+    fmt.Println(newInts())      // 1
+
+}
+
+func intSeq() func() int {
+    i := 0
+    return func() int {
+        i++
+        return i
+    }
+}
+```
+\* [5 ways to use closure](https://www.calhoun.io/5-useful-ways-to-use-closures-in-go/)  
+\* [A Tour of go, closures](https://tour.golang.org/moretypes/25)
+
+
+### Function as argument
+```
+func compute(fn func(float64, float64) float64) float64 {
+	return fn(3, 4)
+}
+
+func main() {	
+	hypot := func(x, y float64) float64 {
+		return math.Sqrt(x*x + y*y)
+	}
+
+	fmt.Println(compute(hypot))
+	fmt.Println(compute(math.Pow))
+}
+
+```
+## Go functions and keywords
 
 #### fmt.Sprint
 ```

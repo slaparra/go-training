@@ -18,10 +18,11 @@
 
 ### Documentation
 
-- [GoLang.org](https://golang.org/doc/)
+- [Golang.org](https://golang.org/doc/)
     - [A Tour of Go](https://tour.golang.org/welcome/1)
     - [Tips for writing clear, idiomatic Go code](https://golang.org/doc/effective_go.html)
     - [The Go Programming Language Specification](https://golang.org/ref/spec)
+    - [Common comments made during reviews of Go code](https://github.com/golang/go/wiki/CodeReviewComments)
 - [Go By Example](https://gobyexample.com/)
 - [GolangBridge Forum](https://forum.golangbridge.org/)
 - [Pocket Gophers](https://pocketgophers.com/)
@@ -34,6 +35,8 @@
 - [Build web apps with Golang (youtube playlist)](https://www.youtube.com/playlist?list=PLSak_q1UXfPp2VwUQ4ZdUVJdMO6pfi5v_)
 - [Go Programing, Derek Banas](https://www.youtube.com/watch?v=CF9S4QZuV30)
 - [Go-lang.cat-v.org: Talks](http://go-lang.cat-v.org/talks/)
+- [Steve Francia talk](https://www.youtube.com/watch?v=sX8r6zATHGU)
+- [Go interfaces (Francesc Campoy)](https://www.youtube.com/watch?v=F4wUrj6pmSI)
 
 ### Free books
 - [Book, an introduction to programming in go](https://www.golang-book.com/books/intro)

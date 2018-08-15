@@ -6,13 +6,18 @@
 - [Address & operators](doc/03-address-operators.md)
 - [Control structures](doc/04-control-structures.md)
 - [Functions](doc/05-functions.md)
+- [Data structures](doc/06-data-structures.md)
 
 #### Intermediate
 - Debug (to do)
     - https://github.com/derekparker/delve
 - Mysql (to do)
 
-
+#### Advance
+- Concurrency (to do)
+- Functional programming (to do)
+    - [Functional Go post](https://medium.com/@geisonfgfg/functional-go-bc116f4c96a4)
+    - [Functional Go video, @francesc](https://www.youtube.com/watch?v=ouyHp2nJl0I)    
 
 ## Links
 
@@ -37,6 +42,7 @@
 - [Go-lang.cat-v.org: Talks](http://go-lang.cat-v.org/talks/)
 - [Steve Francia talk](https://www.youtube.com/watch?v=sX8r6zATHGU)
 - [Go interfaces (Francesc Campoy)](https://www.youtube.com/watch?v=F4wUrj6pmSI)
+- [Functional Go @francesc](https://www.youtube.com/watch?v=ouyHp2nJl0I)
 
 ### Free books
 - [Book, an introduction to programming in go](https://www.golang-book.com/books/intro)

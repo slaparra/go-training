@@ -80,7 +80,7 @@ anotherSlice := append(aSlice, 2)
 
 ```
 
-#### len: length of a slice
+#### len: length of an array or slice
 ```
 aVar := {1, 2}
 fmt.Print(len(aVar)) // 2
@@ -152,3 +152,23 @@ func un(s string) {
 ```
 *"This is useful for many reasons, the most common of which are to close an open connection or unlock a Mutex immediately before the function ends."* [(kylewbanks.com)](https://kylewbanks.com/blog/when-to-use-defer-in-go)  
 *"A defer statement pushes a function call onto a list. The list of saved calls is executed after the surrounding function returns. Defer is commonly used to simplify functions that perform various clean-up actions."* [(golang blog)](https://blog.golang.org/defer-panic-and-recover)
+
+#### Init function
+*init() is called after all the variable declarations in the package have evaluated their initializers, and those are evaluated only after all the imported packages have been initialized.*  
+```
+func init() {
+    if user == "" {
+        log.Fatal("$USER not set")
+    }
+    if home == "" {
+        home = "/home/" + user
+    }
+    if gopath == "" {
+        gopath = home + "/go"
+    }
+    // gopath may be overridden by --gopath flag on command line.
+    flag.StringVar(&gopath, "gopath", gopath, "override default GOPATH")
+}
+```
+https://golang.org/doc/effective_go.html#init  
+https://golang.org/ref/spec#Package_initialization

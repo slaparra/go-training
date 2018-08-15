@@ -9,7 +9,7 @@ func main() {
 }
 
 func arrayFunc() {
-	var array4Pos [4]int
+	var array4Pos [4]int	//initialize an array of int, length 4 and default 0 value initialized [0 0 0 0]
 	array4Pos[0] = 1
 	i := array4Pos[0]
 	fmt.Println(i) // i == 1
@@ -23,6 +23,17 @@ func arrayFunc() {
 	array2Elements = [...]string{"Penn", "Teller"}
 
 	fmt.Printf("%T %v\n", array2Elements, array2Elements)
+
+	var x [58]string
+	fmt.Println(x) 		//prints empty array initialized with "" => [                                                         ]
+
+	for i := 65; i <= 122; i++ {
+		x[i-65] = string(i)
+	}
+	fmt.Println(x)
+	x[33] = "slaparra"
+	fmt.Println(x)
+	fmt.Println(len(x))
 }
 
 //from https://tour.golang.org/moretypes/11

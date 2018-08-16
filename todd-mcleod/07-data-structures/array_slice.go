@@ -6,10 +6,12 @@ func main() {
 	arrayFunc()
 	sliceFunc()
 	makeFunc()
+	newFunc()
+	sliceAnArray()
 }
 
 func arrayFunc() {
-	var array4Pos [4]int	//initialize an array of int, length 4 and default 0 value initialized [0 0 0 0]
+	var array4Pos [4]int //initialize an array of int, length 4 and default 0 value initialized [0 0 0 0]
 	array4Pos[0] = 1
 	i := array4Pos[0]
 	fmt.Println(i) // i == 1
@@ -25,7 +27,7 @@ func arrayFunc() {
 	fmt.Printf("%T %v\n", array2Elements, array2Elements)
 
 	var x [58]string
-	fmt.Println(x) 		//prints empty array initialized with "" => [                                                         ]
+	fmt.Println(x) //prints empty array initialized with "" => [                                                         ]
 
 	for i := 65; i <= 122; i++ {
 		x[i-65] = string(i)
@@ -53,10 +55,22 @@ func sliceFunc() {
 	s = s[2:]
 	printSlice(s)
 
+	//t is a new slice containing the same array of s but with a different length
+	t := s[:4]
+	printSlice(t)
+	printSlice(s)
+
+	//delete element position 2
+	s2 := []int{2, 3, 5, 7, 11, 13}
+	s2 = append(s2[:2], s2[3:]...)
+	fmt.Println(s2)
+
 	/*
 		len=6 cap=6 [2 3 5 7 11 13]
 		len=1 cap=6 [2]
 		len=4 cap=6 [2 3 5 7]
+		len=2 cap=4 [5 7]
+		len=4 cap=4 [5 7 11 13]
 		len=2 cap=4 [5 7]
 	*/
 }
@@ -74,4 +88,26 @@ func makeFunc() {
 	var s []int
 	s = make([]int, 5, 5)
 	fmt.Printf("%T %v\n", s, s)
+
+	slice := make([]int, 5, 100)
+	// error out of bounds
+	// slice[20] = 3
+	slice[3] = 33
+}
+
+func newFunc() {
+	aSlicePointer := new([]int)
+	fmt.Println(aSlicePointer) // &[]
+
+	anArrayPointer := new([3]int)
+	fmt.Println(anArrayPointer) // &[0 0 0]
+
+	aSliceUsingSlicing := new([3]int)[0:2]
+	fmt.Println(aSliceUsingSlicing) // [0 0]
+}
+
+func sliceAnArray() {
+	anArray := [30]string{}
+	aSliceFromArraySliced := anArray[:]
+	fmt.Println(aSliceFromArraySliced)
 }

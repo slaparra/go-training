@@ -1,33 +1,58 @@
 # Data structures
 
-
-
-- Array definition in go [(Todd McLeod)](https://docs.google.com/document/d/1nt5bYAAS5sTVF6tpLaFLDHQzo5BNkcr4b507fg3ZPwM/edit#)
-    - *An array is a numbered sequence of elements of a single type.*
-    - *The number of elements is called the length and is never negative.* 
-    - *The length is part of the array's type; it must evaluate to a non-negative constant representable by a value of type int.* 
+## **Array definition in go**
+[(Todd McLeod)](https://docs.google.com/document/d/1nt5bYAAS5sTVF6tpLaFLDHQzo5BNkcr4b507fg3ZPwM/edit#)
+- *An array is a numbered sequence of elements of a single type.*
+- *The number of elements is called the length and is never negative.* 
+- *The length is part of the array's type; it must evaluate to a non-negative constant representable by a value of type int.* 
     - *The length of an array a can be discovered using the built-in function len.* 
-    - *The elements can be addressed by integer indices 0 through len(a)-1.* 
-    - *Array types are always one-dimensional but may be composed to form multi-dimensional types.* 
-    - *Not dynamic, does not change in size*
-    - *The value property can be useful but also expensive; if you want C-like behavior and efficiency, you can pass a pointer to the array*
-    - *The first index is 0 position, so the last position is length-1*
-    - Links:
-        - [Effective go](https://golang.org/doc/effective_go.html#arrays)
-        - [Go spec](https://golang.org/ref/spec#Array_types)
-        - [Own examples](../todd-mcleod/01-fundamentals/array_slice.go)       
-- Slice
-    - *The length can be changed* 
-    - *Multi-dimensional*  
-    - *Slices hold references to an underlying array, and if you assign one slice to another, both refer to the same array.*)
-    - Links:
-        - [Golang.org ref](https://golang.org/ref/spec#Slice_types)
-        - [Slice reference type](../todd-mcleod/01-fundamentals/slice_reference_type.go)
-        - [Value types and Reference types, The Way to Go](https://tinyurl.com/yah9vxcs)
-        - [Slice usage and internals](https://blog.golang.org/go-slices-usage-and-internals)
-        - [Slice expressions](https://golang.org/ref/spec#Slice_expressions)      
-        - [Slice len & cap tour](https://tour.golang.org/moretypes/11)
-        - [How to use capacity and length post](https://www.calhoun.io/how-to-use-slice-capacity-and-length-in-go/)
+- *The elements can be addressed by integer indices 0 through len(a)-1.* 
+- *Array types are always one-dimensional but may be composed to form multi-dimensional types.* 
+- *Not dynamic, does not change in size*
+- *The value property can be useful but also expensive; if you want C-like behavior and efficiency, you can pass a pointer to the array*
+- *The first index is 0 position, so the last position is length-1*
+- Links:
+    - [Effective go](https://golang.org/doc/effective_go.html#arrays)
+    - [Go spec](https://golang.org/ref/spec#Array_types)
+           
+
+## **Slice definition**  
+[Golang spec](https://golang.org/ref/spec#Slice_types)  
+
+[Todd McLeod:](https://docs.google.com/document/d/1nt5bYAAS5sTVF6tpLaFLDHQzo5BNkcr4b507fg3ZPwM/edit#)
+- *A slice is a descriptor for a contiguous segment of an underlying array and provides access to a numbered sequence of elements from that array.*
+- *The value of an uninitialized slice is nil.*
+    - *it is a reference type*
+- *Like arrays, slices are indexable and have a length.*
+- *The length of a slice s can be discovered by the built-in function "len"*
+    - *Unlike arrays, slices are dynamic*
+        - *Their length may change during execution.*
+- *The elements can be addressed by integer indices 0 through len(s)-1*
+- *A slice, once initialized, is always associated with an underlying array that holds its elements.*
+    - *it is a reference type*
+- *The array underlying a slice may extend past the end of the slice.*
+    - *Capacity is a measure of that extent:*
+        - *it is the sum of the length of the slice and the length of the array beyond the slice;*
+    - *The capacity of a slice a can be discovered using the built-in function cap(a).*
+    - [Length and capacity](https://golang.org/ref/spec#Length_and_capacity)
+- make
+    - *A new, initialized slice value for a given element type T is made using the built-in function make, which takes a slice type and parameters specifying the length and optionally the capacity.*
+    - *A slice created with make always allocates a new, hidden array to which the returned slice value refers.*
+    ```
+        make([]T, length, capacity) 
+        make([]int, 50, 100)            
+        // same as this: new([100]int)[0:50] 
+    ```    
+- *Like arrays, slices are always one-dimensional but may be composed to construct higher-dimensional objects. (multi-dimensional slices) *
+- *Slices hold references to an underlying array, and if you assign one slice to another, both refer to the same array.*)
+- Links:
+    - [Golang.org ref](https://golang.org/ref/spec#Slice_types)
+    - [Slice reference type](../todd-mcleod/01-fundamentals/slice_reference_type.go)
+    - [Value types and Reference types, The Way to Go](https://tinyurl.com/yah9vxcs)
+    - [Slice usage and internals](https://blog.golang.org/go-slices-usage-and-internals)
+    - [Slice expressions](https://golang.org/ref/spec#Slice_expressions)      
+    - [Slice len & cap tour](https://tour.golang.org/moretypes/11)
+    - [How to use capacity and length post](https://www.calhoun.io/how-to-use-slice-capacity-and-length-in-go/)
 
 
 ### Array & slice declaration
@@ -38,3 +63,31 @@ length := len(arrayLength2With2Elements) //2
 
 aSlice := []string{"Hello ", "world"}
 ```
+
+String is a slice of bytes, string is made of runes, a rune is a unicode point.
+```
+fmt.Println("myString"[2])          //83
+fmt.Println(string("myString"[2]))  //S
+```
+#### Slicing a slice
+```
+mySlice := []string{"a", "b", "c", "d", "e", "f", "g"}
+
+//prints from position 2 to 4 (4 not included)
+fmt.Print(mySlice[2:4])   //[c, d]  
+```
+[Delete an element from the slice, example](https://play.golang.org/p/MFmGqFGwW9i)
+
+#### Make & new
+```
+// Both has the same result
+make([]int, 50, 100)
+new([100]int)[0:50]
+```
+
+
+[Todd McLeod slides: "slice, map, new, make, struct"](https://docs.google.com/presentation/d/1jot31JzJ7DiykCWpebfHz5_7s4JWZvklr-xmVWHHApU/edit#slide=id.gb91814ee3_0_17)    
+
+### Code examples
+- [Array & slice](../todd-mcleod/07-data-structures/array_slice.go)  
+- [Multidimensional slice](../todd-mcleod/07-data-structures/multi-dimensional-slice.go)  

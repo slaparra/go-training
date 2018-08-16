@@ -26,6 +26,7 @@ fmt.Printf("%s\n", "github.com/slaparra") #string
 - [Golang: Variables](https://golang.org/ref/spec#Variables)
 - [Example: How to declare variables](../todd-mcleod/01-fundamentals/variables2.go)
 - Types [(spec)](https://golang.org/ref/spec#Types)
+    - [Strings](https://blog.golang.org/strings)
     - [Array in data structures section](06-data-structures.md)       
     - [Slice in data structures section](06-data-structures.md)
     - [Numeric types](https://golang.org/ref/spec#Numeric_types)

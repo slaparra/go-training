@@ -75,9 +75,13 @@ fmt.Sprint('Santiago', 'Laparra')
 #### append
 ```
 // append: add an element to a slice
-aSlice := {0, 1}
+aSlice := []int{0, 1}
 anotherSlice := append(aSlice, 2)
 
+sliceToAppend := []int{3, 4}
+theLastSlice := append(anotherSlice, sliceToAppend...)  //variadic to use append with a slice
+
+fmt.Println(theLastSlice)   //[0 1 2 3 4] 
 ```
 
 #### len: length of an array or slice
@@ -112,6 +116,21 @@ s = make([]byte, 5, 5)
 ```
 [* from golang blog](https://blog.golang.org/go-slices-usage-and-internals)
 
+
+#### New
+*new(T) allocates zeroed storage for a new item of type T and returns its address, a value of type *T. In Go terminology, it returns a pointer to a newly allocated zero value of type T.*  
+[Allocation with *new*](https://golang.org/doc/effective_go.html#allocation_new)
+```
+aSlicePointer := new([]int) 
+fmt.Println(aSlicePointer)              // &[]
+
+anArrayPointer := new([3]int) 
+fmt.Println(anArrayPointer)             // &[0 0 0]
+
+aSliceUsingSlicing := new([3]int)[0:2] 
+fmt.Println(aSliceUsingSlicing)         // [0 0]
+
+```
 
 #### Defer   
 *Deferred functions are invoked immediately before the surrounding function returns, in the reverse order they were deferred.  

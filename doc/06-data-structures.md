@@ -1,20 +1,24 @@
 # Data structures
 
+- array
+- slice
+- map
+
 ## **Array definition in go**
 [(Todd McLeod)](https://docs.google.com/document/d/1nt5bYAAS5sTVF6tpLaFLDHQzo5BNkcr4b507fg3ZPwM/edit#)
 - *An array is a numbered sequence of elements of a single type.*
-- *The number of elements is called the length and is never negative.* 
-- *The length is part of the array's type; it must evaluate to a non-negative constant representable by a value of type int.* 
-    - *The length of an array a can be discovered using the built-in function len.* 
-- *The elements can be addressed by integer indices 0 through len(a)-1.* 
-- *Array types are always one-dimensional but may be composed to form multi-dimensional types.* 
+- *The number of elements is called the length and is never negative.*
+- *The length is part of the array's type; it must evaluate to a non-negative constant representable by a value of type int.*
+    - *The length of an array a can be discovered using the built-in function len.*
+- *The elements can be addressed by integer indices 0 through len(a)-1.*
+- *Array types are always one-dimensional but may be composed to form multi-dimensional types.*
 - *Not dynamic, does not change in size*
 - *The value property can be useful but also expensive; if you want C-like behavior and efficiency, you can pass a pointer to the array*
 - *The first index is 0 position, so the last position is length-1*
 - Links:
     - [Effective go](https://golang.org/doc/effective_go.html#arrays)
     - [Go spec](https://golang.org/ref/spec#Array_types)
-           
+
 
 ## **Slice definition**  
 [Golang spec](https://golang.org/ref/spec#Slice_types)  
@@ -39,9 +43,9 @@
     - *A new, initialized slice value for a given element type T is made using the built-in function make, which takes a slice type and parameters specifying the length and optionally the capacity.*
     - *A slice created with make always allocates a new, hidden array to which the returned slice value refers.*
     ```
-        make([]T, length, capacity) 
+        make([]T, length, capacity)
         make([]int, 50, 100)            
-        // same as this: new([100]int)[0:50] 
+        // same as this: new([100]int)[0:50]
     ```    
 - *Like arrays, slices are always one-dimensional but may be composed to construct higher-dimensional objects. (multi-dimensional slices) *
 - *Slices hold references to an underlying array, and if you assign one slice to another, both refer to the same array.*)
@@ -59,7 +63,7 @@
 ```
 arrayLength5With2Elements := [5]string{"Hello ", "world"}
 arrayLength2With2Elements = [...]string{"Penn", "Teller"}
-length := len(arrayLength2With2Elements) //2 
+length := len(arrayLength2With2Elements) //2
 
 aSlice := []string{"Hello ", "world"}
 ```
@@ -88,6 +92,27 @@ new([100]int)[0:50]
 
 [Todd McLeod slides: "slice, map, new, make, struct"](https://docs.google.com/presentation/d/1jot31JzJ7DiykCWpebfHz5_7s4JWZvklr-xmVWHHApU/edit#slide=id.gb91814ee3_0_17)    
 
-### Code examples
+#### Code examples
 - [Array & slice](../todd-mcleod/07-data-structures/array_slice.go)  
 - [Multidimensional slice](../todd-mcleod/07-data-structures/multi-dimensional-slice.go)  
+
+## Map
+*A map is an unordered group of elements of one type, called the element type, indexed by a set of unique keys of another type, called the key type*  
+They are called dictionaries (key/value storage)  
+- [Map type](https://golang.org/ref/spec#Map_types)
+- [Maps, effective go](https://golang.org/doc/effective_go.html#maps)
+- ['Make' function to create a map](https://golang.org/ref/spec#Making_slices_maps_and_channels)
+- [Delete a value of the map](https://golang.org/ref/spec#Deletion_of_map_elements)  
+- [Golang book, Maps](https://www.golang-book.com/books/intro/6#section3)  
+- [**Map example](../todd-mcleod/07-data-structures/map.go)  
+
+*Maps are Reference Types, they behave like pointers. When you pass a map variable to a function any changes to that mapped variable in the function change that original mapped variable outside the function*
+
+*This looks very much like an array but there are a few differences.*
+- *First the length of a map (found by doing len(x)) can change as we add new items to it. When first created it has a length of 0, after x[1] = 10 it has a length of 1.*
+- *Second maps are not sequential. We have x[1], and with an array that would imply there must be an x[0], but maps don't have this requirement.*
+
+To test for presence in the map without worrying about the actual value, you can use the blank identifier (_) in place of the usual variable for the value.
+```
+_, present := timeZone[tz]
+```

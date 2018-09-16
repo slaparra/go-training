@@ -26,5 +26,17 @@ func main() {
 	//the result of accessing to a position of the map is the value and a boolean (comma ok idiom)
 	//this boolean is the result of if exists or not a value for the given key
 	value, ok := aMapVar["index1"]
-	fmt.Printf("value: %v, result: %v\n", value, result) //value: 3, result: true
+	fmt.Printf("value: %v, result: %v\n", value, ok) //value: 3, result: true
+
+	fmt.Println("Map Range loop: ")
+	mapForRange := map[string]string{
+		"first-key":  "first-value",
+		"second-key": "second-value",
+		"third-key":  "third-value",
+		"fourth-key": "fourth-value",
+	}
+
+	for key, value := range mapForRange {
+		fmt.Printf("- key %s, value %s\n", key, value)
+	}
 }

@@ -1,8 +1,9 @@
 # Data structures
 
-- array
-- slice
-- map
+In this readme, we can find documentation and examples about:
+- Array
+- Slice
+- Map
 
 ## **Array definition in go**
 [(Todd McLeod)](https://docs.google.com/document/d/1nt5bYAAS5sTVF6tpLaFLDHQzo5BNkcr4b507fg3ZPwM/edit#)
@@ -96,14 +97,16 @@ new([100]int)[0:50]
 - [Array & slice](../todd-mcleod/07-data-structures/array_slice.go)  
 - [Multidimensional slice](../todd-mcleod/07-data-structures/multi-dimensional-slice.go)  
 
-## Map
+## Map definition in go
 *A map is an unordered group of elements of one type, called the element type, indexed by a set of unique keys of another type, called the key type*  
 They are called dictionaries (key/value storage)  
 - [Map type](https://golang.org/ref/spec#Map_types)
 - [Maps, effective go](https://golang.org/doc/effective_go.html#maps)
+- [Macro View of Map Internals In Go](https://www.ardanlabs.com/blog/2013/12/macro-view-of-map-internals-in-go.html)
+- [Maps in action, Golang blog](https://blog.golang.org/go-maps-in-action)  
 - ['Make' function to create a map](https://golang.org/ref/spec#Making_slices_maps_and_channels)
 - [Delete a value of the map](https://golang.org/ref/spec#Deletion_of_map_elements)  
-- [Golang book, Maps](https://www.golang-book.com/books/intro/6#section3)  
+- [Golang book, Maps](https://www.golang-book.com/books/intro/6#section3)
 - [**Map example](../todd-mcleod/07-data-structures/map.go)  
 
 *Maps are Reference Types, they behave like pointers. When you pass a map variable to a function any changes to that mapped variable in the function change that original mapped variable outside the function*
@@ -116,3 +119,8 @@ To test for presence in the map without worrying about the actual value, you can
 ```
 _, present := timeZone[tz]
 ```
+
+**Concurrency**
+  
+[Maps are not safe for concurrent use](https://golang.org/doc/faq#atomic_maps): it's not defined what happens when you read and write to them simultaneously. 
+If you need to read from and write to a map from concurrently executing goroutines, the accesses must be mediated by some kind of synchronization mechanism. 

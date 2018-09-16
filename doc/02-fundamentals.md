@@ -145,4 +145,9 @@ fmt.Println([]byte("世界"))
 //[228 184 150 231 149 140] 3 bytes per character
 ```
 
+```
+word := "hello"
+letter := rune(word[0])
+fmt.Println(letter)      //72
+```
 [Rune & UTF-8 example](../todd-mcleod/01-fundamentals/rune.go)

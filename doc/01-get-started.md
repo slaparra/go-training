@@ -13,13 +13,13 @@ brew install go
 ### Folder structure
 Recommended workspace structure [(link)](https://golang.org/doc/code.html#Workspaces):
 ```
-/Users/<user.name>/Documents/go/
+/Users/<user.name>/Documents/Workspace/go/
     bin/
     pkg/
     src/ #libraries will be installed here
         github.com/
-            user/
-                project/
+            <user_name>/
+                <project_name>/
 ```
 
 ### env

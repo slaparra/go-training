@@ -27,6 +27,7 @@ func b() {
 func main() {
 	b()
 }
+
 /*
 	prints:
 		entering: b
@@ -35,4 +36,4 @@ func main() {
 		in a
 		leaving: a
 		leaving: b
- */
+*/

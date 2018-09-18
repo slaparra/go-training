@@ -15,6 +15,16 @@ fmt.Printf("%s\n", "github.com/slaparra") #string
 - [Package file examples](../todd-mcleod/02-package)
 - Methods and vars have to be capitalized to be visible outside the package
 
+
+```
+# when a file needs to access to a struct from another in the same package 
+# we need to run "go install" or "run" the different files:
+go run main.go other_file.go
+
+# another package
+go run main.go aPackage
+```
+
 ## Variables
 
 - Default assignment to a var is zero value. Each type has its own zero value

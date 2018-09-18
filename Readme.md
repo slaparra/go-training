@@ -9,7 +9,8 @@
 - [Data structures](doc/06-data-structures.md)
 
 #### Intermediate
-- [Go packages](doc/08-packages.md)
+- [Go packages](doc/07-packages.md)
+- [Object oriented programming in go](doc/08-oop.md)
 - Debug (to do)
     - https://github.com/derekparker/delve
 - Mysql (to do)

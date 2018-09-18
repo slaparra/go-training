@@ -74,7 +74,7 @@
 - [Domain driven design and Go](https://www.reddit.com/r/golang/comments/6ugzo2/domain_driven_design_and_go/)
 
 ### Courses
-- [Learn How To Code: Golang](https://www.udemy.com/learn-how-to-code/learn/v4/overview)
+- [Learn How To Code: Golang, Todd McLeod](https://www.udemy.com/learn-how-to-code/learn/v4/overview)
     - [Github examples](https://github.com/GoesToEleven/GolangTraining/)
     - [Slides](https://drive.google.com/drive/u/0/folders/0B22KXlqHz6ZNfjNXTzk1U3JHUkJ6VjJ3dnJKNzVtNjRUM3Q2WFNqWGI2Q3RadERqUlVrOEU)
     - [Training resources](https://docs.google.com/document/d/18-0u5CvNIr83oOfMXPoM4klVFASXGl3Vvua1wBGMIoQ/edit)

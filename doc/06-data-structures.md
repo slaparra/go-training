@@ -52,7 +52,7 @@ In this readme, we can find documentation and examples about:
 - *Slices hold references to an underlying array, and if you assign one slice to another, both refer to the same array.*)
 - Links:
     - [Golang.org ref](https://golang.org/ref/spec#Slice_types)
-    - [Slice reference type](../todd-mcleod/01-fundamentals/slice_reference_type.go)
+    - [Slice reference type](../src/01-fundamentals/slice_reference_type.go)
     - [Value types and Reference types, The Way to Go](https://tinyurl.com/yah9vxcs)
     - [Slice usage and internals](https://blog.golang.org/go-slices-usage-and-internals)
     - [Slice expressions](https://golang.org/ref/spec#Slice_expressions)      
@@ -94,8 +94,8 @@ new([100]int)[0:50]
 [Todd McLeod slides: "slice, map, new, make, struct"](https://docs.google.com/presentation/d/1jot31JzJ7DiykCWpebfHz5_7s4JWZvklr-xmVWHHApU/edit#slide=id.gb91814ee3_0_17)    
 
 #### Code examples
-- [Array & slice](../todd-mcleod/07-data-structures/array_slice.go)  
-- [Multidimensional slice](../todd-mcleod/07-data-structures/multi-dimensional-slice.go)  
+- [Array & slice](../src/07-data-structures/array_slice.go)  
+- [Multidimensional slice](../src/07-data-structures/multi-dimensional-slice.go)  
 
 ## Map definition in go
 *A map is an unordered group of elements of one type, called the element type, indexed by a set of unique keys of another type, called the key type*  
@@ -107,7 +107,7 @@ They are called dictionaries (key/value storage)
 - ['Make' function to create a map](https://golang.org/ref/spec#Making_slices_maps_and_channels)
 - [Delete a value of the map](https://golang.org/ref/spec#Deletion_of_map_elements)  
 - [Golang book, Maps](https://www.golang-book.com/books/intro/6#section3)
-- [**Map example](../todd-mcleod/07-data-structures/map.go)  
+- [**Map example](../src/07-data-structures/map.go)  
 
 *Maps are Reference Types, they behave like pointers. When you pass a map variable to a function any changes to that mapped variable in the function change that original mapped variable outside the function*
 

@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/slaparra/go-training/todd-mcleod/02-package/aPackage"
 	"fmt"
+	"github.com/slaparra/go-training/src/02-package/aPackage"
 )
 
 func main() {

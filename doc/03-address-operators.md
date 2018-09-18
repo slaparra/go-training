@@ -4,12 +4,12 @@
 - [Golang: Address operators](https://golang.org/ref/spec#Address_operators)
 - [Golang book: pointers](https://www.golang-book.com/books/intro/8)
     - [& and * operators](https://www.golang-book.com/books/intro/8#section1)
-- [Examples](../todd-mcleod/04-addresses-and-pointers)
-    - [Address & pointer](../todd-mcleod/04-addresses-and-pointers/address-pointer.go)
-    - [Scan and memory addresses](../todd-mcleod/04-addresses-and-pointers/scan-and-memory-addresses.go)
+- [Examples](../src/04-addresses-and-pointers)
+    - [Address & pointer](../src/04-addresses-and-pointers/address-pointer.go)
+    - [Scan and memory addresses](../src/04-addresses-and-pointers/scan-and-memory-addresses.go)
     - [Tour golang pointers](https://tour.golang.org/moretypes/1)
    
-Write a program that can swap two integers (x := 1; y := 2; swap(&x, &y) should give you x=2 and y=1): [result](../todd-mcleod/04-addresses-and-pointers/swap-example.go)
+Write a program that can swap two integers (x := 1; y := 2; swap(&x, &y) should give you x=2 and y=1): [result](../src/04-addresses-and-pointers/swap-example.go)
 
 ```
 func main() {

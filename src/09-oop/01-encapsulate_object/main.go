@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/slaparra/go-training/todd-mcleod/09-oop/01-encapsulate_object/author"
+	"github.com/slaparra/go-training/src/09-oop/01-encapsulate_object/author"
 )
 
 // go run main.go author

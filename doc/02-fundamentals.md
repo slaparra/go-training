@@ -1,6 +1,6 @@
 # Fundamentals
 
-- [Code examples](../todd-mcleod/01-fundamentals): array-slice, constants, print, variables...
+- [Code examples](../src/01-fundamentals): array-slice, constants, print, variables...
 
 ## Format
 https://godoc.org/fmt
@@ -12,7 +12,7 @@ fmt.Printf("%s\n", "github.com/slaparra") #string
 
 ## Packages
 - [Packages (book An Introduction to Programming in Go )](https://www.golang-book.com/books/intro/11)
-- [Package file examples](../todd-mcleod/02-package)
+- [Package file examples](../src/02-package)
 - Methods and vars have to be capitalized to be visible outside the package
 
 
@@ -34,7 +34,7 @@ go run main.go aPackage
     - [Yury Pitsishin post](http://goinbigdata.com/golang-pass-by-pointer-vs-pass-by-value/)
     - [Dave Cheney post](https://dave.cheney.net/2017/04/29/there-is-no-pass-by-reference-in-go)
 - [Golang: Variables](https://golang.org/ref/spec#Variables)
-- [Example: How to declare variables](../todd-mcleod/01-fundamentals/variables2.go)
+- [Example: How to declare variables](../src/01-fundamentals/variables2.go)
 - Types [(spec)](https://golang.org/ref/spec#Types)
     - [Strings](https://blog.golang.org/strings)
     - [Array in data structures section](06-data-structures.md)       
@@ -78,7 +78,7 @@ pointer:                 %p
 References:
 - [Scope golang-book, with great examples**](https://www.golang-book.com/books/web/01-02#scope)
 - [Golang: Declarations and scope](https://golang.org/ref/spec#Declarations_and_scope)
-- [Todd McLeod scope & closure examples](../todd-mcleod/03-block-scope)
+- [Todd McLeod scope & closure examples](../src/03-block-scope)
 
 Definition:
 - The scope of a predeclared identifier is the universe block.
@@ -121,7 +121,7 @@ func main() {
 - [Constants: at Golang blog](https://blog.golang.org/constants)
 - [Golang Constants](https://golang.org/ref/spec#Constant_declarations)  
 - [Iota](https://golang.org/ref/spec#Iota) 
-- [Constants & Iota example](../todd-mcleod/01-fundamentals/constants.go)
+- [Constants & Iota example](../src/01-fundamentals/constants.go)
 
 ## Rune literals
 https://golang.org/ref/spec#Rune_literals
@@ -160,4 +160,4 @@ word := "hello"
 letter := rune(word[0])
 fmt.Println(letter)      //72
 ```
-[Rune & UTF-8 example](../todd-mcleod/01-fundamentals/rune.go)
+[Rune & UTF-8 example](../src/01-fundamentals/rune.go)

@@ -45,7 +45,7 @@ var employee struct {
 In go we don't have public/protected/private visibility in methods nor fields.  
 Only fields or methods can be exported or not-exported (visible or not visible) outside the package (with capital letter at the first).  
 
-See [author example](../todd-mcleod/09-oop/01-encapsulate_object)
+See [author example](../src/09-oop/01-encapsulate_object)
 
 ```
 package main
@@ -136,4 +136,4 @@ func main() {
 
 ```
 
-- [Promoted code example file](../todd-mcleod/09-oop/02-promoted-inheritance/)
+- [Promoted code example file](../src/09-oop/02-promoted-inheritance/)

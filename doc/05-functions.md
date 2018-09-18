@@ -1,6 +1,6 @@
 # Functions
 
-- [Function examples](../todd-mcleod/06-functions)
+- [Function examples](../src/06-functions)
 - [Variadic](https://golang.org/ref/spec#Passing_arguments_to_..._parameters)
 
 ## Func expression

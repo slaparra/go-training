@@ -17,6 +17,7 @@
 
 #### Advance
 - Concurrency (to do)
+- DDD in go (to do)
 - Functional programming (to do)
     - [Functional Go post](https://medium.com/@geisonfgfg/functional-go-bc116f4c96a4)
     - [Functional Go video, @francesc](https://www.youtube.com/watch?v=ouyHp2nJl0I)    

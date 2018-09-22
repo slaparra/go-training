@@ -4,6 +4,11 @@
 - [Composition with go](https://www.ardanlabs.com/blog/2015/09/composition-with-go.html)
 - [Notes about opp in go by Todd McLeod](https://github.com/GoesToEleven/GolangTraining/blob/master/20_struct/00_object-oriented/notes.txt)
 
+## Is go object oriented?
+
+- [Is go object oriented? (Flavio Copes)](https://flaviocopes.com/golang-is-go-object-oriented/)
+- [Is golang an object oriented language? (Golang.org)](https://golang.org/doc/faq#Is_Go_an_object-oriented_language)
+
 ## Structs
 
 *A struct is a sequence of named elements, called fields, each of which has a name and a type. Field names may be specified explicitly (IdentifierList) or implicitly (EmbeddedField). Within a struct, non-blank field names must be unique.*
@@ -77,7 +82,7 @@ aVar := Author{"aFirstName", "aLastName", "aBio"}
 or we can create a named constructor (like a static method in other languages):
 ```
 func Create(aFirstName string, aLastName string, aBio string) Author {
-	return Author{aFirstName, aLastName, aBio}
+	return &Author{aFirstName, aLastName, aBio}
 }
 ```
 
@@ -133,7 +138,8 @@ func main() {
     fmt.Println("City:", p.city) //city is promoted field
     fmt.Println("State:", p.state) //state is promoted field
 }
-
+// if we don't need to encapsulate any logic for changing a field, we can put this field
+// to be visible outside the package.
 ```
 
 - [Promoted code example file](../src/09-oop/02-promoted-inheritance/)

@@ -92,6 +92,24 @@ Definition:
 
 Things defined in the function scope have access to anything above them (file, package, universe), but the reverse is not true. A variable defined in a function is only accessible within that function or blocks defined inside of it.
 
+## Types
+
+A type determines a set of values together with operations and methods specific to those values. A type may be denoted by a type name, if it has one, or specified using a type literal, which composes a type from existing types.
+
+```
+type (
+	B1 string
+	B2 B1
+)
+
+type Employee struct {  
+    firstName string
+    lastName  string
+    age       int
+}
+
+aPerson := Employee{"John", "Raimon", 28}
+```
 ## Blank identifier
 Basically a blank identifier is like a box where you can put things if you don't need them.  
 

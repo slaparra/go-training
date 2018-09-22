@@ -12,4 +12,8 @@ func main() {
 	fmt.Println(aut.FullName())
 
 	fmt.Println(aut.Bio())
+
+	aut.ChangeName("Santiaguin")
+
+	fmt.Println(aut.FullName())
 }

@@ -10,7 +10,7 @@
 
 #### Intermediate
 - [Go packages](doc/07-packages.md)
-- [Object oriented programming in go](doc/08-oop.md)
+- [Go oriented programming, oop in go](doc/08-oop.md)
 - Debug (to do)
     - https://github.com/derekparker/delve
 - Mysql (to do)
@@ -40,7 +40,9 @@
 ### Videos
 - [Learn To Code - Golang Training (youtube playlist)](https://www.youtube.com/playlist?list=PLSak_q1UXfPrI6D67NF8ajfeJ6f7MH83S)
 - [Build web apps with Golang (youtube playlist)](https://www.youtube.com/playlist?list=PLSak_q1UXfPp2VwUQ4ZdUVJdMO6pfi5v_)
+- [How do you structure your Go apps?, Kat Zien](https://www.youtube.com/watch?v=VQym87o91f8)
 - [Go Programing, Derek Banas](https://www.youtube.com/watch?v=CF9S4QZuV30)
+- [Go best practices, Ashley McNamara + Brian Ketelsen](https://www.youtube.com/watch?v=MzTcsI6tn-0)
 - [Go-lang.cat-v.org: Talks](http://go-lang.cat-v.org/talks/)
 - [Steve Francia talk](https://www.youtube.com/watch?v=sX8r6zATHGU)
 - [Go interfaces (Francesc Campoy)](https://www.youtube.com/watch?v=F4wUrj6pmSI)

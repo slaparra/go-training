@@ -4,5 +4,5 @@
 - [Net/http](https://golang.org/pkg/net/http/) 
 - [Enconding/json](https://godoc.org/encoding/json)  
 
-[Go package example files](../src/08-packages/)
+[Go package example files](../src/08-external-packages/)
 

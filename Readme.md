@@ -13,6 +13,7 @@
 - [Go oriented programming, oop in go](doc/08-oop.md)
 - Debug (to do)
     - https://github.com/derekparker/delve
+    - [Jebrains, debugging containerized go app](https://blog.jetbrains.com/go/2018/04/30/debugging-containerized-go-applications)
 - Mysql (to do)
 
 #### Advance

@@ -1,5 +1,7 @@
 # Go programming language Training
 
+Learning Golang, step by step: 
+
 #### Beginner
 - [Get started](doc/01-get-started.md)
 - [Fundamentals](doc/02-fundamentals.md)
@@ -11,10 +13,16 @@
 #### Intermediate
 - [Go packages](doc/07-packages.md)
 - [Go oriented programming, oop in go](doc/08-oop.md)
+    - [Structs](doc/08-oop.md#structs)
+    - [Objects](doc/08-oop.md#objects)
+    - ["Inheritance"](doc/08-oop.md#inheritance-in-go)
+    - [Interfaces](doc/08-oop.md#interfaces)
+- Working with files (to do)
+- Connecting to a database: mysql (to do)
 - Debug (to do)
     - https://github.com/derekparker/delve
     - [Jebrains, debugging containerized go app](https://blog.jetbrains.com/go/2018/04/30/debugging-containerized-go-applications)
-- Mysql (to do)
+
 
 #### Advance
 - Concurrency (to do)
@@ -23,7 +31,7 @@
     - [Functional Go post](https://medium.com/@geisonfgfg/functional-go-bc116f4c96a4)
     - [Functional Go video, @francesc](https://www.youtube.com/watch?v=ouyHp2nJl0I)    
 
-## Links
+## More interesting links
 
 ### Documentation
 
@@ -101,6 +109,7 @@
 ### Repos, examples
 - [Github ArdanLabs: Go-training](https://github.com/ardanlabs/gotraining/tree/master/topics)
 
-## Problems found
-- GOROOT env var: [link](https://stackoverflow.com/questions/21510714/go-cannot-find-package-fmt-error)
-- "go build file.go" command does not generate the bin file: main file should have "main" namespace
+## Connect
+Do you want to recommend some topic about Go?
+- [Twitter](https://www.twitter.com/santiagolaparra)
+- [LinkedIn](https://www.linkedin.com/in/santiago-laparra-muñoz-11152128) 

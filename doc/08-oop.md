@@ -1,5 +1,11 @@
 # OOP in Go
 
+- [Structs](#structs)
+- [Objects](#objects)
+- [Inheritance](#inheritance-in-go)
+- [Interfaces](#interfaces)
+
+### Composition
 - [Composition Instead of Inheritance - OOP in Go](https://golangbot.com/inheritance/)
 - [Composition with go](https://www.ardanlabs.com/blog/2015/09/composition-with-go.html)
 - [Notes about opp in go by Todd McLeod](https://github.com/GoesToEleven/GolangTraining/blob/master/20_struct/00_object-oriented/notes.txt)
@@ -143,3 +149,79 @@ func main() {
 ```
 
 - [Promoted code example file](../src/09-oop/02-promoted-inheritance/)
+
+## Interfaces
+
+*Interfaces make the code more flexible, scalable and it’s a way to achieve polymorphism in Golang.*
+
+*Prominent feature of Golang is that interfaces are implemented implicitly. Programmer doesn’t have to specify that type T implements interface I. That work is done by the Go compiler (never send a human to do a machine’s job).*
+
+*An interface is an ABSTRACT TYPE. It doesn't
+ expose the representation or internal structure of its values, or the set of basic operations they support;
+ it reveals only some of their methods. When you have a value of an interface type, you know nothing about
+ what it IS; you know only what it can DO, or more precisely, what BEHAVIORS ARE PROVIDED BY ITS METHODS.*
+- [Interfaces GoByExample](https://gobyexample.com/interfaces)
+- [Golang.org spec](https://golang.org/ref/spec#Interface_types)
+- Golang spec blog, Interfaces
+    - [Part I](https://medium.com/golangspec/interfaces-in-go-part-i-4ae53a97479c)
+    - [Part II](https://medium.com/golangspec/interfaces-in-go-part-ii-d5057ffdb0a6)
+- [Golang bootcamp](http://www.golangbootcamp.com/book/interfaces)    
+- [How do interfaces work in Go, and why do I keep seeing the empty interface (interface{})?](https://www.calhoun.io/how-do-interfaces-work-in-go/)
+
+```
+package main
+
+import "fmt"
+
+type human interface {
+	speak()
+}
+
+type person struct {
+	first     string
+	last      string
+	birthYear int
+}
+
+type dog struct {
+	name      string
+	birthYear int
+}
+
+func main() {
+	me := person{"Santiago", "Laparra", 2010}
+	toby := dog{"Toby", 2015}
+
+	fmt.Println(me)
+	fmt.Printf("Type of me: %T\n", me)
+	me.speak()
+
+	amIAHuman(me)
+
+	// Toby is not a human because he can't speak.
+	// Call "amIAHuman(toby)" fails because there's no method speak related with dog
+	//
+	// amIAHuman(toby)
+	//
+	// Error message:
+	// cannot use toby (type dog) as type human in argument to amIAHuman:
+	//	dog does not implement human (missing speak method)
+
+	toby.bark()
+
+}
+
+func (object person) speak() {
+	fmt.Printf("My name is %s %s (%d)\n", object.first, object.last, object.birthYear)
+}
+
+func amIAHuman(aHuman human) {
+	fmt.Printf("In this example, %v is a person and a human too because struct person implements speak like human interface\n", aHuman)
+}
+
+func (object dog) bark() {
+	fmt.Printf("Only dogs like <%s> can bark\n", object.name)
+}
+```
+[See the code example](../src/09-oop/04-interfaces/interface.go)  
+[Another example from Todd McLeod training](../src/09-oop/04-interfaces/interface-todd-mcleod.go)

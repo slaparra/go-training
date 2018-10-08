@@ -25,7 +25,7 @@ Learning Golang, step by step:
 
 
 #### Advance
-- Concurrency (to do)
+- [Concurrency](doc/09-concurrency.md)
 - DDD in go (to do)
 - Functional programming (to do)
     - [Functional Go post](https://medium.com/@geisonfgfg/functional-go-bc116f4c96a4)

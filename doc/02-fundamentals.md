@@ -1,5 +1,6 @@
 # Fundamentals
 
+- [Writing, building, installing, and testing Go code (video)](https://www.youtube.com/watch?v=XCsL89YtqCs)
 - [Code examples](../src/01-fundamentals): array-slice, constants, print, variables...
 
 ## Format

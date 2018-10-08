@@ -53,10 +53,12 @@ var employee struct {
 
 ## Objects
 
-In go we don't have public/protected/private visibility in methods nor fields.  
+In go we don't have [public/protected/private] visibility in methods nor fields.  
 Only fields or methods can be exported or not-exported (visible or not visible) outside the package (with capital letter at the first).  
 
 See [author example](../src/09-oop/01-encapsulate_object)
+
+[public/protected/private]: https://yourbasic.org/golang/public-private/
 
 ```
 package main

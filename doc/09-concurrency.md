@@ -57,6 +57,18 @@ v := <-ch  // Receive from ch, and
 Go has a special statement called select which works like a switch but for channels:
 [select example](../src/10-concurrency/select.go)           
 
+##### Close a channel
+A sender can close a channel to indicate that no more values will be sent. Receivers can test whether a channel has been closed by assigning a second parameter to the receive expression: after
+
+```
+//from: https://tour.golang.org/concurrency/4
+v, ok := <-ch
+```
+**ok** is false if there are no more values to receive and the channel is closed.
+  
+**Note**: Only the sender should close a channel, never the receiver. Sending on a closed channel will cause a panic.
+ 
+
 #### Links
 
 - [**Concurrency & goroutines, Golang Book**](https://www.golang-book.com/books/intro/10)  
@@ -69,3 +81,5 @@ Go has a special statement called select which works like a switch but for chann
 
 - Visualizing Concurrency in Go, Ivan Danyliuk [(Video)](https://www.youtube.com/watch?v=KyuFeiG3Y60) [(Post)](http://divan.github.io/posts/go_concurrency_visualize/)
 - [Rob Pike: Concurrency is not parallelism](https://www.youtube.com/watch?v=cN_DpYBzKso)
+- [Rob Pike: Go concurrency patterns](https://www.youtube.com/watch?v=f6kdp27TYZs)
+- [Sameer Ajmani: Advanced Go Concurrency Patterns](https://www.youtube.com/watch?v=QDDwwePbDtw)

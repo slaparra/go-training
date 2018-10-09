@@ -4,7 +4,6 @@
 
 [page]:https://github.com/golang/go/wiki/LearnConcurrency
 
-[](https://yourbasic.org/golang/goroutines-explained/)
 *Making progress on more than one task simultaneously is known as concurrency. Go has rich support for concurrency using goroutines and channels.*  
 ```
 import (
@@ -40,6 +39,11 @@ func main() {
 
 With a goroutine we return immediately to the next line and don't wait for the function to complete.
 
+
+##### Concurrency vs. parallelism
+
+![Picture](https://birdchan.files.wordpress.com/2017/05/concurrency_vs_parallelism.png)
+
 ### Channels
 Channels are a typed conduit through which you can send and receive values with the channel operator, <-.
 ```
@@ -47,11 +51,18 @@ ch <- v    // Send v to channel ch.
 v := <-ch  // Receive from ch, and
            // assign value to v.
 ```
-           
+*Channels provide a way for two goroutines to communicate with one another and synchronize their execution:*
+[Channels example](../src/10-concurrency/channels.go)           
+
+Go has a special statement called select which works like a switch but for channels:
+[select example](../src/10-concurrency/select.go)           
+
 #### Links
 
-- [Concurrency & goroutines, Golang Book](https://www.golang-book.com/books/intro/10)  
+- [**Concurrency & goroutines, Golang Book**](https://www.golang-book.com/books/intro/10)  
 - [Concurrency & channels, GolangBootCamp](http://www.golangbootcamp.com/book/concurrency)
+- [Step-by-step guide to concurrency](https://yourbasic.org/golang/concurrent-programming/)
+- [Go routines explained](https://yourbasic.org/golang/goroutines-explained/) 
 - [GoRoutines, A Tour of go](https://tour.golang.org/concurrency/1)
 
 #### Vídeos  

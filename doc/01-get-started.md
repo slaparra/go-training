@@ -69,3 +69,5 @@ go env
 go fmt
 
 ```
+
+[Oficial documentation: Golang wiki](https://github.com/golang/go/wiki)

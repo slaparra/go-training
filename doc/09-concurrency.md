@@ -64,10 +64,11 @@ A sender can close a channel to indicate that no more values will be sent. Recei
 //from: https://tour.golang.org/concurrency/4
 v, ok := <-ch
 ```
-**ok** is false if there are no more values to receive and the channel is closed.
-  
+[Close example](../src/10-concurrency/range-close.go)  
+
+**ok** is false if there are no more values to receive and the channel is closed.  
 **Note**: Only the sender should close a channel, never the receiver. Sending on a closed channel will cause a panic.
- 
+
 
 #### Links
 
@@ -76,6 +77,7 @@ v, ok := <-ch
 - [Step-by-step guide to concurrency](https://yourbasic.org/golang/concurrent-programming/)
 - [Go routines explained](https://yourbasic.org/golang/goroutines-explained/) 
 - [GoRoutines, A Tour of go](https://tour.golang.org/concurrency/1)
+- [Graceful upgrades in go](https://blog.cloudflare.com/graceful-upgrades-in-go/)
 
 #### Vídeos  
 

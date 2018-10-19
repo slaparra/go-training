@@ -2,28 +2,12 @@
 
 - [Writing, building, installing, and testing Go code (video)](https://www.youtube.com/watch?v=XCsL89YtqCs)
 - [Code examples](../src/01-fundamentals): array-slice, constants, print, variables...
-
+- [How do you structure your go apps](https://www.youtube.com/watch?v=B5oQnECDJ8g)
 ## Format
 https://godoc.org/fmt
 ```
 fmt.Printf("%d - %b\n", 43, 17) #decimal - binary
 fmt.Printf("%s\n", "github.com/slaparra") #string
-```
-
-
-## Packages
-- [Packages (book An Introduction to Programming in Go )](https://www.golang-book.com/books/intro/11)
-- [Package file examples](../src/02-package)
-- Methods and vars have to be capitalized to be visible outside the package
-
-
-```
-# when a file needs to access to a struct from another in the same package 
-# we need to run "go install" or "run" the different files:
-go run main.go other_file.go
-
-# another package
-go run main.go aPackage
 ```
 
 ## Variables

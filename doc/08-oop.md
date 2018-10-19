@@ -100,7 +100,7 @@ Extracted from:
 - [Struct, promoted fields](https://golangbot.com/structs/)
 - [Composition Instead of Inheritance - OOP in Go](https://golangbot.com/inheritance/)
 
-*Go does not support inheritance, however it does support composition. The generic definition of composition is "put together". One example of composition is a car. A car is composed of wheels, engine and various other parts.*
+***Go does not support inheritance**, however it does support composition. The generic definition of composition is "put together". One example of composition is a car. A car is composed of wheels, engine and various other parts.*
 
 *Fields that belong to a anonymous struct field in a structure are called **promoted** fields since they can be accessed as if they belong to the structure which holds the anonymous struct field. I can understand that this definition is quite complex so lets dive right into some code to understand this :).*
 
@@ -158,7 +158,7 @@ func main() {
 
 *Prominent feature of Golang is that interfaces are implemented implicitly. Programmer doesn’t have to specify that type T implements interface I. That work is done by the Go compiler (never send a human to do a machine’s job).*
 
-*An interface is an ABSTRACT TYPE. It doesn't
+*An **interface** is an ABSTRACT TYPE. It doesn't
  expose the representation or internal structure of its values, or the set of basic operations they support;
  it reveals only some of their methods. When you have a value of an interface type, you know nothing about
  what it IS; you know only what it can DO, or more precisely, what BEHAVIORS ARE PROVIDED BY ITS METHODS.*
@@ -227,3 +227,11 @@ func (object dog) bark() {
 ```
 [See the code example](../src/09-oop/04-interfaces/interface.go)  
 [Another example from Todd McLeod training](../src/09-oop/04-interfaces/interface-todd-mcleod.go)
+
+
+##### External packages interfaces most frequently used
+
+- [io Reader](https://golang.org/pkg/io/#Reader)
+- [io Writer](https://golang.org/pkg/io/#Writer)
+- [net-http Handler](https://golang.org/pkg/net/http/#Handler)
+- [sort Interface](https://golang.org/pkg/sort/#Interface)

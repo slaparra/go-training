@@ -1,11 +1,28 @@
 # Go packages
 
+- [Packages (book An Introduction to Programming in Go )](https://www.golang-book.com/books/intro/11)
+- [Package file examples](../src/02-package)
+- Methods and vars have to be capitalized to be visible outside the package
+
+
+```
+# when a file needs to access to a struct from another in the same package 
+# we need to run "go install" or "run" the different files:
+go run main.go other_file.go
+
+# another package
+go run main.go aPackage
+```
+
+## External packages
 - [Bufio newscanner](https://golang.org/pkg/bufio)
 - [Net/http](https://golang.org/pkg/net/http/) 
 - [Enconding/json](https://godoc.org/encoding/json)  
 - [Runtime](https://golang.org/pkg/runtime/)
 
 [Go package example files](../src/08-external-packages/)
+
+### Examples
 
 #### NumCPU and GOMAXPROCS
 ```

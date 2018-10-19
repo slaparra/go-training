@@ -191,3 +191,20 @@ func init() {
 ```
 https://golang.org/doc/effective_go.html#init  
 https://golang.org/ref/spec#Package_initialization
+
+### Printing
+If we implement the method String for a type it will be used when fmt.print methods are executed  
+
+*If you want to control the default format for a custom type, all that's required is to define a method with the signature String() string on the type.* 
+[(effective go)](https://golang.org/doc/effective_go.html#printing)
+
+```
+
+type people []string
+
+studyGroup := people{"Zeno", "John", "Al", "Jenny"}
+
+func (p people) String() string {
+	return fmt.Sprintf("- Custom people type print String [%s, %s, %s, %s]", p[0], p[1], p[2], p[3])
+}
+```

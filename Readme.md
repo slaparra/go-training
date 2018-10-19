@@ -19,6 +19,7 @@ Learning Golang, step by step:
     - [Interfaces](doc/08-oop.md#interfaces)
 - Working with files (to do)
 - Connecting to a database: mysql (to do)
+- Dependency management, [dep](https://golang.github.io/dep/) (todo)
 - Debug (to do)
     - https://github.com/derekparker/delve
     - [Jebrains, debugging containerized go app](https://blog.jetbrains.com/go/2018/04/30/debugging-containerized-go-applications)
@@ -27,6 +28,7 @@ Learning Golang, step by step:
 #### Advance
 - [Concurrency](doc/09-concurrency.md)
 - DDD in go (to do)
+    - [How Do You Structure Your Go Apps?, Kat Zien (>min.14)](https://www.youtube.com/watch?v=B5oQnECDJ8g&t=840)
 - Functional programming (to do)
     - [Functional Go post](https://medium.com/@geisonfgfg/functional-go-bc116f4c96a4)
     - [Functional Go video, @francesc](https://www.youtube.com/watch?v=ouyHp2nJl0I)    
@@ -50,7 +52,7 @@ Learning Golang, step by step:
 ### Videos
 - [Learn To Code - Golang Training (youtube playlist)](https://www.youtube.com/playlist?list=PLSak_q1UXfPrI6D67NF8ajfeJ6f7MH83S)
 - [Build web apps with Golang (youtube playlist)](https://www.youtube.com/playlist?list=PLSak_q1UXfPp2VwUQ4ZdUVJdMO6pfi5v_)
-- [How do you structure your Go apps?, Kat Zien](https://www.youtube.com/watch?v=VQym87o91f8)
+- [How do you structure your Go apps?, Kat Zien](https://www.youtube.com/watch?v=B5oQnECDJ8g)
 - [Go Programing, Derek Banas](https://www.youtube.com/watch?v=CF9S4QZuV30)
 - [Go best practices, Ashley McNamara + Brian Ketelsen](https://www.youtube.com/watch?v=MzTcsI6tn-0)
 - [Go-lang.cat-v.org: Talks](http://go-lang.cat-v.org/talks/)

@@ -68,6 +68,11 @@ go env
 # Format the code
 go fmt
 
+# Golint is a linter for Go source code.
+# Gofmt reformats Go source code, whereas golint prints out style mistakes.
+golint ./...
+
 ```
 
-[Oficial documentation: Golang wiki](https://github.com/golang/go/wiki)
+- [Oficial documentation: Golang wiki](https://github.com/golang/go/wiki)
+- [Golint](https://github.com/golang/lint)

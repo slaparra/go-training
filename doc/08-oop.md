@@ -225,7 +225,7 @@ func (object dog) bark() {
 	fmt.Printf("Only dogs like <%s> can bark\n", object.name)
 }
 ```
-[See the code example](../src/09-oop/04-interfaces/interface.go)  
+[See code examples](../src/09-oop/04-interfaces/)  
 [Another example from Todd McLeod training](../src/09-oop/04-interfaces/interface-todd-mcleod.go)
 
 

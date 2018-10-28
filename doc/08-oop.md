@@ -235,3 +235,17 @@ func (object dog) bark() {
 - [io Writer](https://golang.org/pkg/io/#Writer)
 - [net-http Handler](https://golang.org/pkg/net/http/#Handler)
 - [sort Interface](https://golang.org/pkg/sort/#Interface)
+
+#### Empty interface
+
+*The interface type that specifies zero methods is known as the empty interface:*
+
+`interface{}`
+
+*An empty interface may hold values of any type. (Every type implements at least zero methods.)*
+
+*Empty interfaces are used by code that handles values of unknown type. For example, `fmt.Print` takes any number of arguments of type interface{}.*
+ 
+ - [A tour of go](https://tour.golang.org/methods/14)
+ - [Flaviocopes.com](https://flaviocopes.com/go-empty-interface/#the-empty-interface)
+ - [Generics and go empty interface](http://www.minaandrawos.com/2017/12/29/empty-interface-go-programming-language/)

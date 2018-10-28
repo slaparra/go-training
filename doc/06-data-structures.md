@@ -1,9 +1,9 @@
 # Data structures
 
 In this readme, we can find documentation and examples about:
-- Array
-- Slice
-- Map
+- [Array](#array-definition-in-go)
+- [Slice](#slice-definition)
+- [Map](#map-definition-in-go)
 
 ## **Array definition in go**
 [(Todd McLeod)](https://docs.google.com/document/d/1nt5bYAAS5sTVF6tpLaFLDHQzo5BNkcr4b507fg3ZPwM/edit#)

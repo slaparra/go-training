@@ -19,6 +19,7 @@ go run main.go aPackage
 - [Net/http](https://golang.org/pkg/net/http/) 
 - [Enconding/json](https://godoc.org/encoding/json)  
 - [Runtime](https://golang.org/pkg/runtime/)
+- [Sort](https://golang.org/pkg/sort/)
 
 [Go package example files](../src/08-external-packages/)
 

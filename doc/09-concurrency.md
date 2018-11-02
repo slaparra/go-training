@@ -4,8 +4,16 @@
 
 - [Concurrency vs paralelism](#concurrency-vs-parallelism)
 - [Channels](#channels)
+- [Race conditions](#race-conditions)
+- [Mutex](#prevent-race-conditions-with-mutex)
 
-  
+
+## Goroutines
+
+##### What are Goroutines?
+*Goroutines are functions or methods that run concurrently with other functions or methods. Goroutines can be thought of as light weight threads. The cost of creating a Goroutine is tiny when compared to a thread. Hence its common for Go applications to have thousands of Goroutines running concurrently* [(golangbot)](https://golangbot.com/goroutines/).  
+
+[The Way to Go. Chapter 14: Goroutines and channels (pdf)](../resources/concurrency_goroutines_channles.pdf)  
 ```
 import (
 	"fmt"
@@ -40,19 +48,16 @@ func main() {
 
 With a **goroutine** we return immediately to the next line and don't wait for the function to complete.
 
-##### WaitGroup
+## Concurrency vs. parallelism
 
-*A WaitGroup waits for a collection of goroutines to finish. The main goroutine calls Add to set the number of goroutines to wait for. Then each of the goroutines runs and calls Done when finished.*  
+![Picture](https://birdchan.files.wordpress.com/2017/05/concurrency_vs_parallelism.png)  
+<sub>(Image: [brianchan.us](https://brianchan.us/2017/05/27/concurrency-vs-parallelism/))</sub>
 
-- [WaitGroup sync package](07-packages.md#waitgroup) 
-
-##### Concurrency vs. parallelism
-
-![Picture](https://birdchan.files.wordpress.com/2017/05/concurrency_vs_parallelism.png)
 - Rob Pike: Concurrency is not parallelism [(video)](https://www.youtube.com/watch?v=cN_DpYBzKso)
 
-### Channels
-Channels are a typed conduit through which you can send and receive values with the channel operator, <-.
+## Channels
+*Channels are a typed conduit through which you can send and receive values with the channel operator, <-.* ([golangbootcamp](http://www.golangbootcamp.com/book/concurrency))  
+*Go use channels to synchronize goroutines*
 ```
 ch <- v    // Send v to channel ch.
 v := <-ch  // Receive from ch, and
@@ -71,16 +76,131 @@ A sender can close a channel to indicate that no more values will be sent. Recei
 //from: https://tour.golang.org/concurrency/4
 v, ok := <-ch
 ```
-[Close example](../src/10-concurrency/range-close.go)  
+[Close channel example](../src/10-concurrency/range-close.go)  
 
 **ok** is false if there are no more values to receive and the channel is closed.  
 **Note**: Only the sender should close a channel, never the receiver. Sending on a closed channel will cause a panic.
 
+## Race conditions
 
-#### Links
+*Race conditions are among the most insidious and elusive programming errors. They typically cause erratic and mysterious failures, often long after the code has been deployed to production. While Go's concurrency mechanisms make it easy to write clean concurrent code, they don't prevent race conditions. Care, diligence, and testing are required. And tools can help.*
+<small>[(Golang blog)](https://blog.golang.org/race-detector)</small>  
+
+![img](https://golangbot.com/content/images/2017/08/cs5.png)  
+<sub>(Image: [golangbot.com](https://golangbot.com/mutex/))</sub>
+
+- [Race condition detector](https://golang.org/doc/articles/race_detector.html)
+
+```
+$ go test -race mypkg    // to test the package
+$ go run -race mysrc.go  // to run the source file
+$ go build -race mycmd   // to build the command
+$ go install -race mypkg // to install the package
+```
+
+*Data races are among the most common and hardest to debug types of bugs in concurrent systems. A data race occurs when two goroutines access the same variable concurrently and at least one of the accesses is a write. See the The Go Memory Model for details.*
+
+```
+func main() {
+	fmt.Println(getNumber())
+}
+
+func getNumber() int {
+	var i int
+	go func() {
+		i = 5
+	}()
+
+	return i
+}
+```
+
+*It’s so easy to detect a potential race condition in Go, that I can’t think of any reason not to include the `-race` flag when building your Go application. The benefits far outweigh the costs (if there even are any) and can contribute to a much more robust application.*
+
+#### WaitGroup
+
+*A WaitGroup waits for a collection of goroutines to finish. The main goroutine calls Add to set the number of goroutines to wait for. Then each of the goroutines runs and calls Done when finished.*  
+
+```
+import (
+    "sync"
+)
+
+var wg sync.WaitGroup
+
+func main() {
+    wg.Add(1)   // (add 1 delta to wait the go routine execution) 
+                // If we remove WaitGroup feature, the application will end without finish foo execution
+    go foo()    // (because go routine)
+    wg.Wait()   // It will wait until wg.Done() is executed once
+}
+
+func foo() {
+    for i := 0; i < 1000; i++ {
+        ...
+    }
+    wg.Done()   //reduce the delta added before
+}
+```
+
+- [WaitGroup sync package](07-packages.md#pkg-sync-waitgroup) 
+
+## Prevent race conditions
+
+### 1. with mutex
+
+*In computer science, **mu**tual **ex**clusion is a property of concurrency control, which is instituted for the purpose of preventing race conditions; it is the requirement that one thread of execution never enter its critical section at the same time that another concurrent thread of execution enters its own critical section.* ([wiki])
+
+[wiki]: https://en.wikipedia.org/wiki/Mutual_exclusion 
+
+- [**GolangBot, how to solve race conditions using mutexes and channels**](https://golangbot.com/mutex/)
+- [Data race and how to fix it](https://www.sohamkamani.com/blog/2018/02/18/golang-data-race-and-how-to-fix-it/)
+- [Golang pkg Mutex](https://golang.org/pkg/sync/#Mutex)
+- [Use a sync.Mutex or a channel?](https://github.com/golang/go/wiki/MutexOrChannel)
+- [A Tour of Go, mutex](https://tour.golang.org/concurrency/9)
+
+```
+counter := 0
+
+const gs = 100
+var wg sync.WaitGroup
+wg.Add(gs)
+
+var mu sync.Mutex
+
+for i := 0; i < gs; i++ {
+    go func() {
+        mu.Lock()           //lock the execution for another go routine  
+        v := counter        //until unlock is executed
+        runtime.Gosched()   // *
+        v++
+        counter = v
+        mu.Unlock()
+        wg.Done()
+    }()
+    fmt.Println("Goroutines:", runtime.NumGoroutine())
+}
+wg.Wait()
+
+```
+
+[* runtime.Gosched, stackoverflow](https://stackoverflow.com/questions/13107958/what-exactly-does-runtime-gosched-do)  
+
+*When execution context in one goroutine reaches Gosched call, the scheduler is instructed to switch the execution to another goroutine.*  
+
+### 2. with atomic counters
+*Package atomic provides low-level atomic memory primitives useful for implementing synchronization algorithms.*
+
+- [GoByExample.com](https://gobyexample.com/atomic-counters)
+- [Jacek Wysocki DevLog](http://wysocki.in/golang-concurrency-data-races/#example-2-atomic-counters:59379cce1c625dd15951f4c54912cbba)
+- [Golang.org](https://golang.org/pkg/sync/atomic/)
+
+## Links
 
 - [Resources for learning about concurrency in Go](https://github.com/golang/go/wiki/LearnConcurrency)
-- [**Concurrency & goroutines, Golang Book**](https://www.golang-book.com/books/intro/10)  
+- [**Concurrency & goroutines, Golang Book**](https://www.golang-book.com/books/intro/10)
+- [Multithreading in go, Cory Finger](https://pragmacoders.com/multithreading-go-tutorial/)
+- [Learning Go’s Concurrency Through Illustrations](https://medium.com/@trevor4e/learning-gos-concurrency-through-illustrations-8c4aff603b3)  
 - [Concurrency & channels, GolangBootCamp](http://www.golangbootcamp.com/book/concurrency)
 - [Step-by-step guide to concurrency](https://yourbasic.org/golang/concurrent-programming/)
 - [Go routines explained](https://yourbasic.org/golang/goroutines-explained/) 

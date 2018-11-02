@@ -4,6 +4,10 @@ import (
 	"fmt"
 )
 
+type potentialAdult interface {
+	isOldEnough() bool
+}
+
 type person struct {
 	First string
 	Last  string
@@ -13,6 +17,10 @@ type person struct {
 type doubleZero struct {
 	person        //with this embedded we inherit all the values of person in doubleZero
 	LicenseToKill bool
+}
+
+func (p *person) isOldEnough() bool {
+	return p.Age > 18
 }
 
 func main() {
@@ -29,11 +37,22 @@ func main() {
 		person: person{
 			First: "Miss",
 			Last:  "MoneyPenny",
-			Age:   19,
+			Age:   16,
 		},
 		LicenseToKill: false,
 	}
 
-	fmt.Println(p1.First, p1.Last, p1.Age, p1.LicenseToKill)
-	fmt.Println(p2.First, p2.Last, p2.Age, p2.LicenseToKill)
+	fmt.Println(p1)
+	fmt.Println(p2)
+
+	printIsAdult(&p1)
+	printIsAdult(&p2)
+}
+
+func (d doubleZero) String() string {
+	return fmt.Sprintf("First: %s, last: %s, age: %d, licenseToKill: %t	", d.First, d.Last, d.Age, d.LicenseToKill)
+}
+
+func printIsAdult(p potentialAdult) {
+	fmt.Println(p.isOldEnough())
 }

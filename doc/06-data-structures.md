@@ -116,11 +116,12 @@ They are called dictionaries (key/value storage)
 - *Second maps are not sequential. We have x[1], and with an array that would imply there must be an x[0], but maps don't have this requirement.*
 
 To test for presence in the map without worrying about the actual value, you can use the blank identifier (_) in place of the usual variable for the value.
+
 ```
 _, present := timeZone[tz]
 ```
 
-**Concurrency**
-  
+##### Concurrency
+
 [Maps are not safe for concurrent use](https://golang.org/doc/faq#atomic_maps): it's not defined what happens when you read and write to them simultaneously. 
 If you need to read from and write to a map from concurrently executing goroutines, the accesses must be mediated by some kind of synchronization mechanism. 

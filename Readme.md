@@ -2,38 +2,38 @@
 
 Learning Golang, step by step: 
 
+![img](resources/gopher_studing_go.jpeg)  
+<sub>(Image: [Trevor Forrey](https://medium.com/@trevor4e/learning-gos-concurrency-through-illustrations-8c4aff603b3))</sub>
+
 #### Beginner
-- [Get started](doc/01-get-started.md)
-- [Fundamentals](doc/02-fundamentals.md)
-- [Address & operators](doc/03-address-operators.md)
-- [Control structures](doc/04-control-structures.md)
-- [Functions](doc/05-functions.md)
-- [Data structures](doc/06-data-structures.md)
+- [x] [Get started](doc/01-get-started.md)
+- [x] [Fundamentals](doc/02-fundamentals.md)
+- [x] [Address & operators](doc/03-address-operators.md)
+- [x] [Control structures](doc/04-control-structures.md)
+- [x] [Functions](doc/05-functions.md)
+- [x] [Data structures](doc/06-data-structures.md)
 
 #### Intermediate
-- [Go packages](doc/07-packages.md)
-- [Go oriented programming, oop in go](doc/08-oop.md)
+- [x] [Go packages](doc/07-packages.md)
+- [x] [Go oriented programming, oop in go](doc/08-oop.md)
     - [Structs](doc/08-oop.md#structs)
     - [Objects](doc/08-oop.md#objects)
     - ["Inheritance"](doc/08-oop.md#inheritance-in-go)
     - [Interfaces](doc/08-oop.md#interfaces)
-- Working with files (to do)
-- Connecting to a database: mysql (to do)
-- Dependency management, [dep](https://golang.github.io/dep/) (todo)
-- Debug (to do)
-    - https://github.com/derekparker/delve
-    - [Jebrains, debugging containerized go app](https://blog.jetbrains.com/go/2018/04/30/debugging-containerized-go-applications)
-
+- [ ] Testing  
+- [ ] Working with files
+- [ ] Connecting to a database: mysql
+- [ ] Dependency management, [dep](https://golang.github.io/dep/)
 
 #### Advance
-- [Concurrency](doc/09-concurrency.md)
-- DDD in go (to do)
+- [x] [Concurrency, channels, race conditions, mutex...](doc/09-concurrency.md#concurrency)
+- [ ] DDD in go
     - [How Do You Structure Your Go Apps?, Kat Zien (>min.14)](https://www.youtube.com/watch?v=B5oQnECDJ8g&t=840)
-- Functional programming (to do)
+- [ ] Functional programming
     - [Functional Go post](https://medium.com/@geisonfgfg/functional-go-bc116f4c96a4)
     - [Functional Go video, @francesc](https://www.youtube.com/watch?v=ouyHp2nJl0I)    
 
-## More interesting links
+## Other interesting links
 
 ### Documentation
 
@@ -74,16 +74,15 @@ Learning Golang, step by step:
 ** https://github.com/dariubs/GoBooks  
 
 ### Posts, blogs & forums 
+- [**Golang wiki**](https://github.com/golang/go/wiki)
 - [Go Programing tutorial, Derek Banas](http://www.newthinktank.com/2015/02/go-programming-tutorial/)
 - [Is go object oriented?](https://flaviocopes.com/golang-is-go-object-oriented/)
 - [Go build vs go install](https://pocketgophers.com/go-install-vs-go-build/)
-- [Concurrency](https://medium.com/@trevor4e/learning-gos-concurrency-through-illustrations-8c4aff603b3)
 - [Contribute your time, expertise to Go](https://medium.com/@IndianGuru/contribute-your-time-expertise-to-go-3b61760fabbc)
 - [All posts ArdanLabs blog](https://www.ardanlabs.com/all-posts/)
 - [Dave Cheney blog](https://dave.cheney.net/)
     - [Resources for new go programmers](https://dave.cheney.net/resources-for-new-go-programmers)
 - [Google golang-dev forum](https://groups.google.com/forum/m/#!forum/golang-dev)
-- [Golang wiki](https://github.com/golang/go/wiki)
 - [Golang code](https://golangcode.com/)
 - [Domain driven design and Go](https://www.reddit.com/r/golang/comments/6ugzo2/domain_driven_design_and_go/)
 
@@ -112,6 +111,6 @@ Learning Golang, step by step:
 - [Github ArdanLabs: Go-training](https://github.com/ardanlabs/gotraining/tree/master/topics)
 
 ## Connect
-Do you want to recommend some topic about Go?
+Do you want to recommend me some topic about Golang?
 - [Twitter](https://www.twitter.com/santiagolaparra)
 - [LinkedIn](https://www.linkedin.com/in/santiago-laparra-muñoz-11152128) 

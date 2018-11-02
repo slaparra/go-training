@@ -5,15 +5,17 @@
 - [Inheritance](#inheritance-in-go)
 - [Interfaces](#interfaces)
 
-### Composition
-- [Composition Instead of Inheritance - OOP in Go](https://golangbot.com/inheritance/)
-- [Composition with go](https://www.ardanlabs.com/blog/2015/09/composition-with-go.html)
-- [Notes about opp in go by Todd McLeod](https://github.com/GoesToEleven/GolangTraining/blob/master/20_struct/00_object-oriented/notes.txt)
 
 ## Is go object oriented?
 
 - [Is go object oriented? (Flavio Copes)](https://flaviocopes.com/golang-is-go-object-oriented/)
 - [Is golang an object oriented language? (Golang.org)](https://golang.org/doc/faq#Is_Go_an_object-oriented_language)
+- [Notes about opp in go by Todd McLeod](https://github.com/GoesToEleven/GolangTraining/blob/master/20_struct/00_object-oriented/notes.txt)
+
+### Composition
+
+- [Composition Instead of Inheritance - OOP in Go](https://golangbot.com/inheritance/)
+- [Composition with go](https://www.ardanlabs.com/blog/2015/09/composition-with-go.html)
 
 ## Structs
 
@@ -152,9 +154,15 @@ func main() {
 
 - [Promoted code example file](../src/09-oop/02-promoted-inheritance/)
 
+#### Polymorphism
+
+- [**OOPs in Go, William Kennedy (video)**](https://www.youtube.com/watch?v=gRpUfjTwSOo)
+- [Polymorphism example, William Kennedy](../src/09-oop/02-promoted-inheritance/)
+
+
 ## Interfaces
 
-*Interfaces make the code more flexible, scalable and it’s a way to achieve polymorphism in Golang.*
+*Interfaces make the code more flexible, scalable and **it’s a way to achieve polymorphism in Golang**.*
 
 *Prominent feature of Golang is that interfaces are implemented implicitly. Programmer doesn’t have to specify that type T implements interface I. That work is done by the Go compiler (never send a human to do a machine’s job).*
 

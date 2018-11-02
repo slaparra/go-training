@@ -20,6 +20,9 @@ go run main.go aPackage
 - [Enconding/json](https://godoc.org/encoding/json)  
 - [Runtime](https://golang.org/pkg/runtime/)
 - [Sort](https://golang.org/pkg/sort/)
+- [Sync](https://golang.org/pkg/sync/)
+- [Time](https://golang.org/pkg/time/)
+- [Math/rand](https://golang.org/pkg/math/rand/)
 
 [Go package example files](../src/08-external-packages/)
 
@@ -43,7 +46,7 @@ By default, Go programs run with GOMAXPROCS set to the number of cores available
 
 So starting from Go 1.5, the default value should be the number of cores.
 
-#### WaitGroup
+#### Pkg sync, WaitGroup
 *A WaitGroup waits for a collection of goroutines to finish. The main goroutine calls Add to set the number of goroutines to wait for. Then each of the goroutines runs and calls Done when finished. At the same time, Wait can be used to block until all goroutines have finished.*
 
 ```
@@ -70,5 +73,26 @@ func foo() {
 
 ...
 ```
-- [wait-group.go, Todd McLeod example](../src/02-package/wait-group.go)
+- [wait-group.go, Todd McLeod example](../src/08-external-packages/wait-group.go)
 - [golang.org/pkg WaitGroup example](https://golang.org/pkg/sync/#example_WaitGroup)
+
+#### Pkg Time, sleep
+
+*Sleep pauses the current goroutine for at least the duration d. A negative or zero duration causes Sleep to return immediately.*
+
+```
+package main
+
+import (
+	"fmt"
+	"time"
+)
+
+func main() {
+	for i := 0; i < 45; i++ {
+		fmt.Println("Foo:", i)
+		time.Sleep(3 * time.Second)
+	}
+}	
+```
+

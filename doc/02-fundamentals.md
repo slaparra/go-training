@@ -74,6 +74,7 @@ Definition:
 - The scope of a type identifier declared inside a function begins at the identifier in the TypeSpec and ends at the end of the innermost containing block.
 
 ![Picture](https://www.golang-book.com/public/img/web/scopes.0.png)  
+<sub>(Image: [golang-book.com](https://www.golang-book.com/books/intro))</sub>
 
 Things defined in the function scope have access to anything above them (file, package, universe), but the reverse is not true. A variable defined in a function is only accessible within that function or blocks defined inside of it.
 

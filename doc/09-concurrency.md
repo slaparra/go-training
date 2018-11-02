@@ -1,10 +1,11 @@
 # Concurrency
 
-**This [page] links to resources for learning about concurrency in Go. The items are presented in order, from beginner material to advanced topics.**
+*Making progress on more than one task simultaneously is known as concurrency. Go has rich support for concurrency using goroutines and channels.*
 
-[page]:https://github.com/golang/go/wiki/LearnConcurrency
+- [Concurrency vs paralelism](#concurrency-vs-parallelism)
+- [Channels](#channels)
 
-*Making progress on more than one task simultaneously is known as concurrency. Go has rich support for concurrency using goroutines and channels.*  
+  
 ```
 import (
 	"fmt"
@@ -19,7 +20,7 @@ func say(s string) {
 }
 
 func main() {
-	go say("world")
+	go say("world") //goroutine
 	say("hello")
 }
 /*
@@ -37,12 +38,18 @@ func main() {
 */
 ```
 
-With a goroutine we return immediately to the next line and don't wait for the function to complete.
+With a **goroutine** we return immediately to the next line and don't wait for the function to complete.
 
+##### WaitGroup
+
+*A WaitGroup waits for a collection of goroutines to finish. The main goroutine calls Add to set the number of goroutines to wait for. Then each of the goroutines runs and calls Done when finished.*  
+
+- [WaitGroup sync package](07-packages.md#waitgroup) 
 
 ##### Concurrency vs. parallelism
 
 ![Picture](https://birdchan.files.wordpress.com/2017/05/concurrency_vs_parallelism.png)
+- Rob Pike: Concurrency is not parallelism [(video)](https://www.youtube.com/watch?v=cN_DpYBzKso)
 
 ### Channels
 Channels are a typed conduit through which you can send and receive values with the channel operator, <-.
@@ -72,6 +79,7 @@ v, ok := <-ch
 
 #### Links
 
+- [Resources for learning about concurrency in Go](https://github.com/golang/go/wiki/LearnConcurrency)
 - [**Concurrency & goroutines, Golang Book**](https://www.golang-book.com/books/intro/10)  
 - [Concurrency & channels, GolangBootCamp](http://www.golangbootcamp.com/book/concurrency)
 - [Step-by-step guide to concurrency](https://yourbasic.org/golang/concurrent-programming/)

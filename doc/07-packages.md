@@ -42,3 +42,33 @@ As Go 1.5 Release Notes says
 By default, Go programs run with GOMAXPROCS set to the number of cores available; in prior releases it defaulted to 1.
 
 So starting from Go 1.5, the default value should be the number of cores.
+
+#### WaitGroup
+*A WaitGroup waits for a collection of goroutines to finish. The main goroutine calls Add to set the number of goroutines to wait for. Then each of the goroutines runs and calls Done when finished. At the same time, Wait can be used to block until all goroutines have finished.*
+
+```
+import (
+    "fmt"
+    "sync"
+)
+
+var wg sync.WaitGroup
+
+func main() {
+    wg.Add(2)   // if we remove WaitGroup feature, the application will end without finish foo & bar execution
+    go foo()    // (because go routine)
+    go bar()
+    wg.Wait()   // It will wait until wg.Done() is executed twice
+}
+
+func foo() {
+    for i := 0; i < 45; i++ {
+        fmt.Println("Foo:", i)
+    }
+    wg.Done()
+}
+
+...
+```
+- [wait-group.go, Todd McLeod example](../src/02-package/wait-group.go)
+- [golang.org/pkg WaitGroup example](https://golang.org/pkg/sync/#example_WaitGroup)

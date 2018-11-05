@@ -16,20 +16,20 @@
 [The Way to Go. Chapter 14: Goroutines and channels (pdf)](../resources/concurrency_goroutines_channles.pdf)  
 ```
 import (
-	"fmt"
-	"time"
+    "fmt"
+    "time"
 )
 
 func say(s string) {
-	for i := 0; i < 5; i++ {
-		time.Sleep(100 * time.Millisecond)
-		fmt.Println(s)
-	}
+    for i := 0; i < 5; i++ {
+        time.Sleep(100 * time.Millisecond)
+        fmt.Println(s)
+    }
 }
 
 func main() {
-	go say("world") //goroutine
-	say("hello")
+    go say("world") //goroutine
+    say("hello")
 }
 /*
     Will print:
@@ -56,16 +56,42 @@ With a **goroutine** we return immediately to the next line and don't wait for t
 - Rob Pike: Concurrency is not parallelism [(video)](https://www.youtube.com/watch?v=cN_DpYBzKso)
 
 ## Channels
-*Channels are a typed conduit through which you can send and receive values with the channel operator, <-.* ([golangbootcamp](http://www.golangbootcamp.com/book/concurrency))  
+*Channels are a typed conduit through which you can send and receive values with the channel operator, <-.* 
+- [Golangbootcamp](http://www.golangbootcamp.com/book/concurrency)
+- [Effective go, channles](https://golang.org/doc/effective_go.html#channels)
+  
 *Go use channels to synchronize goroutines*
 ```
 ch <- v    // Send v to channel ch.
 v := <-ch  // Receive from ch, and
            // assign value to v.
 ```
-*Channels provide a way for two goroutines to communicate with one another and synchronize their execution:*
-[Channels example](../src/10-concurrency/channels.go)           
+*Channels provide a way for two goroutines to communicate with one another and synchronize their execution*. Code examples:  
+- [Communicate goroutines through channels](../src/11-channels/channels.go)           
+- [Using a channel to wait the anonymous function execution](../src/11-channels/channels2.go)           
 
+```
+func main() {
+    c := make(chan int)
+
+    go func() {
+        for i := 0; i < 10; i++ {
+            c <- i  // the code here stops until the next go func  
+                    // gets the "i" value
+        }
+    }()
+
+    go func() {
+        for {
+            fmt.Println(<-c)    //when println gets the value, then the previous anon. func will loop to the next iteration
+        }
+    }()
+
+    time.Sleep(time.Second)
+}
+
+// example from Todd McLeod training
+```
 Go has a special statement called select which works like a switch but for channels:
 [select example](../src/10-concurrency/select.go)           
 
@@ -102,16 +128,16 @@ $ go install -race mypkg // to install the package
 
 ```
 func main() {
-	fmt.Println(getNumber())
+    fmt.Println(getNumber())
 }
 
 func getNumber() int {
-	var i int
-	go func() {
-		i = 5
-	}()
+    var i int
+    go func() {
+        i = 5
+    }()
 
-	return i
+    return i
 }
 ```
 

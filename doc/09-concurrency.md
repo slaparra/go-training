@@ -95,7 +95,7 @@ func main() {
 Go has a special statement called select which works like a switch but for channels:
 [select example](../src/10-concurrency/select.go)           
 
-##### Close a channel
+#### Close a channel
 A sender can close a channel to indicate that no more values will be sent. Receivers can test whether a channel has been closed by assigning a second parameter to the receive expression: after
 
 ```
@@ -106,6 +106,54 @@ v, ok := <-ch
 
 **ok** is false if there are no more values to receive and the channel is closed.  
 **Note**: Only the sender should close a channel, never the receiver. Sending on a closed channel will cause a panic.
+
+#### Channel as an function argument
+
+```
+func main() {
+...
+    go googleIt(respond, query)
+...
+}
+
+func googleIt(respond chan<- string, query string) {
+    ...
+
+    respond <- "A Google Response"
+}
+
+```
+- `chan` means it can take input data or it can pull output data
+- `chan<-` means it can only be used to input data
+- `<-chan means it can only be used to pull output data
+
+#### Buffered channels
+*Buffered channels work similar to unbuffered channels, but with one catch — we can send multiple pieces of data to the channel before needing another go routine to read from it.*  
+<sub>[@trevor4e](https://medium.com/@trevor4e/learning-gos-concurrency-through-illustrations-8c4aff603b3)</sub>
+```
+bufferedChan := make(chan string, 3)
+go func() {
+ bufferedChan <- "first"
+ fmt.Println("Sent 1st")
+ bufferedChan <- "second"
+ fmt.Println("Sent 2nd")
+ bufferedChan <- "third"
+ fmt.Println("Sent 3rd")
+}()
+
+<-time.After(time.Second * 1)
+
+go func() {
+ firstRead := <- bufferedChan
+ fmt.Println("Receiving..")
+ fmt.Println(firstRead)
+ secondRead := <- bufferedChan
+ fmt.Println(secondRead)
+ thirdRead := <- bufferedChan
+ fmt.Println(thirdRead)
+}()
+```
+- [Channel examples](../src/11-channels)
 
 ## Race conditions
 

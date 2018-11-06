@@ -22,6 +22,8 @@ A Closure is a technique for implementing lexically scoped name binding
 in a language with first-class functions. Operationally, a closure is a 
 record storing a function together with an environment. (wiki)
 
+![img](../resources/anonymous-gopher.png)  
+<sub>(Image: [Trevor Forrey](https://medium.com/@trevor4e/learning-gos-concurrency-through-illustrations-8c4aff603b3))</sub>
 
 ```
 func main() {

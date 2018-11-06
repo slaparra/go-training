@@ -29,7 +29,7 @@ func ponger(c chan string) {
 }
 
 func main() {
-	var c chan string = make(chan string)
+	var c chan string = make(chan string) //unbuffered channel
 
 	go pinger(c)
 	go ponger(c)

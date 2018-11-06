@@ -96,3 +96,6 @@ func main() {
 }	
 ```
 
+## Links
+- [Parsing json in golang](https://www.sohamkamani.com/blog/2017/10/18/parsing-json-in-golang/)
+- [Json, GoByExample](https://gobyexample.com/json)

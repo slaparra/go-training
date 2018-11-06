@@ -1,28 +1,19 @@
 package main
 
-import "sync"
-
 func main() {
-	var wg sync.WaitGroup
-	wg.Add(2)
-	myChannel := make(chan string, 4)
 	mySlice := []string{"hi", "how", "are", "you"}
+	myChannel := make(chan string, len(mySlice)) //buffered with 4
+
 	go func() {
 		for _, item := range mySlice {
 			myChannel <- item
 		}
 		close(myChannel)
-		wg.Done()
 	}()
 
-	go func() {
-		for myString := range myChannel {
-			println(myString)
-		}
-		wg.Done()
-	}()
-
-	wg.Wait()
+	for myString := range myChannel {
+		println(myString)
+	}
 }
 
 /*

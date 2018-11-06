@@ -21,7 +21,7 @@ Learning Golang, step by step:
     - ["Inheritance"](doc/08-oop.md#inheritance-in-go)
     - [Interfaces](doc/08-oop.md#interfaces)
 - [ ] Testing  
-- [ ] Working with files
+- [ ] [Working with files](doc/10-working-with-files.md)
 - [ ] Connecting to a database: mysql
 - [ ] Dependency management, [dep](https://golang.github.io/dep/)
 

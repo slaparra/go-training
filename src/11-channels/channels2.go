@@ -10,7 +10,10 @@ func main() {
 	a := 1
 	b := 2
 
-	operationDone := make(chan bool) //Make a channel that consumes and outputs bool values.
+	operationDone := make(chan bool)
+	//unbuffered channel
+	//Make a channel that consumes and outputs bool values.
+
 	go func() {
 		b = a * b
 

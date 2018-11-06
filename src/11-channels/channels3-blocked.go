@@ -10,7 +10,7 @@ func main() {
 	var wg sync.WaitGroup
 	wg.Add(2)
 
-	ch := make(chan string)
+	ch := make(chan string) //unbuffered channel
 	go func() {
 		ch <- "hi"
 		ch <- "hi2"

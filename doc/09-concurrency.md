@@ -5,7 +5,7 @@
 - [Concurrency vs paralelism](#concurrency-vs-parallelism)
 - [Channels](#channels)
 - [Race conditions](#race-conditions)
-- [Mutex](#prevent-race-conditions-with-mutex)
+- [Mutex](#1-with-mutex)
 
 
 ## Goroutines

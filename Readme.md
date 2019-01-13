@@ -24,7 +24,14 @@ Learning Golang, step by step:
 - [ ] [Working with files](doc/10-working-with-files.md)
 - [ ] Persistence with go, working with a database
     - https://www.alexedwards.net/blog/organising-database-access
-- [ ] Dependency management, [dep](https://golang.github.io/dep/)
+- [ ] Package management
+    - [dep], [glide]
+    - Go Modules
+        - https://roberto.selbach.ca/intro-to-go-modules/
+        - https://github.com/golang/go/wiki/Modules 
+
+[dep]: (https://golang.github.io/dep/)
+[glide]: (https://glide.sh/)
 
 #### Advance
 - [x] [Concurrency, channels, race conditions, mutex...](doc/09-concurrency.md#concurrency)
@@ -59,8 +66,12 @@ Learning Golang, step by step:
 - [Go best practices, Ashley McNamara + Brian Ketelsen](https://www.youtube.com/watch?v=MzTcsI6tn-0)
 - [Go-lang.cat-v.org: Talks](http://go-lang.cat-v.org/talks/)
 - [Steve Francia talk](https://www.youtube.com/watch?v=sX8r6zATHGU)
-- [Go interfaces (Francesc Campoy)](https://www.youtube.com/watch?v=F4wUrj6pmSI)
-- [Functional Go @francesc](https://www.youtube.com/watch?v=ouyHp2nJl0I)
+
+##### Francesc Campoy videos
+- [**The Robustness of Go**](https://www.youtube.com/watch?v=40d26ZGfhR8)
+- [Go interfaces](https://www.youtube.com/watch?v=F4wUrj6pmSI)
+- [Functional Go](https://www.youtube.com/watch?v=ouyHp2nJl0I)
+- [Youtube video channel](https://www.youtube.com/channel/UC_BzFbxG2za3bp5NRRRXJSw)
 
 ### Free books
 - [Book, an introduction to programming in go](https://www.golang-book.com/books/intro)

@@ -22,13 +22,15 @@ Learning Golang, step by step:
     - [Interfaces](doc/08-oop.md#interfaces)
 - [ ] Testing  
 - [ ] [Working with files](doc/10-working-with-files.md)
-- [ ] Connecting to a database: mysql
+- [ ] Persistence with go, working with a database
+    - https://www.alexedwards.net/blog/organising-database-access
 - [ ] Dependency management, [dep](https://golang.github.io/dep/)
 
 #### Advance
 - [x] [Concurrency, channels, race conditions, mutex...](doc/09-concurrency.md#concurrency)
 - [ ] DDD in go
     - [How Do You Structure Your Go Apps?, Kat Zien (>min.14)](https://www.youtube.com/watch?v=B5oQnECDJ8g&t=840)
+    - [GoDDD, github, Marcus Olsson](https://github.com/marcusolsson/goddd)
 - [ ] Functional programming
     - [Functional Go post](https://medium.com/@geisonfgfg/functional-go-bc116f4c96a4)
     - [Functional Go video, @francesc](https://www.youtube.com/watch?v=ouyHp2nJl0I)    
@@ -109,6 +111,11 @@ Learning Golang, step by step:
 
 ### Repos, examples
 - [Github ArdanLabs: Go-training](https://github.com/ardanlabs/gotraining/tree/master/topics)
+
+### Social network
+
+##### Twitter
+- [Friends of Go Tech (spanish)](https://twitter.com/FriendsofGOTech)
 
 ## Connect
 Do you want to recommend me some topic about Golang?

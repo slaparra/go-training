@@ -72,6 +72,8 @@ go fmt
 # Gofmt reformats Go source code, whereas golint prints out style mistakes.
 golint ./...
 
+# Show race conditions info
+go run --race gofile.go
 ```
 
 - [Oficial documentation: Golang wiki](https://github.com/golang/go/wiki)

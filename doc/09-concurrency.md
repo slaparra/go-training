@@ -67,8 +67,9 @@ v := <-ch  // Receive from ch, and
            // assign value to v.
 ```
 *Channels provide a way for two goroutines to communicate with one another and synchronize their execution*. Code examples:  
-- [Communicate goroutines through channels](../src/11-channels/channels.go)           
+- [Communicate goroutines through channels](../src/11-channels/channels1.go)           
 - [Using a channel to wait the anonymous function execution](../src/11-channels/channels2.go)           
+- [All examples...](../src/11-channels)           
 
 ```
 func main() {
@@ -94,6 +95,9 @@ func main() {
 ```
 Go has a special statement called select which works like a switch but for channels:
 [select example](../src/10-concurrency/select.go)           
+
+#### Channel types
+- https://golang.org/ref/spec#Channel_types
 
 #### Close a channel
 A sender can close a channel to indicate that no more values will be sent. Receivers can test whether a channel has been closed by assigning a second parameter to the receive expression: after
@@ -280,6 +284,10 @@ wg.Wait()
 - [Go routines explained](https://yourbasic.org/golang/goroutines-explained/) 
 - [GoRoutines, A Tour of go](https://tour.golang.org/concurrency/1)
 - [Graceful upgrades in go](https://blog.cloudflare.com/graceful-upgrades-in-go/)
+- Fan-in / Fan-out:
+    - [Golang blog](https://blog.golang.org/pipelines#TOC_4.)
+    - [Concurrency patterns: fan-in/fan-out, futures](https://medium.com/@thejasbabu/concurrency-patterns-golang-5c5e1bcd0833)
+    - [Fan-in/out messaging](http://tmrts.com/blog/fan-in--fan-out-messaging-patterns/)
 
 #### Vídeos  
 

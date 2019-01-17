@@ -13,15 +13,17 @@ Learning Golang, step by step:
 - [x] [Functions](doc/05-functions.md)
 - [x] [Data structures](doc/06-data-structures.md)
 
-#### Intermediate
+#### Intermediate beginner
 - [x] [Go packages](doc/07-packages.md)
 - [x] [Go oriented programming, oop in go](doc/08-oop.md)
     - [Structs](doc/08-oop.md#structs)
     - [Objects](doc/08-oop.md#objects)
     - ["Inheritance"](doc/08-oop.md#inheritance-in-go)
     - [Interfaces](doc/08-oop.md#interfaces)
+- [ ] [Error handling](doc/10-error-handling.md)  
 - [ ] Testing  
-- [ ] [Working with files](doc/10-working-with-files.md)
+    - https://www.golang-book.com/books/intro/12
+- [ ] [Working with files](doc/x-working-with-files.md)
 - [ ] Persistence with go, working with a database
     - https://www.alexedwards.net/blog/organising-database-access
 - [ ] Package management
@@ -33,14 +35,17 @@ Learning Golang, step by step:
 [dep]: (https://golang.github.io/dep/)
 [glide]: (https://glide.sh/)
 
-#### Advance
+#### Advance beginner
 - [x] [Concurrency, channels, race conditions, mutex...](doc/09-concurrency.md#concurrency)
+- [ ] Docker
+    - [Docker dev environment with Go Modules and live code reloading](https://threedots.tech/post/go-docker-dev-environment-with-go-modules-and-live-code-reloading/)
 - [ ] DDD in go
     - [How Do You Structure Your Go Apps?, Kat Zien (>min.14)](https://www.youtube.com/watch?v=B5oQnECDJ8g&t=840)
     - [GoDDD, github, Marcus Olsson](https://github.com/marcusolsson/goddd)
 - [ ] Functional programming
     - [Functional Go post](https://medium.com/@geisonfgfg/functional-go-bc116f4c96a4)
     - [Functional Go video, @francesc](https://www.youtube.com/watch?v=ouyHp2nJl0I)    
+
 
 ## Other interesting links
 
@@ -66,12 +71,17 @@ Learning Golang, step by step:
 - [Go best practices, Ashley McNamara + Brian Ketelsen](https://www.youtube.com/watch?v=MzTcsI6tn-0)
 - [Go-lang.cat-v.org: Talks](http://go-lang.cat-v.org/talks/)
 - [Steve Francia talk](https://www.youtube.com/watch?v=sX8r6zATHGU)
+- [Production Ready for a Go Service in 30 Minutes](https://www.youtube.com/watch?v=wxkEQxvxs3w)
 
-##### Francesc Campoy videos
+##### Youtube channels
+- [The Go Programming Language](https://www.youtube.com/channel/UCO3LEtymiLrgvpb59cNsb8A)
+- [Gopher Academy](https://www.youtube.com/channel/UCx9QVEApa5BKLw9r8cnOFEA)
+- [Francesc Campoy](https://www.youtube.com/channel/UC_BzFbxG2za3bp5NRRRXJSw)
+
+##### Francesc Campoy highlighted videos
 - [**The Robustness of Go**](https://www.youtube.com/watch?v=40d26ZGfhR8)
 - [Go interfaces](https://www.youtube.com/watch?v=F4wUrj6pmSI)
 - [Functional Go](https://www.youtube.com/watch?v=ouyHp2nJl0I)
-- [Youtube video channel](https://www.youtube.com/channel/UC_BzFbxG2za3bp5NRRRXJSw)
 
 ### Free books
 - [Book, an introduction to programming in go](https://www.golang-book.com/books/intro)
@@ -97,7 +107,9 @@ Learning Golang, step by step:
     - [Resources for new go programmers](https://dave.cheney.net/resources-for-new-go-programmers)
 - [Google golang-dev forum](https://groups.google.com/forum/m/#!forum/golang-dev)
 - [Golang code](https://golangcode.com/)
+- [Traps, Gotchas, and Common Mistakes for New Golang Devs](http://devs.cloudimmunity.com/gotchas-and-common-mistakes-in-go-golang/)
 - [Domain driven design and Go](https://www.reddit.com/r/golang/comments/6ugzo2/domain_driven_design_and_go/)
+- [Golang Challenge](http://golang-challenge.org/)
 
 ### Courses
 - [Learn How To Code: Golang, Todd McLeod](https://www.udemy.com/learn-how-to-code/learn/v4/overview)
@@ -123,10 +135,12 @@ Learning Golang, step by step:
 ### Repos, examples
 - [Github ArdanLabs: Go-training](https://github.com/ardanlabs/gotraining/tree/master/topics)
 
+
 ### Social network
 
 ##### Twitter
 - [Friends of Go Tech (spanish)](https://twitter.com/FriendsofGOTech)
+- [Golang BCN](https://twitter.com/GolangBCN)
 
 ## Connect
 Do you want to recommend me some topic about Golang?

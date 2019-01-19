@@ -64,6 +64,7 @@ Learning Golang, step by step:
 - [Go group google+](https://plus.google.com/u/0/communities/114112804251407510571)
 
 ### Videos
+- [SOLID Go design, Dave Cheney](https://www.youtube.com/watch?v=zzAdEt3xZ1M)
 - [Learn To Code - Golang Training (youtube playlist)](https://www.youtube.com/playlist?list=PLSak_q1UXfPrI6D67NF8ajfeJ6f7MH83S)
 - [Build web apps with Golang (youtube playlist)](https://www.youtube.com/playlist?list=PLSak_q1UXfPp2VwUQ4ZdUVJdMO6pfi5v_)
 - [How do you structure your Go apps?, Kat Zien](https://www.youtube.com/watch?v=B5oQnECDJ8g)

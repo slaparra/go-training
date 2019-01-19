@@ -171,7 +171,12 @@ func un(s string) {
 // but its arguments (trace("b")) are evaluated immediately
 ```
 *"This is useful for many reasons, the most common of which are to close an open connection or unlock a Mutex immediately before the function ends."* [(kylewbanks.com)](https://kylewbanks.com/blog/when-to-use-defer-in-go)  
+
 *"A defer statement pushes a function call onto a list. The list of saved calls is executed after the surrounding function returns. Defer is commonly used to simplify functions that perform various clean-up actions."* [(golang blog)](https://blog.golang.org/defer-panic-and-recover)
+
+*Defer is a language mechanism that puts your function call into a stack. The deferred functions will be executed in reverse order when the host function finishes regardless of whether a panic is called or not. The defer mechanism is very useful for cleaning up resources.* [(@hussachai)]
+
+[(@hussachai)]: https://medium.com/@hussachai/error-handling-in-go-a-quick-opinionated-guide-9199dd7c7f76
 
 #### Init function
 *init() is called after all the variable declarations in the package have evaluated their initializers, and those are evaluated only after all the imported packages have been initialized.*  

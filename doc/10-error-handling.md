@@ -18,7 +18,7 @@ if err != nil {
 
 There are 4 forms of handling errors:
 ```
-_, err := os.Open("no-file.txt")	//try to find a non existing txt file to force an error
+_, err := os.Open("no-file.txt")    //try to find a non existing txt file to force an error
 if err != nil {
     // fmt.Println("err happened", err)
     // log.Println("err happened", err)
@@ -59,15 +59,15 @@ func Sqrt(f float64) (float64, error) {
 package main
 
 import (
-	"fmt"
+    "fmt"
 )
 
 func main() {
-	const name, id = "bimmler", 17
-	err := fmt.Errorf("user %q (id %d) not found", name, id)
-	if err != nil {
-		fmt.Print(err)
-	}
+    const name, id = "bimmler", 17
+    err := fmt.Errorf("user %q (id %d) not found", name, id)
+    if err != nil {
+        fmt.Print(err)
+    }
 }
 ```
 #### Custom errors
@@ -88,7 +88,7 @@ panic: open no-file.txt: no such file or directory
 
 goroutine 1 [running]:
 main.main()
-	/Users/santiago/Documents/Workspace/go/src/github.com/slaparra/go-training/src/12-error-handling/error-println-log.go:24 +0x63
+    /Users/santiago/Documents/Workspace/go/src/github.com/slaparra/go-training/src/12-error-handling/error-println-log.go:24 +0x63
 exit status 2
 ```
 
@@ -99,6 +99,44 @@ Panic is a built-in function that stops the normal execution flow. **The deferre
 When you call panic and you don’t handle it, the execution flow stops, all deferred functions are executed in reverse order, and stack traces are printed at the end.
 
 [Example: Defer is executed regardless a panic](https://play.golang.org/p/sfkGfBo04d3)
+
+
+### Recover
+Recover is a built-in function that regains control of a panicking goroutine.
+
+Recover is only useful inside deferred functions. During normal execution, a call to recover will return nil and have no other effect. If the current goroutine is panicking, a call to recover will capture the value given to panic and resume normal execution.
+
+```
+package main
+
+import (
+    "errors"
+    "fmt"
+)
+
+func main() {
+    callFunc()
+
+    fmt.Println("Returned normally from callFunc.")
+}
+
+func callFunc() {
+    //if a method can result in a panic:
+    //  put a defer inside a function
+    //  and call the recover method to don't break the execution
+    defer func() {
+        if r := recover(); r != nil {
+            fmt.Println("Recovered from defer function: ", r)
+        }
+    }()
+
+    //force a panic (imagine a call to an external library)
+    panic(errors.New("the error was panicked"))
+}
+
+```
+[Recovering example](../src/12-error-handling/recover.go)  
+From: [Golang blog](https://blog.golang.org/defer-panic-and-recover)
 
 ---
 

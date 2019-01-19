@@ -20,7 +20,7 @@ Learning Golang, step by step:
     - [Objects](doc/08-oop.md#objects)
     - ["Inheritance"](doc/08-oop.md#inheritance-in-go)
     - [Interfaces](doc/08-oop.md#interfaces)
-- [ ] [Error handling](doc/10-error-handling.md)  
+- [x] [Error handling](doc/10-error-handling.md)  
 - [ ] Testing  
     - https://www.golang-book.com/books/intro/12
 - [ ] [Working with files](doc/x-working-with-files.md)

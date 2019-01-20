@@ -8,28 +8,7 @@
 
 *In Go it’s idiomatic to communicate errors via an explicit, separate return value. This contrasts with the exceptions used in languages like Java and Ruby and the overloaded single result / error value sometimes used in C.*
 
-```
-f, err := os.Open("filename.ext")
-if err != nil {
-    log.Fatal(err)
-}
-// do something with the open *File f
-```
-
-There are 4 forms of handling errors:
-```
-_, err := os.Open("no-file.txt")    //try to find a non existing txt file to force an error
-if err != nil {
-    // fmt.Println("err happened", err)
-    // log.Println("err happened", err)
-    // log.Fatalln(err)
-    // panic(err)
-}
-```
-- *`log.Println` calls Output to print to the standard logger. Arguments are handled in the manner of `fmt.Println`.*
-- *`log.Fatalln` is equivalent to `log.Println()` followed by a call to `os.Exit(1)`.*  [Exit into](https://godoc.org/os#Exit)
-
-### Create an error
+## Create an error
 
 #### errors.New
 
@@ -38,9 +17,12 @@ if err != nil {
 New returns an error that formats as the given text.
 
 ```
-_, err := Sqrt(-1)
-if err != nil {
-    fmt.Println(err)
+func main() {  
+    _, err := Sqrt(-1)
+    if err != nil {
+        fmt.Println(err)
+    }
+    //...
 }
 
 func Sqrt(f float64) (float64, error) {
@@ -71,9 +53,52 @@ func main() {
 }
 ```
 #### Custom errors
+
 *Sometimes the caller needs extra context in order to make a more informed error handling decision. For me, that is when custom error types make sense.* 
 
-[How to build custom errors, Ardanlabs](https://www.ardanlabs.com/blog/2014/11/error-handling-in-go-part-ii.html)
+```
+// Naming convention for custom error types:
+// --> It is idiomatic in Go to postfix the name of a custom error type with the word Error.
+type CustomError struct {
+    param    int
+    errorMsg string
+    method   string
+}
+
+// Error() to follow error interface: https://golang.org/pkg/errors/
+func (error *CustomError) Error() string {
+    return fmt.Sprintf("Error: %d %s - Method: %s", error.param, error.errorMsg, error.method)
+}
+```
+- [Custom error example](../src/12-error-handling/custom-error.go)
+- [Custom errors, golangbot](https://golangbot.com/custom-errors/)
+- [How to build custom errors, Ardanlabs](https://www.ardanlabs.com/blog/2014/11/error-handling-in-go-part-ii.html)
+
+
+## Handling errors
+
+```
+f, err := os.Open("filename.ext")
+if err != nil {
+    log.Fatal(err)
+}
+// do something with the open *File f
+```
+
+
+There are 4 forms of handling errors:
+```
+_, err := os.Open("no-file.txt")    //try to find a non existing txt file to force an error
+if err != nil {
+    // fmt.Println("err happened", err)
+    // log.Println("err happened", err)
+    // log.Fatalln(err)
+    // panic(err)
+}
+```
+- *`log.Println` calls Output to print to the standard logger. Arguments are handled in the manner of `fmt.Println`.*
+- *`log.Fatalln` is equivalent to `log.Println()` followed by a call to `os.Exit(1)`.*  [Exit into](https://godoc.org/os#Exit)
+- [Error handling, golangbot](https://golangbot.com/error-handling/)
 
 ---
 
@@ -98,8 +123,9 @@ Panic is a built-in function that stops the normal execution flow. **The deferre
 
 When you call panic and you don’t handle it, the execution flow stops, all deferred functions are executed in reverse order, and stack traces are printed at the end.
 
-[Example: Defer is executed regardless a panic](https://play.golang.org/p/sfkGfBo04d3)
+*One important factor is that you should avoid panic and recover and use errors where ever possible. Only in cases where the program just cannot continue execution should a panic and recover mechanism be used.*
 
+- [Example: Defer is executed regardless a panic](https://play.golang.org/p/sfkGfBo04d3)  
 
 ### Recover
 Recover is a built-in function that regains control of a panicking goroutine.
@@ -135,9 +161,10 @@ func callFunc() {
 }
 
 ```
-[Recovering example](../src/12-error-handling/recover.go)  
-From: [Golang blog](https://blog.golang.org/defer-panic-and-recover)
+Recover works only when it is called from the same goroutine. It's not possible to recover from a panic that has happened in a different goroutine. Let's understand this using an example.
 
+- [Recovering example](../src/12-error-handling/recover.go). From: [Golang blog](https://blog.golang.org/defer-panic-and-recover)
+- [Golangbot, Panic and Recover](https://golangbot.com/panic-and-recover/)
 ---
 
 #### Examples
@@ -154,6 +181,7 @@ From: [Golang blog](https://blog.golang.org/defer-panic-and-recover)
 - [GoByExample: Errors](https://gobyexample.com/errors)
 - [Custom errors](https://golangbot.com/custom-errors/)
 - [GoByExample: Panic](https://gobyexample.com/panic)
+- [Panic & recover](https://golangbot.com/panic-and-recover/)
 - [Defer, panic & recover](https://www.golang-book.com/books/intro/7#section6)
 
 #### Videos

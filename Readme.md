@@ -26,17 +26,14 @@ Learning Golang, step by step:
 - [ ] [Working with files](doc/x-working-with-files.md)
 - [ ] Persistence with go, working with a database
     - https://www.alexedwards.net/blog/organising-database-access
-- [ ] Package management
-    - [dep], [glide]
-    - Go Modules
-        - https://roberto.selbach.ca/intro-to-go-modules/
-        - https://github.com/golang/go/wiki/Modules 
-
-[dep]: (https://golang.github.io/dep/)
-[glide]: (https://glide.sh/)
 
 #### Advance beginner
 - [x] [Concurrency, channels, race conditions, mutex...](doc/09-concurrency.md#concurrency)
+- [ ] Package management
+    - [dep](https://golang.github.io/dep/), [glide](https://glide.sh/)
+    - Go Modules
+        - https://roberto.selbach.ca/intro-to-go-modules/
+        - https://github.com/golang/go/wiki/Modules         
 - [ ] Docker
     - [Docker dev environment with Go Modules and live code reloading](https://threedots.tech/post/go-docker-dev-environment-with-go-modules-and-live-code-reloading/)
 - [ ] DDD in go

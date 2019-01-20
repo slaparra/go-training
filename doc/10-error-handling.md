@@ -14,7 +14,7 @@
 
 `func New(text string) error`
 
-New returns an error that formats as the given text.
+`New` returns an error that formats as the given text.
 
 ```
 func main() {  
@@ -55,6 +55,7 @@ func main() {
 #### Custom errors
 
 *Sometimes the caller needs extra context in order to make a more informed error handling decision. For me, that is when custom error types make sense.* 
+(*[William Kennedy](https://www.ardanlabs.com/blog/2014/11/error-handling-in-go-part-ii.html)*) 
 
 ```
 // Naming convention for custom error types:

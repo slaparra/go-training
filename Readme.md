@@ -21,8 +21,7 @@ Learning Golang, step by step:
     - ["Inheritance"](doc/08-oop.md#inheritance-in-go)
     - [Interfaces](doc/08-oop.md#interfaces)
 - [x] [Error handling](doc/10-error-handling.md)  
-- [ ] Testing  
-    - https://www.golang-book.com/books/intro/12
+- [ ] [Testing](doc/11-testing.md)     
 - [ ] [Working with files](doc/x-working-with-files.md)
 - [ ] Persistence with go, working with a database
     - https://www.alexedwards.net/blog/organising-database-access
@@ -139,6 +138,7 @@ Learning Golang, step by step:
 ##### Twitter
 - [Friends of Go Tech (spanish)](https://twitter.com/FriendsofGOTech)
 - [Golang BCN](https://twitter.com/GolangBCN)
+- [Gopher Academy](https://twitter.com/GopherAcademy)
 
 ## Connect
 Do you want to recommend me some topic about Golang?

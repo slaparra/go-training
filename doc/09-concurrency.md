@@ -291,7 +291,10 @@ wg.Wait()
 
 #### Vídeos  
 
-- Visualizing Concurrency in Go, Ivan Danyliuk [(Video)](https://www.youtube.com/watch?v=KyuFeiG3Y60) [(Post)](http://divan.github.io/posts/go_concurrency_visualize/)
+- [Introduction to Go Goroutine - Concurrency in Go, TutorialEdge](https://www.youtube.com/watch?v=ARHXmR0_MGY)
+- Visualizing Concurrency in Go, Ivan Danyliuk
+    - [Video](https://www.youtube.com/watch?v=KyuFeiG3Y60)
+    - [Post](http://divan.github.io/posts/go_concurrency_visualize/)
 - [Rob Pike: Concurrency is not parallelism](https://www.youtube.com/watch?v=cN_DpYBzKso)
 - [Rob Pike: Go concurrency patterns](https://www.youtube.com/watch?v=f6kdp27TYZs)
 - [Sameer Ajmani: Advanced Go Concurrency Patterns](https://www.youtube.com/watch?v=QDDwwePbDtw)

@@ -26,10 +26,11 @@ fmt.Printf("%s\n", "github.com/slaparra") #string
     - [Strings](https://blog.golang.org/strings)
     - [Array in data structures section](06-data-structures.md)       
     - [Slice in data structures section](06-data-structures.md)
+    - [Constants](https://golang.org/ref/spec#Constant_declarations)
     - [Numeric types](https://golang.org/ref/spec#Numeric_types)
     - [Package types](https://golang.org/pkg/go/types/)  
     
-Simple quote:
+#### Simple quote
 ```
 e := "Hello"
 f := `Do you like my hat?`
@@ -39,9 +40,26 @@ fmt.Printf("%T \n", e)
 fmt.Printf("%T \n", f)
 fmt.Printf("%T \n", g)
 
+a := `this is a
+string literal
+and you can print "quotes"
+like this`
+
 (string)
 (string)
 (int32)!!!!
+```
+
+#### Constants
+```
+const Pi float64 = 3.14159265358979323846
+const zero = 0.0         // untyped floating-point constant
+const (
+	size int64 = 1024
+	eof        = -1  // untyped integer constant
+)
+const a, b, c = 3, 4, "foo"  // a = 3, b = 4, c = "foo", untyped integer and string constants
+const u, v float32 = 0, 3    // u = 0.0, v = 3.0
 ```
 
 #### Print variables
@@ -60,6 +78,15 @@ chan:                    %p
 pointer:                 %p
 ``` 
 
+#### Shift 1 bit to the left
+
+```
+a := 42
+b := a << 1
+fmt.Printf("%d", b) //84
+fmt.Printf("%b", b) //1010100
+```
+
 ## Scope
 
 References:
@@ -75,7 +102,7 @@ Definition:
 - The scope of a constant or variable identifier declared inside a function begins at the end of the ConstSpec or VarSpec (ShortVarDecl for short variable declarations) and ends at the end of the innermost containing block.
 - The scope of a type identifier declared inside a function begins at the identifier in the TypeSpec and ends at the end of the innermost containing block.
 
-![Picture](https://www.golang-book.com/public/img/web/scopes.0.png)  
+![Picture](../resources/scopes.1359063689.png)  
 <sub>(Image: [golang-book.com](https://www.golang-book.com/books/web/01-02))</sub>
 
 Things defined in the function scope have access to anything above them (file, package, universe), but the reverse is not true. A variable defined in a function is only accessible within that function or blocks defined inside of it.

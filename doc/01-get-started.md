@@ -72,6 +72,9 @@ go fmt
 # Gofmt reformats Go source code, whereas golint prints out style mistakes.
 golint ./...
 
+# Report suspicious constructs
+go vet
+
 # Show race conditions info
 go run --race gofile.go
 ```

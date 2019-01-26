@@ -53,7 +53,7 @@ Learning Golang, step by step:
     - [The Go Programming Language Specification](https://golang.org/ref/spec)
     - [Common comments made during reviews of Go code](https://github.com/golang/go/wiki/CodeReviewComments)
 - [Go By Example](https://gobyexample.com/)
-- [GolangBridge Forum](https://forum.golangbridge.org/)
+- [GolangBridge Forum](https://forum.golangbridge.org/): A great forum to ask questions
 - [Pocket Gophers](https://pocketgophers.com/)
 - [ArdanLabs, Go reading](https://github.com/ardanlabs/gotraining/tree/master/reading)
 - [Golang user groups *](https://github.com/golang/go/wiki/GoUserGroups)
@@ -113,10 +113,11 @@ Learning Golang, step by step:
     - [Github examples](https://github.com/GoesToEleven/GolangTraining/)
     - [Slides](https://drive.google.com/drive/u/0/folders/0B22KXlqHz6ZNfjNXTzk1U3JHUkJ6VjJ3dnJKNzVtNjRUM3Q2WFNqWGI2Q3RadERqUlVrOEU)
     - [Training resources](https://docs.google.com/document/d/18-0u5CvNIr83oOfMXPoM4klVFASXGl3Vvua1wBGMIoQ/edit)
+- [Golang course outline, Tutorialedge.net](https://tutorialedge.net/course/golang/)
 
 ### Packages
 - [Go-search.org](https://go-search.org/)
-- [Godoc.org](https://godoc.org/)
+- [Godoc.org](https://godoc.org/): Standard libraries and third-party packages
     - [fmt, implements formatted I/O](https://godoc.org/fmt)
 - [**Awesome-go**: A curated list of awesome Go frameworks, libraries and software](https://github.com/avelino/awesome-go)
 

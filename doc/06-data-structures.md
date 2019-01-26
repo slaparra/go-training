@@ -19,7 +19,24 @@ In this readme, we can find documentation and examples about:
 - Links:
     - [Effective go](https://golang.org/doc/effective_go.html#arrays)
     - [Go spec](https://golang.org/ref/spec#Array_types)
+    - [Tour golang](https://tour.golang.org/moretypes/6)
 
+```
+package main
+
+import "fmt"
+
+func main() {
+    var a [2]string
+    a[0] = "Hello"
+    a[1] = "World"
+    fmt.Println(a[0], a[1])
+    fmt.Println(a)
+
+    primes := [6]int{2, 3, 5, 7, 11, 13}
+    fmt.Println(primes)
+}
+```
 
 ## **Slice definition**  
 [Golang spec](https://golang.org/ref/spec#Slice_types)  
@@ -74,6 +91,7 @@ String is a slice of bytes, string is made of runes, a rune is a unicode point.
 fmt.Println("myString"[2])          //83
 fmt.Println(string("myString"[2]))  //S
 ```
+
 #### Slicing a slice
 ```
 mySlice := []string{"a", "b", "c", "d", "e", "f", "g"}
@@ -90,8 +108,8 @@ make([]int, 50, 100)
 new([100]int)[0:50]
 ```
 
-
 [Todd McLeod slides: "slice, map, new, make, struct"](https://docs.google.com/presentation/d/1jot31JzJ7DiykCWpebfHz5_7s4JWZvklr-xmVWHHApU/edit#slide=id.gb91814ee3_0_17)    
+
 
 #### Code examples
 - [Array & slice](../src/07-data-structures/array_slice.go)  

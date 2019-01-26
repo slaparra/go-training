@@ -18,7 +18,7 @@ Characteristics of a Golang test function:
 Run tests:
 `go test` or `go test -v` to run tests with verbose mode
 
-### Package testing
+## Testing package
 
 *Package [testing] provides support for automated testing of Go packages. It is intended to 
 be used in concert with the `go test` command, which automates execution of any function of the form.*
@@ -44,11 +44,11 @@ $ go test
 PASS
 ok      golang-book/chapter11/math      0.032s
 ```
-Error is equivalent to Log followed by Fail.
+`t.Error` is equivalent to `t.Log followed by Fail.
 - https://golang.org/pkg/testing/
 - https://godoc.org/testing
 
-### Table driven tests (Test tables)
+## Table driven tests (Test tables)
 *At the heart of all table driven tests is the table itself, which provides the inputs and expected results of the function under test. In most cases the table is a slice of anonymous structs, which allows the table to be written in a compact form.* ([dave-cheney])
 
 [dave-cheney]: https://dave.cheney.net/2013/06/09/writing-table-driven-tests-in-go
@@ -67,7 +67,7 @@ func Fib(n int) int {
 }
 ```
 
-*At the heart of all table driven tests is the table itself, which provides the inputs and expected results of the function under test. In most cases the table is a slice of anonymous structs, which allows the table to be written in a compact form:*
+Test file:
 ```
 type fibTest struct {
         n        int
@@ -105,7 +105,7 @@ Then open coverage.html in a web-browser ([blog.alexellis.io])
 
 [blog.alexellis.io]: https://blog.alexellis.io/golang-writing-unit-tests/
 
-### "Testify" package, Mat Ryer
+## "Testify" package, Mat Ryer
 
 The [assert] package provides some helpful methods that allow you to write better test code in Go.
 
@@ -135,7 +135,7 @@ func TestIsSuperAnimal(t *testing.T) {
 ```
 - [Example from blog.friendsofgo.tech](https://blog.friendsofgo.tech/posts/empezando-con-los-tests-automatizados-en-go/)
 
-### "Is" package, Mat Ryer
+## "Is" package, Mat Ryer
 
 Package [is] provides a lightweight extension to the standard library's testing capabilities.
 
@@ -168,6 +168,8 @@ With `is.NewRelaxed(t)` instead of `is.New(t)`, relaxed mode, failures call `T.F
 
 - [Example from blog.friendsofgo.tech](https://blog.friendsofgo.tech/posts/empezando-con-los-tests-automatizados-en-go/)
 - [Other examples](../src/13-testing/03-testing-packages)
+
+---
 
 ## Videos
 

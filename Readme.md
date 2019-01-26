@@ -141,6 +141,9 @@ Learning Golang, step by step:
 - [Golang BCN](https://twitter.com/GolangBCN)
 - [Gopher Academy](https://twitter.com/GopherAcademy)
 
+##### Slack
+- [Golang BcnEng (spanish)](https://bcneng.slack.com/messages/C2WR8BJ49)
+
 ## Connect
 Do you want to recommend me some topic about Golang?
 - [Twitter](https://www.twitter.com/santiagolaparra)

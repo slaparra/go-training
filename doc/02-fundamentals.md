@@ -49,6 +49,27 @@ like this`
 (string)
 (int32)!!!!
 ```
+#### Arithmetic operations
+
+```
++    sum                    integers, floats, complex values, strings
+-    difference             integers, floats, complex values
+*    product                integers, floats, complex values
+/    quotient               integers, floats, complex values
+%    remainder              integers
+
+&    bitwise AND            integers
+|    bitwise OR             integers
+^    bitwise XOR            integers
+&^   bit clear (AND NOT)    integers
+
+<<   left shift             integer << unsigned integer
+>>   right shift            integer >> unsigned integer
+```
+
+https://golang.org/ref/spec#Arithmetic_operators
+
+**Package math** provides basic constants and mathematical functions: https://golang.org/pkg/math
 
 #### Constants
 ```

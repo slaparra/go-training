@@ -62,7 +62,7 @@ func sliceFunc() {
 
 	//delete element position 2
 	s2 := []int{2, 3, 5, 7, 11, 13}
-	s2 = append(s2[:2], s2[3:]...)
+	s2 = append(s2[:2], s2[3:]...) //append to a slice from 0 to 2 (2 not included) the elements from 3 to the end (variadic to extract elements)
 	fmt.Println(s2)
 
 	/*

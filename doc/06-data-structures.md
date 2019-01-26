@@ -101,6 +101,42 @@ fmt.Print(mySlice[2:4])   //[c, d]
 ```
 [Delete an element from the slice, example](https://play.golang.org/p/MFmGqFGwW9i)
 
+#### Append elements to a slice
+
+```
+package main
+
+import (
+    "fmt"
+)
+
+func main() {
+    slice := []int{42, 43, 44, 45, 46, 47, 48, 49, 50, 51}
+    fmt.Printf("%v\n", slice)
+    fmt.Printf("%T\n", slice)
+    fmt.Println(len(slice))
+
+    slice = append(slice, 52)       //append 52
+    fmt.Printf("%v\n", slice)
+
+    slice = append(slice, 53, 54)   //append 53, 54
+    fmt.Printf("%v\n", slice)
+
+    y:= []int{56,57,58}
+    slice = append(slice[3:6], y...)     //return a slice from position 3 to 6 (6 not included)
+    fmt.Printf("%v\n", slice)
+    fmt.Println(slice[3:])     
+}
+
+// [42 43 44 45 46 47 48 49 50 51]
+// []int
+// 10
+// [42 43 44 45 46 47 48 49 50 51 52]
+// [42 43 44 45 46 47 48 49 50 51 52 53 54]
+// [45 46 47 56 57 58]
+// [56 57 58]
+```
+
 #### Make & new
 ```
 // Both has the same result

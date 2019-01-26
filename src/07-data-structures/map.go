@@ -39,4 +39,15 @@ func main() {
 	for key, value := range mapForRange {
 		fmt.Printf("- key %s, value %s\n", key, value)
 	}
+
+	mapStringSlices := map[string][]string{
+		"aKey":       []string{"1value", "2values"},
+		"anotherKey": []string{"1value", "2values"},
+	}
+
+	fmt.Println(mapStringSlices)
+
+	delete(mapStringSlices, "aKey")
+
+	fmt.Println(mapStringSlices)
 }

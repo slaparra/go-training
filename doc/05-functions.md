@@ -92,18 +92,6 @@ fmt.Print(len(aVar)) // 2
 ```
 [* length & capacity tour](https://tour.golang.org/moretypes/11)
 
-#### range
-Range iterates over elements in a variety of data structures
-```
-nums := []int{2, 3, 4}
-sum := 0
-for _, num := range nums {
-    sum += num
-}
-fmt.Println("sum:", sum)
-```
-* https://github.com/golang/go/wiki/Range
-* https://gobyexample.com/range
 
 #### make
 [Allocation with *make*](https://golang.org/doc/effective_go.html#allocation_make)
@@ -134,7 +122,35 @@ fmt.Println(aSliceUsingSlicing)         // [0 0]
 ```
 
 #### Defer   
+
 *Deferred functions are invoked immediately before the surrounding function returns, in the reverse order they were deferred.  
+
+```
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	defer myFunc1()
+	myFunc2()
+	fmt.Println("bla3")
+}
+
+func myFunc1() {
+	fmt.Println("bla1")
+}
+
+func myFunc2() {
+	fmt.Println("bla2")
+}
+
+// bla2
+// bla3
+// bla1
+```
+
 Go's defer statement schedules a function call (the deferred function) to be run immediately before the function executing the defer returns.  
 Deferred functions are executed in LIFO order.*
 

@@ -11,6 +11,9 @@ Learning Golang, step by step:
 - [x] [Address & operators](doc/03-address-operators.md)
 - [x] [Control structures](doc/04-control-structures.md)
 - [x] [Functions](doc/05-functions.md)
+    - [Anonymous function](doc/05-functions.md#anonymous-function) 
+    - [Function as argument](doc/05-functions.md#function-as-argument)      
+    - [Defer](doc/05-functions.md#defer) 
 - [x] [Data structures](doc/06-data-structures.md)
 
 #### Intermediate beginner

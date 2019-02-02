@@ -23,6 +23,19 @@ https://golang.org/ref/spec#For_statements
     }
 ```
 
+## Range
+Range iterates over elements in a variety of data structures
+```
+nums := []int{2, 3, 4}
+sum := 0
+for _, num := range nums {
+    sum += num
+}
+fmt.Println("sum:", sum)
+```
+* https://github.com/golang/go/wiki/Range
+* https://gobyexample.com/range
+
 ## Switch
 *Go `Switch` only runs the selected case, not all the cases that follow. The break statement  is provided automatically in Go.*
 ```

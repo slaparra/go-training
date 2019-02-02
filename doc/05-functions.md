@@ -16,11 +16,13 @@ func main() {
 	fmt.Println(hypot(5, 12))
 }
 ```
+- [Example](../src/06-functions/function-variable.go)
 
 ![img](../resources/anonymous-gopher.png)  
 <sub>(Image: [Trevor Forrey](https://medium.com/@trevor4e/learning-gos-concurrency-through-illustrations-8c4aff603b3))</sub>
 
 ### Closure
+
 A Closure is a technique for implementing lexically scoped name binding 
 in a language with first-class functions. Operationally, a closure is a 
 record storing a function together with an environment. (wiki)
@@ -48,7 +50,7 @@ func intSeq() func() int {
 \* [A Tour of go, closures](https://tour.golang.org/moretypes/25)
 
 
-### Function as argument
+### Function as argument (callback)
 ```
 func compute(fn func(float64, float64) float64) float64 {
 	return fn(3, 4)
@@ -64,6 +66,9 @@ func main() {
 }
 
 ```
+
+- [Example](../src/06-functions/callback.go)
+
 ## Go functions and keywords
 
 #### fmt.Sprint

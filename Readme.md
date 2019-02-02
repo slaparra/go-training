@@ -92,6 +92,7 @@ Learning Golang, step by step:
 - [Build web application with Golang](https://legacy.gitbook.com/book/astaxie/build-web-application-with-golang/details)
 - [Webapps in Go the anti textbook](https://leanpub.com/antitextbookGo/)
 - [Building Web Apps with Go](https://legacy.gitbook.com/book/codegangsta/building-web-apps-with-go/details)
+- [Essential Go (html)](https://www.programming-books.io/essential/go/)
 
 ** https://github.com/golang/go/wiki/Books  
 ** https://github.com/dariubs/GoBooks  

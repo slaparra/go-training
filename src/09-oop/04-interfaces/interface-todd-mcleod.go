@@ -19,6 +19,8 @@ type shape interface {
 	area() float64
 }
 
+// https://golang.org/pkg/math/
+// Pi constant
 func (c circle) area() float64 {
 	return math.Pi * c.radius * c.radius
 }

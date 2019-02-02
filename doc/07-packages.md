@@ -96,6 +96,22 @@ func main() {
 }	
 ```
 
+- [Time, golang by example](https://gobyexample.com/time)
+
+#### Time formatting
+
+*Go supports time formatting and parsing via pattern-based layouts.*
+
+- [Time formatting example**](../src/01-fundamentals/time-formating.go)
+- https://gobyexample.com/time-formatting-parsing
+
+#### Time add & substract
+
+- [File Example](../src/01-fundamentals/time-add-substract.go)
+
+- https://stackoverflow.com/questions/26285735/subtracting-time-duration-from-time-in-go)
+- https://www.socketloop.com/tutorials/golang-minus-time-with-time-add-or-time-adddate-functions-to-calculate-past-date
+
 ## Links
 - [Parsing json in golang](https://www.sohamkamani.com/blog/2017/10/18/parsing-json-in-golang/)
 - [Json, GoByExample](https://gobyexample.com/json)

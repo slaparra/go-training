@@ -151,7 +151,31 @@ func main() {
 // if we don't need to encapsulate any logic for changing a field, we can put this field
 // to be visible outside the package.
 ```
+### Structs
+A structure is a user defined type which represents a collection of fields. It can be used in places where it makes sense to group the data into a single unit rather than maintaining each of them as separate types.
+```
+# Declaring a struct
 
+type Employee struct {  
+    firstName string
+    lastName  string
+    age       int
+}
+```
+https://golangbot.com/structs/
+
+#### Anonymous structs
+It is possible to declare structures without declaring a new type and these type of structures are called anonymous structures.
+```
+var people = []struct {
+    first       string
+    last        string
+    birthyear   int
+}{
+    {"Santi", "Hi", 1999},
+    {"Maria", "Hi2", 1988},  
+}
+```
 - [Promoted code example file](../src/09-oop/02-promoted-inheritance/)
 
 #### Polymorphism
@@ -175,6 +199,7 @@ func main() {
 - Golang spec blog, Interfaces
     - [Part I](https://medium.com/golangspec/interfaces-in-go-part-i-4ae53a97479c)
     - [Part II](https://medium.com/golangspec/interfaces-in-go-part-ii-d5057ffdb0a6)
+    - [Part III](https://medium.com/golangspec/interfaces-in-go-part-iii-61f5e7c52fb5)
 - [Golang bootcamp](http://www.golangbootcamp.com/book/interfaces)    
 - [How do interfaces work in Go, and why do I keep seeing the empty interface (interface{})?](https://www.calhoun.io/how-do-interfaces-work-in-go/)
 
@@ -233,9 +258,25 @@ func (object dog) bark() {
 	fmt.Printf("Only dogs like <%s> can bark\n", object.name)
 }
 ```
-[See code examples](../src/09-oop/04-interfaces/)  
-[Another example from Todd McLeod training](../src/09-oop/04-interfaces/interface-todd-mcleod.go)
+*Go has the concept of method expressions. It’s a way to get function from method set of type T. Such function has additional, explicit parameter of type T ([post](https://medium.com/golangspec/interfaces-in-go-part-iii-61f5e7c52fb5)):*
 
+```
+type T struct {
+    name string
+}
+func (t *T) SayHi() {
+    fmt.Printf("Hi, my name is %s\n", t.name)
+}
+func main() {
+    t := &T{"foo"}
+    f := (*T).SayHi
+    f(t) // Hi, my name is foo
+}
+```
+
+- [See code examples](../src/09-oop/04-interfaces/)  
+- [Another example from Todd McLeod training](../src/09-oop/04-interfaces/interface-todd-mcleod.go)
+- [Golang interfaces, Todd McLeod video](https://www.youtube.com/watch?v=qrPWnAZew-E)
 
 ##### External packages interfaces most frequently used
 

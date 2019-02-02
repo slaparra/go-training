@@ -95,8 +95,8 @@ Learning Golang, step by step:
 
 ### Posts, blogs & forums 
 - [**Golang wiki**](https://github.com/golang/go/wiki)
+- [**Golang spec**](https://medium.com/golangspec)
 - [Go Programing tutorial, Derek Banas](http://www.newthinktank.com/2015/02/go-programming-tutorial/)
-- [Is go object oriented?](https://flaviocopes.com/golang-is-go-object-oriented/)
 - [Go build vs go install](https://pocketgophers.com/go-install-vs-go-build/)
 - [Contribute your time, expertise to Go](https://medium.com/@IndianGuru/contribute-your-time-expertise-to-go-3b61760fabbc)
 - [All posts ArdanLabs blog](https://www.ardanlabs.com/all-posts/)
@@ -125,10 +125,15 @@ Learning Golang, step by step:
 - [Go Playground, go online](https://play.golang.org/)
 
 ### Go Frameworks
-- [Gorilla toolkit](http://www.gorillatoolkit.org/)
-- [Gin-Gonic](https://gin-gonic.github.io/gin/)
 
-** [Post: 7 frameworks to build a rest api in go](https://nordicapis.com/7-frameworks-to-build-a-rest-api-in-go/)
+- [Beego](https://beego.me/)
+- [Revel](https://revel.github.io/)
+- [Gorilla toolkit](http://www.gorillatoolkit.org/)
+- [Gin](https://gin-gonic.github.io/gin/)
+- [Echo](https://echo.labstack.com/)
+
+[Top 6 web frameworks for Go as of 2017](https://blog.usejournal.com/top-6-web-frameworks-for-go-as-of-2017-23270e059c4b)*  
+[7 frameworks to build a rest api in go](https://nordicapis.com/7-frameworks-to-build-a-rest-api-in-go/) **  
 
 ### Repos, examples
 - [Github ArdanLabs: Go-training](https://github.com/ardanlabs/gotraining/tree/master/topics)

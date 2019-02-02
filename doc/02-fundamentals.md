@@ -132,6 +132,8 @@ Things defined in the function scope have access to anything above them (file, p
 
 A type determines a set of values together with operations and methods specific to those values. A type may be denoted by a type name, if it has one, or specified using a type literal, which composes a type from existing types.
 
+Go is strongly typed programming language. It’s strict when it goes to types and mistakes will be reported during compilation
+
 ```
 type (
 	B1 string
@@ -146,7 +148,22 @@ type Employee struct {
 
 aPerson := Employee{"John", "Raimon", 28}
 ```
+
+- [Golang Basic Types, Operators](https://www.callicoder.com/golang-basic-types-operators-type-conversion/#type-conversion)
+
+### Type conversion
+
+*Unlike in C, in Go assignment between items of different type requires an explicit conversion*
+- [Example type custom struct conversion](../src/01-fundamentals/type-conversion.go)
+- [Type conversions in Tour of go](https://tour.golang.org/basics/13)
+
+*There are times where it might be desirable to convert value to other type. Golang doesn’t allow to do it in arbitrary way. They’re certain rules enforced by the type system.*
+
+- [Conversions in go, Golang spec](https://medium.com/golangspec/conversions-in-go-4301e8d84067)
+- [Type conversions](https://www.callicoder.com/golang-basic-types-operators-type-conversion/#type-conversion)
+
 ## Blank identifier
+
 Basically a blank identifier is like a box where you can put things if you don't need them.  
 
 It's a bit like writing to the Unix /dev/null file: it represents a write-only value to be used as a place-holder where a variable is needed but the actual value is irrelevant (in code is the underscore).

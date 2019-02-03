@@ -37,10 +37,14 @@ import (
 
 func init() {
 	runtime.GOMAXPROCS(runtime.NumCPU())
+	fmt.Println(runtime.NumCPU())
+	fmt.Println(runtime.NumGoroutine())
 }
 ```
-- GOMAXPROCS sets the maximum number of CPUs that can be executing  
-- NumCPU returns the number of logical CPUs usable by the current process.
+- **GOMAXPROCS** sets the maximum number of CPUs that can be executing  
+- **NumCPU** returns the number of logical CPUs usable by the current process.
+- **NumGoroutine** returns the number of goroutines in process
+
 As Go 1.5 Release Notes says
 
 By default, Go programs run with GOMAXPROCS set to the number of cores available; in prior releases it defaulted to 1.

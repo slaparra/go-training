@@ -127,6 +127,7 @@ Learning Golang, step by step:
 
 ### Tools
 - [Go Playground, go online](https://play.golang.org/)
+- [Goplay space (like 'Go Playground' with doc)](https://goplay.space/)
 
 ### Go Frameworks
 

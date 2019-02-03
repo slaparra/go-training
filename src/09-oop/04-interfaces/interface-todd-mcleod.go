@@ -21,11 +21,11 @@ type shape interface {
 
 // https://golang.org/pkg/math/
 // Pi constant
-func (c circle) area() float64 {
+func (c *circle) area() float64 {
 	return math.Pi * c.radius * c.radius
 }
 
-func (s square) area() float64 {
+func (s *square) area() float64 {
 	return s.side * s.side
 }
 
@@ -44,8 +44,8 @@ func totalArea(shapes ...shape) float64 {
 }
 
 func main() {
-	s := square{10}
-	c := circle{5}
+	s := &square{10}
+	c := &circle{5}
 	info(s)
 	info(c)
 	fmt.Println("Total Area: ", totalArea(c, s))

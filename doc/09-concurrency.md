@@ -164,8 +164,11 @@ go func() {
 *Race conditions are among the most insidious and elusive programming errors. They typically cause erratic and mysterious failures, often long after the code has been deployed to production. While Go's concurrency mechanisms make it easy to write clean concurrent code, they don't prevent race conditions. Care, diligence, and testing are required. And tools can help.*
 <small>[(Golang blog)](https://blog.golang.org/race-detector)</small>  
 
-![img](https://golangbot.com/content/images/2017/08/cs5.png)  
+![img](../resources/race_flow.png)  
 <sub>(Image: [golangbot.com](https://golangbot.com/mutex/))</sub>
+
+![img](../resources/data_race.png)  
+<sub>(Image: [William Kennedy](https://www.ardanlabs.com/blog/2013/09/detecting-race-conditions-with-go.html))</sub>
 
 - [Race condition detector](https://golang.org/doc/articles/race_detector.html)
 
@@ -275,7 +278,8 @@ wg.Wait()
 
 ## Links
 
-- [Resources for learning about concurrency in Go](https://github.com/golang/go/wiki/LearnConcurrency)
+- [Resources for learning concurrency in Go](https://github.com/golang/go/wiki/LearnConcurrency)
+- [Concurrency, Effective Go](https://golang.org/doc/effective_go.html#concurrency)
 - [**Concurrency & goroutines, Golang Book**](https://www.golang-book.com/books/intro/10)
 - [Multithreading in go, Cory Finger](https://pragmacoders.com/multithreading-go-tutorial/)
 - [Learning Go’s Concurrency Through Illustrations](https://medium.com/@trevor4e/learning-gos-concurrency-through-illustrations-8c4aff603b3)  

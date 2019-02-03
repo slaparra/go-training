@@ -23,6 +23,7 @@ go run main.go aPackage
 - [Sync](https://golang.org/pkg/sync/)
 - [Time](https://golang.org/pkg/time/)
 - [Math/rand](https://golang.org/pkg/math/rand/)
+- [Bcrypt](https://godoc.org/golang.org/x/crypto/bcrypt)
 
 [Go package example files](../src/08-external-packages/)
 
@@ -111,6 +112,24 @@ func main() {
 
 - https://stackoverflow.com/questions/26285735/subtracting-time-duration-from-time-in-go)
 - https://www.socketloop.com/tutorials/golang-minus-time-with-time-add-or-time-adddate-functions-to-calculate-past-date
+
+#### Bcrypt
+
+*Package bcrypt implements Provos and Mazières's bcrypt adaptive hashing algorithm.*
+
+```
+hashedPassword, err := bcrypt.GenerateFromPassword([]byte(`aPassword`), 8)
+
+...
+
+if err = bcrypt.CompareHashAndPassword([]byte(`aPassword`), []byte(creds.Password)); err != nil {
+    // If the two passwords don't match, return a 401 status
+    fmt.Println("Invalid password")
+}
+```
+
+- https://godoc.org/golang.org/x/crypto/bcrypt
+- https://www.sohamkamani.com/blog/2018/02/25/golang-password-authentication-and-storage/
 
 ## Links
 - [Parsing json in golang](https://www.sohamkamani.com/blog/2017/10/18/parsing-json-in-golang/)

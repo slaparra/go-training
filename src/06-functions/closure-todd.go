@@ -15,6 +15,12 @@ func main() {
 	increment := wrapper()
 	fmt.Println(increment())
 	fmt.Println(increment())
+	fmt.Println(increment())
+	fmt.Println(increment())
+
+	increment = wrapper()
+	fmt.Println(increment())
+	fmt.Println(increment())
 }
 
 /*

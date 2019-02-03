@@ -61,6 +61,7 @@ go clean
 # Get a Package. It will be downloaded in $GOPATH/src directory
 go get github.com/satori/go.uuid
 go get github.com/slaparra/go-training
+go get -u github.com/slaparra/go-training //to get the updates
 
 # Show go environment variables
 go env

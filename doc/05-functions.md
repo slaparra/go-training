@@ -46,8 +46,11 @@ func intSeq() func() int {
     }
 }
 ```
-\* [5 ways to use closure](https://www.calhoun.io/5-useful-ways-to-use-closures-in-go/)  
-\* [A Tour of go, closures](https://tour.golang.org/moretypes/25)
+- [Fibonacci example](../src/06-functions/closure-fibonacci.go)
+- [What is a closure](https://www.calhoun.io/what-is-a-closure/#closuresprovidedataisolation)
+- [5 ways to use closure](https://www.calhoun.io/5-useful-ways-to-use-closures-in-go/)  
+- [A Tour of go, closures](https://tour.golang.org/moretypes/25)
+- [Closures, Go by example](https://gobyexample.com/closures)
 
 
 ### Function as argument (callback)
@@ -226,7 +229,6 @@ If we implement the method String for a type it will be used when fmt.print meth
 [(effective go)](https://golang.org/doc/effective_go.html#printing)
 
 ```
-
 type people []string
 
 studyGroup := people{"Zeno", "John", "Al", "Jenny"}

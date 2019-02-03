@@ -27,9 +27,11 @@ go run main.go aPackage
 
 [Go package example files](../src/08-external-packages/)
 
-### Examples
+## Examples
 
-#### NumCPU and GOMAXPROCS
+#### Runtime
+
+##### NumCPU and GOMAXPROCS
 ```
 import (
 	"runtime"
@@ -41,15 +43,32 @@ func init() {
 	fmt.Println(runtime.NumGoroutine())
 }
 ```
+
 - **GOMAXPROCS** sets the maximum number of CPUs that can be executing  
 - **NumCPU** returns the number of logical CPUs usable by the current process.
 - **NumGoroutine** returns the number of goroutines in process
 
-As Go 1.5 Release Notes says
+As Go 1.5 Release Notes says:
 
-By default, Go programs run with GOMAXPROCS set to the number of cores available; in prior releases it defaulted to 1.
+*By default, Go programs run with GOMAXPROCS set to the number of cores available; in prior releases it defaulted to 1.*
 
 So starting from Go 1.5, the default value should be the number of cores.
+
+```
+// Go operating system and architecture:
+
+package main
+
+import (
+    "fmt"
+    "runtime"
+)
+
+func main() {
+    fmt.Println(runtime.GOOS)   // darwin
+    fmt.Println(runtime.GOARCH) // amd64
+}
+```
 
 #### Pkg sync, WaitGroup
 *A WaitGroup waits for a collection of goroutines to finish. The main goroutine calls Add to set the number of goroutines to wait for. Then each of the goroutines runs and calls Done when finished. At the same time, Wait can be used to block until all goroutines have finished.*
@@ -81,7 +100,9 @@ func foo() {
 - [wait-group.go, Todd McLeod example](../src/08-external-packages/wait-group.go)
 - [golang.org/pkg WaitGroup example](https://golang.org/pkg/sync/#example_WaitGroup)
 
-#### Pkg Time, sleep
+#### Pkg Time
+
+##### sleep
 
 *Sleep pauses the current goroutine for at least the duration d. A negative or zero duration causes Sleep to return immediately.*
 
@@ -103,19 +124,19 @@ func main() {
 
 - [Time, golang by example](https://gobyexample.com/time)
 
-#### Time formatting
+##### Time formatting
 
 *Go supports time formatting and parsing via pattern-based layouts.*
 
 - [Time formatting example**](../src/01-fundamentals/time-formating.go)
 - https://gobyexample.com/time-formatting-parsing
 
-#### Time add & substract
+##### Time add & substract
 
 - [File Example](../src/01-fundamentals/time-add-substract.go)
-
 - https://stackoverflow.com/questions/26285735/subtracting-time-duration-from-time-in-go)
 - https://www.socketloop.com/tutorials/golang-minus-time-with-time-add-or-time-adddate-functions-to-calculate-past-date
+
 
 #### Bcrypt
 

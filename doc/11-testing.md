@@ -183,9 +183,9 @@ With `is.NewRelaxed(t)` instead of `is.New(t)`, relaxed mode, failures call `T.F
 
 ## Links
 
-- https://godoc.org/testing
-- https://www.golang-book.com/books/intro/12
-- https://blog.golang.org/examples
-- https://www.calhoun.io/how-to-test-with-go/
-- https://blog.alexellis.io/golang-writing-unit-tests/
-- https://blog.friendsofgo.tech/posts/empezando-con-los-tests-automatizados-en-go/ (spanish)
+- [Testing, Golang book](http://www.golang-book.com/books/intro/12) 
+- [Package testing, Godoc](https://godoc.org/testing)
+- [Testable Examples in Go, Golang blog](https://blog.golang.org/examples)
+- [How to test with Go](https://www.calhoun.io/how-to-test-with-go/)
+- [Writing unit tests, Alex Ellis](https://blog.alexellis.io/golang-writing-unit-tests/)
+- [Starting with automated tests, Friends of Go](https://blog.friendsofgo.tech/posts/empezando-con-los-tests-automatizados-en-go/) (spanish)

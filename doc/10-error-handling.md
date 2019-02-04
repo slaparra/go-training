@@ -75,8 +75,14 @@ func (error *CustomError) Error() string {
 - [Custom errors, golangbot](https://golangbot.com/custom-errors/)
 - [How to build custom errors, Ardanlabs](https://www.ardanlabs.com/blog/2014/11/error-handling-in-go-part-ii.html)
 
-
 ## Handling errors
+
+There are 4 forms of handling errors:
+
+- fmt.Println("err happened", err)
+- log.Println("err happened", err)
+- log.Fatalln(err)
+- panic(err)
 
 ```
 f, err := os.Open("filename.ext")
@@ -86,8 +92,8 @@ if err != nil {
 // do something with the open *File f
 ```
 
+After an error has happened:
 
-There are 4 forms of handling errors:
 ```
 _, err := os.Open("no-file.txt")    //try to find a non existing txt file to force an error
 if err != nil {
@@ -97,6 +103,7 @@ if err != nil {
     // panic(err)
 }
 ```
+
 - *`log.Println` calls Output to print to the standard logger. Arguments are handled in the manner of `fmt.Println`.*
 - *`log.Fatalln` is equivalent to `log.Println()` followed by a call to `os.Exit(1)`.*  [Exit into](https://godoc.org/os#Exit)
 - [Error handling, golangbot](https://golangbot.com/error-handling/)

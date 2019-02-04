@@ -5,7 +5,9 @@
 - [Concurrency vs paralelism](#concurrency-vs-parallelism)
 - [Channels](#channels)
 - [Race conditions](#race-conditions)
-- [Mutex](#1-with-mutex)
+- Prevent race conditions with:
+    - [Mutex](#1-with-mutex)
+    - [Atomic](#2-with-atomic-counters)
 - [Context](#context)
 
 
@@ -368,6 +370,28 @@ func main() {
 	fmt.Println("error check 3:", ctx.Err())
 	fmt.Println("num goroutines 3:", runtime.NumGoroutine())
 }
+
+    /*
+        error check 1: <nil>
+        num gortins 1: 1
+        working 1
+        working 2
+        working 3
+        working 4
+        working 5
+        working 6
+        working 7
+        working 8
+        working 9
+        working 10
+        error check 2: <nil>
+        num gortins 2: 2
+        about to cancel context
+        cancelled context
+        working 11
+        error check 3: context canceled
+        num goroutines 3: 1
+    */    
 ```
 
 ---

@@ -7,7 +7,8 @@
 
 ## Format
 https://godoc.org/fmt
-```
+
+```go
 fmt.Printf("%d - %b\n", 43, 17) #decimal - binary
 fmt.Printf("%s\n", "github.com/slaparra") #string
 ```
@@ -31,7 +32,8 @@ fmt.Printf("%s\n", "github.com/slaparra") #string
     - [Package types](https://golang.org/pkg/go/types/)  
     
 #### Simple quote
-```
+
+```go
 e := "Hello"
 f := `Do you like my hat?`
 g := 'M'
@@ -49,6 +51,7 @@ like this`
 (string)
 (int32)!!!!
 ```
+
 #### Arithmetic operations
 
 ```
@@ -72,7 +75,8 @@ https://golang.org/ref/spec#Arithmetic_operators
 **Package math** provides basic constants and mathematical functions: https://golang.org/pkg/math
 
 #### Constants
-```
+
+```go
 const Pi float64 = 3.14159265358979323846
 const zero = 0.0         // untyped floating-point constant
 const (
@@ -101,7 +105,7 @@ pointer:                 %p
 
 #### Shift 1 bit to the left
 
-```
+```go
 a := 42
 b := a << 1
 fmt.Printf("%d", b) //84
@@ -134,7 +138,7 @@ A type determines a set of values together with operations and methods specific 
 
 Go is strongly typed programming language. It’s strict when it goes to types and mistakes will be reported during compilation
 
-```
+```go
 type (
 	B1 string
 	B2 B1
@@ -170,7 +174,7 @@ It's a bit like writing to the Unix /dev/null file: it represents a write-only v
 
 [More documentation and uses of Blank identifier](https://golang.org/doc/effective_go.html#blank)
 
-```
+```go
 package main
 
 import (
@@ -209,24 +213,24 @@ What's a rune:
     
 A rune literal is expressed as one or more characters enclosed in single quotes, as in 'x' or '\n'.
 
-```
+```go
 var aRuneVar rune = 'h'
 ```
 
-```
+```go
 fmt.Println([]byte("Hello"))
 
 //[72 101 108 108 111] 1 byte per character
 ```
 https://en.wikipedia.org/wiki/ASCII#Printable_characters
 
-```
+```go
 fmt.Println([]byte("世界"))
 
 //[228 184 150 231 149 140] 3 bytes per character
 ```
 
-```
+```go
 word := "hello"
 letter := rune(word[0])
 fmt.Println(letter)      //72

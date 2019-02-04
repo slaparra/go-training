@@ -5,7 +5,7 @@
 - Methods and vars have to be capitalized to be visible outside the package
 
 
-```
+```bash
 # when a file needs to access to a struct from another in the same package 
 # we need to run "go install" or "run" the different files:
 go run main.go other_file.go
@@ -32,7 +32,7 @@ go run main.go aPackage
 #### Runtime
 
 ##### NumCPU and GOMAXPROCS
-```
+```go
 import (
 	"runtime"
 )
@@ -54,7 +54,7 @@ As Go 1.5 Release Notes says:
 
 So starting from Go 1.5, the default value should be the number of cores.
 
-```
+```go
 // Go operating system and architecture:
 
 package main
@@ -73,7 +73,7 @@ func main() {
 #### Pkg sync, WaitGroup
 *A WaitGroup waits for a collection of goroutines to finish. The main goroutine calls Add to set the number of goroutines to wait for. Then each of the goroutines runs and calls Done when finished. At the same time, Wait can be used to block until all goroutines have finished.*
 
-```
+```go
 import (
     "fmt"
     "sync"
@@ -106,7 +106,7 @@ func foo() {
 
 *Sleep pauses the current goroutine for at least the duration d. A negative or zero duration causes Sleep to return immediately.*
 
-```
+```go
 package main
 
 import (
@@ -142,7 +142,7 @@ func main() {
 
 *Package bcrypt implements Provos and Mazières's bcrypt adaptive hashing algorithm.*
 
-```
+```go
 hashedPassword, err := bcrypt.GenerateFromPassword([]byte(`aPassword`), 8)
 
 ...

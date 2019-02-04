@@ -3,7 +3,7 @@
 ## Install go
 https://golang.org/dl/
 
-```
+```bash
 # mac brew
 brew install go
 ```
@@ -38,7 +38,7 @@ export PATH=$GOBIN:$PATH
 
 https://golang.org/cmd/go/
 
-```
+```bash
 # Version
 go version
 

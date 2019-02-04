@@ -1,7 +1,7 @@
 # Go packages
 
 - [Packages (book An Introduction to Programming in Go )](https://www.golang-book.com/books/intro/11)
-- [Package file examples](../src/02-package)
+- [Package file examples](../src/02-how-to-use-a-package)
 - Methods and vars have to be capitalized to be visible outside the package
 
 

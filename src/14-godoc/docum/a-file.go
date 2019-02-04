@@ -1,4 +1,4 @@
-// This package is documented with comments in a-file.go
+// This package is documented with comments in a-file.go for go training: https://github.com/slaparra/go-training
 package docum
 
 import "fmt"

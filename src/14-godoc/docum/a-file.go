@@ -3,12 +3,12 @@ package docum
 
 import "fmt"
 
-// Comment for the struct Person
+// Person Comment for the struct Person
 type Person struct {
 	First string
 }
 
-// Method Start is the main entry of the a-file.go application
+// Start Method is the main entry of the a-file.go application
 func Start() {
 	p := Person{"Santi"}
 	p.Speak()
@@ -16,12 +16,12 @@ func Start() {
 	aMethod()
 }
 
-// This is a comment of the method speak
+// Speak This is a comment of the method speak
 func (p *Person) Speak() {
 	fmt.Println("Person speak")
 }
 
-// Commenting a method
+// aMethod Commenting a method
 func aMethod() {
 	fmt.Println("aMethod")
 }

@@ -18,6 +18,7 @@ Learning Golang, step by step:
 
 #### Intermediate beginner
 - [x] [Go packages](doc/07-packages.md)
+- [x] [Create documentation with `go doc`](doc/12-godoc.md)
 - [x] [Go oriented programming, oop in go](doc/08-oop.md)
     - [Structs](doc/08-oop.md#structs)
     - [Objects](doc/08-oop.md#objects)
@@ -41,6 +42,8 @@ Learning Golang, step by step:
 - [ ] DDD in go
     - [How Do You Structure Your Go Apps?, Kat Zien (>min.14)](https://www.youtube.com/watch?v=B5oQnECDJ8g&t=840)
     - [GoDDD, github, Marcus Olsson](https://github.com/marcusolsson/goddd)
+- [ ] Web/Api with go
+    - [Example for test](https://github.com/aperezg/monster)
 - [ ] Functional programming
     - [Functional Go post](https://medium.com/@geisonfgfg/functional-go-bc116f4c96a4)
     - [Functional Go video, @francesc](https://www.youtube.com/watch?v=ouyHp2nJl0I)    

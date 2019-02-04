@@ -14,7 +14,7 @@ type CustomError struct {
 	method   string
 }
 
-// Error() to follow error interface: https://golang.org/pkg/errors/
+// implement method Error() to follow error interface: https://golang.org/pkg/errors/
 func (error *CustomError) Error() string {
 	return fmt.Sprintf("Error: %d %s - Method: %s", error.param, error.errorMsg, error.method)
 }

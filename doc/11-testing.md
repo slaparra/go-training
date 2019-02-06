@@ -169,6 +169,66 @@ With `is.NewRelaxed(t)` instead of `is.New(t)`, relaxed mode, failures call `T.F
 - [Example from blog.friendsofgo.tech](https://blog.friendsofgo.tech/posts/empezando-con-los-tests-automatizados-en-go/)
 - [Other examples](../src/13-testing/03-testing-packages)
 
+## Mocks
+*We often need to simulate or mimic an object to create a deterministic, fast and network-independent object. Such an object is useful while testing. This practice is also known as mocking.*
+- [How to mock in go, Adnaan Badr](http://adnaan.badr.in/blog/2019/01/10/how-to-mock-in-go/)
+- [Mocking dependencies in go](https://medium.com/agrea-technogies/mocking-dependencies-in-go-bb9739fef008)
+- https://github.com/golang/mock
+- https://github.com/matryer/moq
+- https://github.com/DATA-DOG/go-sqlmock
+
+## Benchmarking
+
+<small>From: Dave Cheney</small>
+
+Given a method:
+```
+func Fib(n int) int {
+        if n < 2 {
+                return n
+        }
+        return Fib(n-1) + Fib(n-2)
+}
+```
+
+*Benchmarks are placed inside `_test.go files and follow the rules of their Test counterparts. 
+In this first example it is going to benchmark the speed of computing the 10th number in the Fibonacci series.*
+
+```
+// from fib_test.go
+func BenchmarkFib10(b *testing.B) {
+        // run the Fib function b.N times
+        for n := 0; n < b.N; n++ {
+                Fib(10)
+        }
+}
+```
+Launch a benchmark:
+
+```bash
+go test -bench=.
+```
+
+Response
+
+```
+goos: darwin
+goarch: amd64
+pkg: github.com/slaparra/go-training/src/13-testing/04-benchmark/somePackage
+BenchmarkPrintAString-4   	10000000	       152 ns/op
+PASS
+ok  	github.com/slaparra/go-training/src/13-testing/04-benchmark/somePackage	1.692s
+```
+Writing a benchmark is very similar to writing a test as they share the infrastructure from the testing package. Some of the key differences are
+
+- Benchmark functions start with **Benchmark** not Test.
+- Benchmark functions are run several times by the testing package. The value of b.N will increase each time until the benchmark runner is satisfied with the stability of the benchmark.
+- Each benchmark must execute the code under test b.N times. The for loop in BenchmarkFib10 will be present in every benchmark function.
+
+#### Links:
+- [How to write benchmarks in Go, Dave Cheney](https://dave.cheney.net/2013/06/30/how-to-write-benchmarks-in-go)
+- [Analyzing the performance of Go functions with benchmarks, Francesc Campoy](https://medium.com/justforfunc/analyzing-the-performance-of-go-functions-with-benchmarks-60b8162e61c6)
+
 ---
 
 ## Videos
@@ -180,6 +240,7 @@ With `is.NewRelaxed(t)` instead of `is.New(t)`, relaxed mode, failures call `T.F
 - [Quality Tests in Go, Mat Ryer](https://www.youtube.com/watch?v=MMnaq2jwAiE)
 - [Advanced Testing with Go, Mitchell Hashimoto](https://www.youtube.com/watch?v=yszygk1cpEc)
 - [Unit Testing in Go, advance examples by packtpub.com](https://www.youtube.com/watch?v=j_Isq09hZG8)
+- [Basic Benchmarks, justforfunc](https://www.youtube.com/watch?time_continue=97&v=2AulMm-hsdI)
 
 ## Links
 

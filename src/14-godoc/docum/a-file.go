@@ -9,16 +9,15 @@ type Person struct {
 }
 
 // Start Method is the main entry of the a-file.go application
-func Start() {
+func Start() string {
 	p := Person{"Santi"}
-	p.Speak()
-	fmt.Println("A comment")
 	aMethod()
+	return p.FirstName()
 }
 
-// Speak This is a comment of the method speak
-func (p *Person) Speak() {
-	fmt.Println("Person speak")
+// First This is a comment of the method speak
+func (p *Person) FirstName() string {
+	return fmt.Sprint(p.First)
 }
 
 // aMethod Commenting a method

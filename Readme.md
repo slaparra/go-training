@@ -25,7 +25,8 @@ Learning Golang, step by step:
     - ["Inheritance"](doc/08-oop.md#inheritance-in-go)
     - [Interfaces](doc/08-oop.md#interfaces)
 - [x] [Error handling](doc/10-error-handling.md)  
-- [ ] [Testing](doc/11-testing.md)     
+- [x] [Testing](doc/11-testing.md)  
+- [ ] [Web development, web server](doc/13-web-server-and-development.md)  
 - [ ] [Working with files](doc/x-working-with-files.md)
 - [ ] Persistence with go, working with a database
     - https://www.alexedwards.net/blog/organising-database-access
@@ -47,7 +48,7 @@ Learning Golang, step by step:
 - [ ] Functional programming
     - [Functional Go post](https://medium.com/@geisonfgfg/functional-go-bc116f4c96a4)
     - [Functional Go video, @francesc](https://www.youtube.com/watch?v=ouyHp2nJl0I)    
-
+    - [Awesome-go, functional](https://github.com/avelino/awesome-go#functional)
 
 ## Other interesting links
 
@@ -61,7 +62,6 @@ Learning Golang, step by step:
 - [Go By Example](https://gobyexample.com/)
 - [GolangBridge Forum](https://forum.golangbridge.org/): A great forum to ask questions
 - [Pocket Gophers](https://pocketgophers.com/)
-- [ArdanLabs, Go reading](https://github.com/ardanlabs/gotraining/tree/master/reading)
 - [Golang user groups *](https://github.com/golang/go/wiki/GoUserGroups)
 - [Go group google+](https://plus.google.com/u/0/communities/114112804251407510571)
 
@@ -89,7 +89,7 @@ Learning Golang, step by step:
 ### Free books
 - [Book, an introduction to programming in go](https://www.golang-book.com/books/intro)
 - [The Little Go Book](https://www.openmymind.net/The-Little-Go-Book/)
-- [Go Bootcamp](http://www.golangbootcamp.com/)
+- [Go Bootcamp book](http://www.golangbootcamp.com/)
 - [Book, The way to go](https://ia800702.us.archive.org/8/items/TheWayToGo/The_Way_To_Go.pdf)
 - [Learning Go](https://miek.nl/go/)
 - [Build web application with Golang](https://legacy.gitbook.com/book/astaxie/build-web-application-with-golang/details)
@@ -108,7 +108,6 @@ Learning Golang, step by step:
 - [Contribute your time, expertise to Go](https://medium.com/@IndianGuru/contribute-your-time-expertise-to-go-3b61760fabbc)
 - [All posts ArdanLabs blog](https://www.ardanlabs.com/all-posts/)
 - [Dave Cheney blog](https://dave.cheney.net/)
-    - [Resources for new go programmers](https://dave.cheney.net/resources-for-new-go-programmers)
 - [Google golang-dev forum](https://groups.google.com/forum/m/#!forum/golang-dev)
 - [Golang code](https://golangcode.com/)
 - [Traps, Gotchas, and Common Mistakes for New Golang Devs](http://devs.cloudimmunity.com/gotchas-and-common-mistakes-in-go-golang/)
@@ -131,6 +130,7 @@ Learning Golang, step by step:
 ### Tools
 - [Go Playground, go online](https://play.golang.org/)
 - [Goplay space (like 'Go Playground' with doc)](https://goplay.space/)
+- [Exercism.io, Code practice and mentorship for everyone Level up your programming skills](https://exercism.io/tracks/go)
 
 ### Go Frameworks
 
@@ -143,9 +143,11 @@ Learning Golang, step by step:
 [Top 6 web frameworks for Go as of 2017](https://blog.usejournal.com/top-6-web-frameworks-for-go-as-of-2017-23270e059c4b)*  
 [7 frameworks to build a rest api in go](https://nordicapis.com/7-frameworks-to-build-a-rest-api-in-go/) **  
 
-### Repos, examples
-- [Github ArdanLabs: Go-training](https://github.com/ardanlabs/gotraining/tree/master/topics)
+### Resources, repos, examples
 
+- [ArdanLabs, Go reading](https://github.com/ardanlabs/gotraining/tree/master/reading)
+- [Resources for new go programmers, Dave Cheney](https://dave.cheney.net/resources-for-new-go-programmers)
+- [Everything you need to know to start with go](https://peteraba.com/blog/everything-you-need-to-know-to-start-with-go/)
 
 ### Social network
 

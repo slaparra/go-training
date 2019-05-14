@@ -69,6 +69,8 @@ godoc -src fmt Printf
         - First sentence appears in package list
         - If a large amount of documentation, place in its own file doc.go
 
+https://golang.org/doc/effective_go.html#commentary
+
 ##### Create examples in doc
 Write in the test file a method with Example prefix:
 

@@ -1,6 +1,6 @@
 # Go packages
 
-- [Packages (book An Introduction to Programming in Go )](https://www.golang-book.com/books/intro/11)
+- [Packages (book An Introduction to Programming in Go)](https://www.golang-book.com/books/intro/11)
 - [Package file examples](../src/02-how-to-use-a-package)
 - Methods and vars have to be capitalized to be visible outside the package
 
@@ -155,6 +155,31 @@ if err = bcrypt.CompareHashAndPassword([]byte(`aPassword`), []byte(creds.Passwor
 
 - https://godoc.org/golang.org/x/crypto/bcrypt
 - https://www.sohamkamani.com/blog/2018/02/25/golang-password-authentication-and-storage/
+
+#### OS
+*Package os provides a platform-independent interface to operating system functionality. The design is Unix-like, although the error handling is Go-like; failing calls return values of type error rather than error numbers.*
+
+https://golang.org/pkg/os/
+
+
+```
+// go run file.go something
+
+func main() {
+    fmt.Println(os.Args[0])
+    fmt.Println(os.Args[1])
+}
+
+// print the executable file and <something>
+```
+
+```
+file, err := os.Open("file.go") // For read access.
+if err != nil {
+	log.Fatal(err)
+}
+```
+
 
 ## Links
 - [Parsing json in golang](https://www.sohamkamani.com/blog/2017/10/18/parsing-json-in-golang/)

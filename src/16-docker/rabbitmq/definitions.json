@@ -1,0 +1,89 @@
+{
+    "users": [
+        {
+            "name": "admin",
+            "password": "1234",
+            "tags": "administrator"
+        },
+        {
+            "name": "user",
+            "password": "1234",
+            "tags": ""
+        }
+    ],
+    "vhosts": [
+        {
+            "name": "/"
+        }
+    ],
+    "permissions": [
+        {
+            "user": "admin",
+            "vhost": "/",
+            "configure": ".*",
+            "write": ".*",
+            "read": ".*"
+        },
+        {
+            "user": "user",
+            "vhost": "/",
+            "configure": ".*",
+            "write": ".*",
+            "read": ".*"
+        }
+    ],
+    "exchanges": [
+        {
+            "name": "go_rabbit_direct",
+            "vhost": "/",
+            "type": "direct",
+            "durable": true,
+            "auto_delete": false,
+            "internal": false,
+            "arguments": {}
+        },
+        {
+            "name": "go_rabbit_topic",
+            "vhost": "/",
+            "type": "topic",
+            "durable": true,
+            "auto_delete": false,
+            "internal": false,
+            "arguments": {}
+        },
+    ],
+    "queues": [
+        {
+            "name": "go_rabbit_direct_queue",
+            "vhost": "/",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {}
+        },
+        {
+            "name": "go_rabbit_topic_queue",
+            "vhost": "/",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {}
+        }
+    ],
+    "bindings": [
+        {
+            "source": "go_rabbit_direct",
+            "vhost": "/",
+            "destination": "go_rabbit_direct_queue",
+            "destination_type": "queue",
+            "routing_key": "*",
+            "arguments": {}
+        },
+        {
+            "source": "go_rabbit_topic",
+            "vhost": "/",
+            "destination": "go_rabbit_topic_query",
+            "destination_type": "queue",
+            "routing_key": "*",
+            "arguments": {}
+        }
+    ]
+}

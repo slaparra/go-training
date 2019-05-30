@@ -38,8 +38,7 @@ Learning Golang, step by step:
     - Go Modules
         - https://roberto.selbach.ca/intro-to-go-modules/
         - https://github.com/golang/go/wiki/Modules         
-- [ ] Docker
-    - [Docker dev environment with Go Modules and live code reloading](https://threedots.tech/post/go-docker-dev-environment-with-go-modules-and-live-code-reloading/)
+- [x] [Docker with a Go app & RabbitMq](doc/14-docker.md)
 - [ ] DDD in go
     - [How Do You Structure Your Go Apps?, Kat Zien (>min.14)](https://www.youtube.com/watch?v=B5oQnECDJ8g&t=840)
     - [GoDDD, github, Marcus Olsson](https://github.com/marcusolsson/goddd)
@@ -148,6 +147,7 @@ Learning Golang, step by step:
 - [ArdanLabs, Go reading](https://github.com/ardanlabs/gotraining/tree/master/reading)
 - [Resources for new go programmers, Dave Cheney](https://dave.cheney.net/resources-for-new-go-programmers)
 - [Everything you need to know to start with go](https://peteraba.com/blog/everything-you-need-to-know-to-start-with-go/)
+- [Go training github repo](https://github.com/go-training/training)
 
 ### Social network
 

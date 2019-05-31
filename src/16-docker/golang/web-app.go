@@ -22,13 +22,6 @@ func onRequestDoSomething(res http.ResponseWriter, req *http.Request) {
 	writeHttpResponse(res)
 }
 
-func writeHttpResponse(res http.ResponseWriter) {
-	tmpl := template.Must(template.ParseFiles("layout.gohtml"))
-	fmt.Println("Message sent")
-	data := "Hello world"
-	tmpl.Execute(res, data)
-}
-
 func sendAMessageToRabbitMq() {
 	conn, err := amqp.Dial("amqp://admin:1234@rabbitmq:5672/")
 	failOnError(err, "Failed to connect to RabbitMQ")
@@ -65,4 +58,11 @@ func failOnError(err error, msg string) {
 	if err != nil {
 		log.Fatalf("%s: %s", msg, err)
 	}
+}
+
+func writeHttpResponse(res http.ResponseWriter) {
+	tmpl := template.Must(template.ParseFiles("layout.gohtml"))
+	fmt.Println("Message sent")
+	data := "Hello world"
+	tmpl.Execute(res, data)
 }

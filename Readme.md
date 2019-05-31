@@ -120,6 +120,13 @@ Learning Golang, step by step:
     - [Training resources](https://docs.google.com/document/d/18-0u5CvNIr83oOfMXPoM4klVFASXGl3Vvua1wBGMIoQ/edit)
 - [Golang course outline, Tutorialedge.net](https://tutorialedge.net/course/golang/)
 
+##### Pending courses
+
+- [Web Development with Golang, Todd McLeod](https://www.udemy.com/go-programming-language)
+- [Modern Golang Programming, O'Reilly](https://learning.oreilly.com/videos/modern-golang-programming/9781787125254)
+- [Use golang, Jon Calhoun](https://www.usegolang.com)
+- [Test with go, Jon Calhoun](https://testwithgo.com/)
+
 ### Packages
 - [Go-search.org](https://go-search.org/)
 - [Godoc.org](https://godoc.org/): Standard libraries and third-party packages
@@ -129,7 +136,6 @@ Learning Golang, step by step:
 ### Tools
 - [Go Playground, go online](https://play.golang.org/)
 - [Goplay space (like 'Go Playground' with doc)](https://goplay.space/)
-- [Exercism.io, Code practice and mentorship for everyone Level up your programming skills](https://exercism.io/tracks/go)
 
 ### Go Frameworks
 
@@ -142,8 +148,13 @@ Learning Golang, step by step:
 [Top 6 web frameworks for Go as of 2017](https://blog.usejournal.com/top-6-web-frameworks-for-go-as-of-2017-23270e059c4b)*  
 [7 frameworks to build a rest api in go](https://nordicapis.com/7-frameworks-to-build-a-rest-api-in-go/) **  
 
-### Resources, repos, examples
 
+### Practice with online exercises
+- [Gophercises. FREE online coding exercises for budding gophers (Jon Calhoun)](https://gophercises.com/)
+- [Gophercises Youtube videos](https://www.youtube.com/playlist?list=PLVEltXlEeWglGINo25GxVfvSSylLVg4r1)
+- [Exercism.io, Code practice and mentorship for everyone Level up your programming skills](https://exercism.io/tracks/go)
+
+### Resources, repos, examples
 - [ArdanLabs, Go reading](https://github.com/ardanlabs/gotraining/tree/master/reading)
 - [Resources for new go programmers, Dave Cheney](https://dave.cheney.net/resources-for-new-go-programmers)
 - [Everything you need to know to start with go](https://peteraba.com/blog/everything-you-need-to-know-to-start-with-go/)

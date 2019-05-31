@@ -4,12 +4,11 @@ services:
   golang-app:
     build: golang
     container_name: golang
-    working_dir: /go/src/app
     depends_on:
     - rabbitmq
     ports:
     - 8080:80
-    command: go run web-app.go
+#    command: go run web-app.go
 
   rabbitmq:
     build: rabbitmq

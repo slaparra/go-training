@@ -298,3 +298,18 @@ func main() {
  - [A tour of go](https://tour.golang.org/methods/14)
  - [Flaviocopes.com](https://flaviocopes.com/go-empty-interface/#the-empty-interface)
  - [Generics and go empty interface](http://www.minaandrawos.com/2017/12/29/empty-interface-go-programming-language/)
+
+
+#### Embedding interfaces
+
+*In Go, an interface cannot implement other interfaces or extend them, but we can create new interface by merging two or more interfaces.*  
+*Composing interfaces is a very common pattern you will find in Go, taking existing interfaces and grouping them into composed behaviors.* 
+
+```go
+type NailDrivePuller interface {
+    NailDriver
+    NailPuller
+}
+```
+
+- [Interfaces in Go, Embedding interfaces](https://medium.com/rungo/interfaces-in-go-ab1601159b3a#9071)

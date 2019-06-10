@@ -35,6 +35,7 @@ RUN go build
 - [Building Docker Containers for Go Applications](https://www.callicoder.com/docker-golang-image-container-example/#creating-a-simple-golang-app)
 - [Docker dev environment with Go Modules and live code reloading](https://threedots.tech/post/go-docker-dev-environment-with-go-modules-and-live-code-reloading/)
 - [Golang and Docker for development and production](https://medium.com/statuscode/golang-docker-for-development-and-production-ce3ad4e69673)
+- [Docker RUN vs CMD vs ENTRYPOINT](https://goinbigdata.com/docker-run-vs-cmd-vs-entrypoint/)
 
 Todd McLeod documentation and some examples:
 - https://github.com/GoesToEleven/golang-web-dev/tree/master/043_docker

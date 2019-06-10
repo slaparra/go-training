@@ -2,8 +2,8 @@
 
 Learning Golang, step by step: 
 
-![img](resources/gopher_studing_go.jpeg)  
-<sub>(Image: [Trevor Forrey](https://medium.com/@trevor4e/learning-gos-concurrency-through-illustrations-8c4aff603b3))</sub>
+![img](resources/gophers.jpeg)  
+<sub>(Image by [Renee French](https://reneefrench.blogspot.com/), licensed under [Creative Commons 3.0 Attributions license](https://creativecommons.org/licenses/by/3.0/).)</sub>
 
 #### Beginner
 - [x] [Get started](doc/01-get-started.md)
@@ -34,10 +34,8 @@ Learning Golang, step by step:
 #### Advance beginner
 - [x] [Concurrency, channels, race conditions, mutex...](doc/09-concurrency.md#concurrency)
 - [ ] Package management
+    - [Go Modules](doc/15-go-modules.md)        
     - [dep](https://golang.github.io/dep/), [glide](https://glide.sh/)
-    - Go Modules
-        - https://roberto.selbach.ca/intro-to-go-modules/
-        - https://github.com/golang/go/wiki/Modules         
 - [x] [Docker with a Go app & RabbitMq](doc/14-docker.md)
 - [ ] DDD in go
     - [How Do You Structure Your Go Apps?, Kat Zien (>min.14)](https://www.youtube.com/watch?v=B5oQnECDJ8g&t=840)
@@ -74,6 +72,7 @@ Learning Golang, step by step:
 - [Go-lang.cat-v.org: Talks](http://go-lang.cat-v.org/talks/)
 - [Steve Francia talk](https://www.youtube.com/watch?v=sX8r6zATHGU)
 - [Production Ready for a Go Service in 30 Minutes](https://www.youtube.com/watch?v=wxkEQxvxs3w)
+- [The Go Gopher, A Character Study. Renee French](https://www.youtube.com/watch?v=4rw_B4yY69k)
 
 ##### Youtube channels
 - [The Go Programming Language](https://www.youtube.com/channel/UCO3LEtymiLrgvpb59cNsb8A)
@@ -114,18 +113,33 @@ Learning Golang, step by step:
 - [Golang Challenge](http://golang-challenge.org/)
 
 ### Courses
-- [Learn How To Code: Golang, Todd McLeod](https://www.udemy.com/learn-how-to-code/learn/v4/overview)
+- [x] [Learn How To Code: Golang, Todd McLeod](https://www.udemy.com/learn-how-to-code/learn/v4/overview)
     - [Github examples](https://github.com/GoesToEleven/GolangTraining/)
     - [Slides](https://drive.google.com/drive/u/0/folders/0B22KXlqHz6ZNfjNXTzk1U3JHUkJ6VjJ3dnJKNzVtNjRUM3Q2WFNqWGI2Q3RadERqUlVrOEU)
     - [Training resources](https://docs.google.com/document/d/18-0u5CvNIr83oOfMXPoM4klVFASXGl3Vvua1wBGMIoQ/edit)
-- [Golang course outline, Tutorialedge.net](https://tutorialedge.net/course/golang/)
+- [ ] [Introducción a Go: Tu primera app]. ([Friends Of Go] in [Codely.tv], Spanish)
+- [ ] [Web Development with Golang, Todd McLeod](https://www.udemy.com/go-programming-language)
+
+[Friends Of Go]: https://twitter.com/FriendsofGOTech
+[Introducción a Go: Tu primera app]: https://pro.codely.tv/library/introduccion-a-go-tu-primera-app/89042/path/
+[Codely.tv]: https://codely.tv/
 
 ##### Pending courses
-
-- [Web Development with Golang, Todd McLeod](https://www.udemy.com/go-programming-language)
+- [Golang course outline, Tutorialedge.net](https://tutorialedge.net/course/golang/)
 - [Modern Golang Programming, O'Reilly](https://learning.oreilly.com/videos/modern-golang-programming/9781787125254)
 - [Use golang, Jon Calhoun](https://www.usegolang.com)
 - [Test with go, Jon Calhoun](https://testwithgo.com/)
+
+### Practice with online exercises
+- [Gophercises. FREE online coding exercises for budding gophers (Jon Calhoun)](https://gophercises.com/)
+- [Gophercises Youtube videos](https://www.youtube.com/playlist?list=PLVEltXlEeWglGINo25GxVfvSSylLVg4r1)
+- [Exercism.io, Code practice and mentorship for everyone Level up your programming skills](https://exercism.io/tracks/go)
+
+### Resources, repos, examples
+- [ArdanLabs, Go reading](https://github.com/ardanlabs/gotraining/tree/master/reading)
+- [Resources for new go programmers, Dave Cheney](https://dave.cheney.net/resources-for-new-go-programmers)
+- [Everything you need to know to start with go](https://peteraba.com/blog/everything-you-need-to-know-to-start-with-go/)
+- [Go training github repo](https://github.com/go-training/training)
 
 ### Packages
 - [Go-search.org](https://go-search.org/)
@@ -149,28 +163,26 @@ Learning Golang, step by step:
 [7 frameworks to build a rest api in go](https://nordicapis.com/7-frameworks-to-build-a-rest-api-in-go/) **  
 
 
-### Practice with online exercises
-- [Gophercises. FREE online coding exercises for budding gophers (Jon Calhoun)](https://gophercises.com/)
-- [Gophercises Youtube videos](https://www.youtube.com/playlist?list=PLVEltXlEeWglGINo25GxVfvSSylLVg4r1)
-- [Exercism.io, Code practice and mentorship for everyone Level up your programming skills](https://exercism.io/tracks/go)
-
-### Resources, repos, examples
-- [ArdanLabs, Go reading](https://github.com/ardanlabs/gotraining/tree/master/reading)
-- [Resources for new go programmers, Dave Cheney](https://dave.cheney.net/resources-for-new-go-programmers)
-- [Everything you need to know to start with go](https://peteraba.com/blog/everything-you-need-to-know-to-start-with-go/)
-- [Go training github repo](https://github.com/go-training/training)
-
-### Social network
+## Social network
 
 ##### Twitter
 - [Friends of Go Tech (spanish)](https://twitter.com/FriendsofGOTech)
 - [Golang BCN](https://twitter.com/GolangBCN)
 - [Gopher Academy](https://twitter.com/GopherAcademy)
+- [Go, official golang.org](https://twitter.com/golang)
+- [Cool Go, Auto-retweeting and forwarding cool Go stuff](https://twitter.com/cool_golang)
+- [Gopher Academy, a community organization focused on promoting the Go programming language.](https://twitter.com/GopherAcademy)
+- [Daily Go / #golang news and links](https://twitter.com/golangweekly)
+- [Golang Go, Stuff on #golang](https://twitter.com/GolangGo)
+- [Go news, Keep up to date with the latest Go news from HackerNews](https://twitter.com/golang_news)
+- [Golang News & Libs](https://twitter.com/golangch)
+- [Francesc Campoy](https://twitter.com/francesc)
 
 ##### Slack
 - [Golang BcnEng (spanish)](https://bcneng.slack.com/messages/C2WR8BJ49)
+- [http://gophers.slack.com](https://invite.slack.golangbridge.org/)
 
 ## Connect
-Do you want to recommend me some topic about Golang?
+Do you want to recommend me some topics about Golang?
 - [Twitter](https://www.twitter.com/santiagolaparra)
 - [LinkedIn](https://www.linkedin.com/in/santiago-laparra-muñoz-11152128) 

@@ -166,6 +166,25 @@ aPerson := Employee{"John", "Raimon", 28}
 - [Conversions in go, Golang spec](https://medium.com/golangspec/conversions-in-go-4301e8d84067)
 - [Type conversions](https://www.callicoder.com/golang-basic-types-operators-type-conversion/#type-conversion)
 
+### Type alias
+*Type aliases are not meant for everyday use. They were introduced to support gradual code repair while moving a type between packages during large-scale refactoring.*
+
+```go
+type celsius float64
+
+func (c celsius) String() string {
+    return fmt.Sprintf("%.2 C", c)
+}
+
+func main() {
+    c := celsius(10.0)
+    fmt.Println(c)
+}
+```
+- [Type alias explained](https://yourbasic.org/golang/type-alias/)
+- [Understanding Go's type aliases, Francesc Campoy](https://www.youtube.com/watch?v=Vg603e9C-Vg) (video)
+- [Codebase Refactoring: Type aliases](https://talks.golang.org/2016/refactor.article#TOC_5.3.)
+
 ## Blank identifier
 
 Basically a blank identifier is like a box where you can put things if you don't need them.  

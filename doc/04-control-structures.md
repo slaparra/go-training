@@ -37,8 +37,8 @@ fmt.Println("sum:", sum)
 * https://gobyexample.com/range
 
 ## Switch
-*Go `Switch` only runs the selected case, not all the cases that follow. The break statement  is provided automatically in Go.*
-```
+*Go `Switch` only runs the selected case, not all the cases that follow. The break statement is provided automatically in Go.*
+```go
 func main() {    
     switch os := runtime.GOOS; os {
     case "darwin":
@@ -51,6 +51,27 @@ func main() {
         fmt.Printf("%s.", os)
     }
 }
+```
+
+To execute a code for different cases:
+```go
+switch tag {
+default: s3()
+case 0, 1, 2, 3: s1()
+case 4, 5, 6, 7: s2()
+}
+
+switch x := f(); {  // missing switch expression means "true"
+case x < 0: return -x
+default: return x
+}
+
+switch {
+case x < y: f1()
+case x < z: f2()
+case x == 4: f3()
+}
+
 ```
 - [A tour of go](https://tour.golang.org/flowcontrol/9)
 - [Switch examples](../src/05-control-structures/switch.go)

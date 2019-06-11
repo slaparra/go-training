@@ -24,6 +24,7 @@ go run main.go aPackage
 - [Time](https://golang.org/pkg/time/)
 - [Math/rand](https://golang.org/pkg/math/rand/)
 - [Bcrypt](https://godoc.org/golang.org/x/crypto/bcrypt)
+- [Flag](https://golang.org/pkg/flag/)
 
 [Go package example files](../src/08-external-packages/)
 
@@ -179,8 +180,47 @@ if err != nil {
 	log.Fatal(err)
 }
 ```
+#### Flag
+*Package flag implements command-line flag parsing.*  
 
+```go
+import "flag"
+import "fmt"
 
-## Links
-- [Parsing json in golang](https://www.sohamkamani.com/blog/2017/10/18/parsing-json-in-golang/)
-- [Json, GoByExample](https://gobyexample.com/json)
+func main() {
+    //Here we declare a
+    // string flag `word` with a default value `"foo"`
+    // and a short description "a string" to the help
+    // if we execute go run <app> -h
+    wordPtr := flag.String("word", "foo", "a string")
+    numbPtr := flag.Int("numb", 42, "an int")
+    boolPtr := flag.Bool("fork", false, "a bool")
+    
+    // Once all flags are declared, call `flag.Parse()`
+    // to execute the command-line parsing.
+    flag.Parse()
+    
+    //Note that we need to dereference the pointers with 
+    // e.g. `*wordPtr` to get the actual option values.
+    fmt.Println("word:", *wordPtr)
+    fmt.Println("numb:", *numbPtr)
+    fmt.Println("fork:", *boolPtr)        
+}
+
+```
+For a command:  
+`$ ./command-line-flags -word=opt -numb=7 -fork`
+
+should print:
+```
+word: opt
+numb: 7
+fork: true
+```
+[Cobra] is a library to improve your cli-commands
+
+- [Command line Flags, Go by Example](https://gobyexample.com/command-line-flags)
+- [Flag, Golang.org](https://golang.org/pkg/flag/)
+- [Dealing with Command Line Options in Golang: flag package](https://medium.com/what-i-talk-about-when-i-talk-about-technology/dealing-with-command-line-options-in-golang-flag-package-e5fb6ef1a79e)
+
+[Cobra]: https://github.com/spf13/cobra

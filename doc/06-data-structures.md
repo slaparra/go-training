@@ -75,7 +75,7 @@ func main() {
     - [Slice expressions](https://golang.org/ref/spec#Slice_expressions)      
     - [Slice len & cap tour](https://tour.golang.org/moretypes/11)
     - [How to use capacity and length post](https://www.calhoun.io/how-to-use-slice-capacity-and-length-in-go/)
-
+    - [How the Go runtime implements maps efficiently](https://dave.cheney.net/2018/05/29/how-the-go-runtime-implements-maps-efficiently-without-generics)
 
 ### Array & slice declaration
 ```
@@ -153,7 +153,17 @@ new([100]int)[0:50]
 
 ## Map definition in go
 *A map is an unordered group of elements of one type, called the element type, indexed by a set of unique keys of another type, called the key type*  
-They are called dictionaries (key/value storage)  
+They are called dictionaries (key/value storage) 
+
+```go 
+// shorthand creating a map
+aMapVar := map[string]int{"index1": 3, "index2": 5} 
+
+anotherMapVar := make(map[string]int, 100)
+
+aMapVar["index3"] = 333
+delete(aMapVar, "index1")
+``` 
 - [Map type](https://golang.org/ref/spec#Map_types)
 - [Maps, effective go](https://golang.org/doc/effective_go.html#maps)
 - [Macro View of Map Internals In Go](https://www.ardanlabs.com/blog/2013/12/macro-view-of-map-internals-in-go.html)

@@ -26,8 +26,8 @@ Learning Golang, step by step:
     - [Interfaces](doc/08-oop.md#interfaces)
 - [x] [Error handling](doc/10-error-handling.md)  
 - [x] [Testing](doc/11-testing.md)  
+- [x] [Working with files](doc/16-working-with-files.md)
 - [ ] [Web development, web server](doc/13-web-server-and-development.md)  
-- [ ] [Working with files](doc/x-working-with-files.md)
 - [ ] Persistence with go, working with a database
     - https://www.alexedwards.net/blog/organising-database-access
 

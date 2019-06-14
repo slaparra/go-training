@@ -1,0 +1,19 @@
+version: '2'
+services:
+
+  mysql:
+    image: mysql:5.7
+    command: ["--default-authentication-plugin=mysql_native_password"]
+    container_name: go_mysql
+    ports:
+    - "3396:3306"
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+      MYSQL_ROOT_PASSWORD: ""
+      MYSQL_DATABASE: go_db
+      MYSQL_USER: go_user
+      MYSQL_PASSWORD: 1234
+    volumes:
+    - './mysql:/var/lib/mysql:cached'
+
+

@@ -4,6 +4,7 @@ In this readme, we can find documentation and examples about:
 - [Array](#array-definition-in-go)
 - [Slice](#slice-definition)
 - [Map](#map-definition-in-go)
+- [Enum](#enum)
 
 ## **Array definition in go**
 [(Todd McLeod)](https://docs.google.com/document/d/1nt5bYAAS5sTVF6tpLaFLDHQzo5BNkcr4b507fg3ZPwM/edit#)
@@ -188,4 +189,45 @@ _, present := timeZone[tz]
 ##### Concurrency
 
 [Maps are not safe for concurrent use](https://golang.org/doc/faq#atomic_maps): it's not defined what happens when you read and write to them simultaneously. 
-If you need to read from and write to a map from concurrently executing goroutines, the accesses must be mediated by some kind of synchronization mechanism. 
+If you need to read from and write to a map from concurrently executing goroutines, the accesses must be mediated by some kind of synchronization mechanism.
+
+
+## Enum
+*Enumerations are an excellent way of declaring constants with similar behavior. Some weeks ago, while playing with Golang, I realize one can not have constant literals in Golang. Bang !!!, So if somebody is java sick, and wants to implement Enum pattern, what is the easiest way of doing so.*
+```go
+package main
+
+import "fmt"
+
+func main() {
+    fmt.Println(Friday)
+}
+
+type Weekday int
+
+const (
+    Monday    Weekday = 0
+    Tuesday   Weekday = 1
+    Wednesday Weekday = 2
+    Thursday  Weekday = 3
+    Friday    Weekday = 4
+    Saturday  Weekday = 5
+    Sunday    Weekday = 6
+)
+
+func (d Weekday) String() string {
+	names := []string{
+		"Monday",
+		"Tuesday",
+		"Wednesday",
+		"Thursday",
+		"Friday",
+		"Saturday",
+		"Sunday",
+	}
+
+	return names[d]
+}
+``` 
+- *Code example from: [Codely.tv, Introducción a go: tu primera app](https://pro.codely.tv/library/introduccion-a-go-tu-primera-app)*
+- [Ultimate Visual Guide to Go Enums and iota](https://blog.learngoprogramming.com/golang-const-type-enums-iota-bc4befd096d3)

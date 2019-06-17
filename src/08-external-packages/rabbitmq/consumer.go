@@ -32,7 +32,7 @@ func PrintMessages(msgs <-chan amqp.Delivery) {
     forever := make(chan bool)
     go func() {
         for d := range msgs {
-            log.Printf(" [x] %s", d.Body)
+            log.Printf(" Consuming: %s", d.Body)
             //time.Sleep(100*time.Millisecond)
             d.Ack(true)
         }

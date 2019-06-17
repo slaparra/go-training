@@ -27,7 +27,7 @@ Learning Golang, step by step:
 - [x] [Error handling](doc/10-error-handling.md)  
 - [x] [Testing](doc/11-testing.md)  
 - [x] [Working with files](doc/16-working-with-files.md)
-- [x] [Working with a database, connecting with mysql](doc/17-working-with-a-database-mysql.md)
+- [x] [Working with a database, connecting to a mysql database](doc/17-working-with-a-database-mysql.md)
 - [x] [RabbitMq](doc/18-rabbitmq.md)
 - [ ] [Web development, web server](doc/13-web-server-and-development.md)  
 
@@ -86,10 +86,10 @@ Learning Golang, step by step:
 - [Functional Go](https://www.youtube.com/watch?v=ouyHp2nJl0I)
 
 ### Free books
-- [Book, an introduction to programming in go](https://www.golang-book.com/books/intro)
+- [An introduction to programming in go](https://www.golang-book.com/books/intro)
+- [The way to go](https://ia800702.us.archive.org/8/items/TheWayToGo/The_Way_To_Go.pdf)
 - [The Little Go Book](https://www.openmymind.net/The-Little-Go-Book/)
 - [Go Bootcamp book](http://www.golangbootcamp.com/)
-- [Book, The way to go](https://ia800702.us.archive.org/8/items/TheWayToGo/The_Way_To_Go.pdf)
 - [Learning Go](https://miek.nl/go/)
 - [Build web application with Golang](https://legacy.gitbook.com/book/astaxie/build-web-application-with-golang/details)
 - [Webapps in Go the anti textbook](https://leanpub.com/antitextbookGo/)

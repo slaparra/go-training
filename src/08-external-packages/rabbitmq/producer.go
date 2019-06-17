@@ -9,14 +9,19 @@ func main() {
 
 	conn, ch := lib.Connect("amqp://admin:1234@localhost:5678/")
 
-	lib.CreateExchange(ch, "new_exchange_topic")
+	lib.CreateExchange(ch, lib.ExchangeName())
 
 	for i := 0; i < 5000000; i++ {
+		messageType := "command"
+		if (i % 2 == 0) {
+			messageType = "event"
+		}
+		routingKey := fmt.Sprintf("a.routing.key.%s.message_name", messageType)
 		lib.PublishMessage(
 			ch,
-			fmt.Sprintf("Hello World: %d", i),
-			"new_exchange_topic",
-			"a.routing.key.event_name",
+			fmt.Sprintf("%s: Hello World: %d", routingKey, i),
+			lib.ExchangeName(),
+			routingKey,
 		)
 	}
 

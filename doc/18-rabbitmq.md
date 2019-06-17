@@ -6,8 +6,10 @@
 - Admin url: http://localhost:15678
 
 ## Exchange type **Topic** examples
-The examples written in this tutorial is for a Topic Exchange. Learn more about this kind of configuration in:  
+The examples written in this tutorial are for a Topic Exchange routing. Learn more about this kind of configuration in:  
 - https://www.rabbitmq.com/tutorials/tutorial-five-go.html
+
+![img](../resources/topic-exchange-routing.jpg)
 
 ## Connect to the broker
 
@@ -22,6 +24,7 @@ if err != nil {
 }
 defer conn.Close()
 ```
+
 - https://godoc.org/github.com/streadway/amqp#Dial
 
 Next we create a channel, which is where most of the API for getting things done resides:
@@ -35,6 +38,9 @@ defer ch.Close()
 ```
 - https://godoc.org/github.com/streadway/amqp#Connection.Channel
 
+*It's advisable to use separate connections for
+`Channel.Publish` and `Channel.Consume` so not to have TCP pushback on publishing
+affect the ability to consume messages.*
 
 ## Create an exchange
 ***ExchangeDeclare** declares an exchange on the server. If the exchange does not already exist, the server will create it. If the exchange exists, the server verifies that it is of the provided type, durability and auto-delete flags.*
@@ -42,17 +48,18 @@ defer ch.Close()
 
 ```go
 err = ch.ExchangeDeclare(
-        "exchange_topic_name", // name
-        "topic",      // type
-        true,          // durable
-        false,         // auto-deleted
-        false,         // internal
-        false,         // no-wait
-        nil,           // arguments
+        "exchange_topic_name",  // name
+        "topic",                // type
+        true,                   // durable
+        false,                  // auto-deleted
+        false,                  // internal
+        false,                  // no-wait
+        nil,                    // arguments
     )
 ```
 
-## Publish a message
+## Publish/produce/send a message
+A producer is someone who creates new messages/work. One example is, when a file upload happens, the http handler produces a message for our workers to consume. The http handler/web app is the producer.
 ```go
 err := ch.Publish(
     exchange,           // string
@@ -83,11 +90,11 @@ existing queue matches the same parameters.*
 ```go
 q, err := ch.QueueDeclare(
     "my_new_queue_name",    // name
-    true, // durable
-    false, // delete when usused
-    true,  // exclusive
-    false, // no-wait
-    nil,   // arguments
+    true,                   // durable
+    false,                  // delete when usused
+    true,                   // exclusive
+    false,                  // no-wait
+    nil,                    // arguments
 )
 
 if err != nil {
@@ -105,9 +112,9 @@ if err != nil {
 ```go
 //where q is the queue previously created with QueueDeclare
 err = ch.QueueBind(
-    q.Name,       // queue name
-    "a.routing.key.*",            // routing key
-    "new_exchange_topic", // exchange
+    q.Name,                 // queue name
+    "a.routing.key.*",      // routing key
+    "new_exchange_topic",   // exchange
     false,
     nil,
 )
@@ -122,25 +129,46 @@ to make sure the network buffers stay full between the server and client.*
 
 ```go
 err = ch.Qos(
-    20,     // prefetch count
-    0,     // prefetch size
-    false, // global
+    20,         // prefetch count
+    0,          // prefetch size
+    false,      // global
 )
 ```
 
 ## Consume messages
+Consuming has a similar meaning to receiving. A consumer is a program that mostly waits to receive messages. Consumers are who consume the messages produced by the producers/publishers. The background workers are consumers.
+
 ```go
 msgs, err := ch.Consume(
-    q.Name, // queue
-    "consumer_name",     // consumer
-    true,   // auto ack
-    false,  // exclusive
-    false,  // no local
-    false,  // no wait
-    nil,    // args
+    q.Name,             // queue
+    "consumer_name",    // consumer
+    true,               // auto ack
+    false,              // exclusive
+    false,              // no local
+    false,              // no wait
+    nil,                // args
 )
 lib.FailOnError(err, "Failed to register a consumer")
 ```
+`Consume` method returns a channel where the messages will be received.
+```go
+func (ch *Channel) Consume(queue, ...) (<-chan Delivery, ...)
+```
+
+With this feature we can use a goroutine to process the message concurrently: 
+
+```go
+go func() {
+    for d := range msgs {
+        log.Printf(" Consuming: %s", d.Body)
+        d.Ack(true)
+    }
+}()
+```
+Continues deliveries to the returned **chan (msgs)** Delivery until Channel.Cancel,
+Connection.Close, Channel.Close, or an AMQP exception occurs.  Consumers must
+range over the chan to ensure all deliveries are received.  Unreceived
+deliveries will block all methods on the same connection.
 
 ## Related links
 - [Producer example](../src/08-external-packages/rabbitmq/producer.go)
@@ -149,4 +177,5 @@ lib.FailOnError(err, "Failed to register a consumer")
 - [Go example with RabbitMq](https://www.rabbitmq.com/tutorials/tutorial-one-go.html)
 - [streadway/amqp go package](https://godoc.org/github.com/streadway/amqp)
 
-[(To review)](https://github.com/Pungyeon/go-rabbitmq-example)
+[(To review)](https://github.com/Pungyeon/go-rabbitmq-example)  
+[(To review2)](https://gist.github.com/harrisonturton/c6b62d45e6117d5d03ff44e4e8e1e7f7)

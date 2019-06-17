@@ -1,15 +1,19 @@
 # RabbitMq
 
-## Admin
-- Go to the path: `/src/08-external-packages/rabbitmq`
-- Execute `docker-compose up`
-- Admin url: http://localhost:15678
+### Exchange type **Topic** examples
 
-## Exchange type **Topic** examples
 The examples written in this tutorial are for a Topic Exchange routing. Learn more about this kind of configuration in:  
 - https://www.rabbitmq.com/tutorials/tutorial-five-go.html
 
 ![img](../resources/topic-exchange-routing.jpg)
+
+- [1- Connect to the broker](#connect-to-the-broker)
+- [2- Create a topic exchange](#create-an-exchange)
+- [3- Produce a message](#publishproducesend-a-message)
+- [4- Create a queue](#create-a-queue)
+- [5- Bind a queue to the exchange](#bind-a-queue-to-the-exchange)
+- [6- Consume messages](#consume-messages)
+- [**Practice](#practice)
 
 ## Connect to the broker
 
@@ -150,10 +154,11 @@ msgs, err := ch.Consume(
 )
 lib.FailOnError(err, "Failed to register a consumer")
 ```
-`Consume` method returns a channel where the messages will be received.
+`Consume` method returns a `chan` where the messages will be received.
 ```go
 func (ch *Channel) Consume(queue, ...) (<-chan Delivery, ...)
 ```
+<small>([More about Channels](09-concurrency.md#channels))</small>
 
 With this feature we can use a goroutine to process the message concurrently: 
 
@@ -169,6 +174,16 @@ Continues deliveries to the returned **chan (msgs)** Delivery until Channel.Canc
 Connection.Close, Channel.Close, or an AMQP exception occurs.  Consumers must
 range over the chan to ensure all deliveries are received.  Unreceived
 deliveries will block all methods on the same connection.
+
+
+## Practice
+- Go to the path: `/src/08-external-packages/rabbitmq`
+- Execute `docker-compose up`
+- Admin url: `http://localhost:15678`
+- Execute: `go run consumer.go "a.routing.key.command.*"`
+- Execute: `go run consumer.go "a.routing.key.event.*"`
+- Execute: `go run producer.go`
+
 
 ## Related links
 - [Producer example](../src/08-external-packages/rabbitmq/producer.go)

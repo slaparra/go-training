@@ -16,7 +16,7 @@
 ##### What are Goroutines?
 *Goroutines are functions or methods that run concurrently with other functions or methods. Goroutines can be thought of as light weight threads. The cost of creating a Goroutine is tiny when compared to a thread. Hence its common for Go applications to have thousands of Goroutines running concurrently* [(golangbot)](https://golangbot.com/goroutines/).  
 
-[The Way to Go. Chapter 14: Goroutines and channels (pdf)](../resources/concurrency_goroutines_channles.pdf)  
+[The Way to Go. Chapter 14: Goroutines and channels (pdf)](../resources/concurrency_goroutines_channels.pdf)  
 ```
 import (
     "fmt"
@@ -61,7 +61,7 @@ With a **goroutine** we return immediately to the next line and don't wait for t
 ## Channels
 *Channels are a typed conduit through which you can send and receive values with the channel operator, <-.* 
 - [Golangbootcamp](http://www.golangbootcamp.com/book/concurrency)
-- [Effective go, channles](https://golang.org/doc/effective_go.html#channels)
+- [Effective go, channels](https://golang.org/doc/effective_go.html#channels)
   
 *Go use channels to synchronize goroutines*
 ```

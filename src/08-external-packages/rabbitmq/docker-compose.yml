@@ -1,0 +1,12 @@
+version: '2'
+services:
+
+  rabbitmq:
+    build: docker
+    container_name: go_rabbitmq
+    volumes:
+    - './docker/volume:/var/lib/rabbitmq:cached'
+    ports:
+    - 15678:15672
+    - 5678:5672
+

@@ -1,4 +1,9 @@
 # Docker
+
+*Containers are standalone software packages that bundle an application with all its dependencies, tools, libraries, runtime, configuration files, and anything else necessary to run the application.*
+
+*Containers abstract away the application from any of the environments that they will run on. That means, containerized apps run consistently across environments from dev to staging to production.*
+
 https://www.docker.com/get-started
 
 Golang official docker images
@@ -31,6 +36,7 @@ RUN go build
 ```
 
 ## Related links
+- [Building Docker Containers for Go Applications](https://www.callicoder.com/docker-golang-image-container-example/)
 - [Dockerizando tu aplicación en go, Friends Of Go (spanish)](https://blog.friendsofgo.tech/posts/dockerizando-tu-aplicacion-en-go/)
 - [Building Docker Containers for Go Applications](https://www.callicoder.com/docker-golang-image-container-example/#creating-a-simple-golang-app)
 - [Docker dev environment with Go Modules and live code reloading](https://threedots.tech/post/go-docker-dev-environment-with-go-modules-and-live-code-reloading/)
@@ -41,5 +47,5 @@ Todd McLeod documentation and some examples:
 - https://github.com/GoesToEleven/golang-web-dev/tree/master/043_docker
 
 #### RabbitMq
-- [RabbitMq get started with Golang examples](https://www.rabbitmq.com/getstarted.html)
+- [Send Messages to RabbitMq with Go](18-rabbitmq.md)
 

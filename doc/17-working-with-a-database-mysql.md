@@ -1,4 +1,4 @@
-# Working with a database, connecting to mysql
+# Working with a database, connecting with mysql
 
 Package [sql](https://golang.org/pkg/database/sql/) provides a generic interface around SQL (or SQL-like) databases.
 The sql package must be used in conjunction with a database driver. See https://golang.org/s/sqldrivers for a list of drivers.

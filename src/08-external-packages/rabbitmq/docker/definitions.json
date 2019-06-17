@@ -82,7 +82,7 @@
             "vhost": "/",
             "destination": "go_rabbit_topic_queue",
             "destination_type": "queue",
-            "routing_key": "*",
+            "routing_key": "a.routing.key.*",
             "arguments": {}
         }
     ]

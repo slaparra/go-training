@@ -25,6 +25,7 @@ go run main.go aPackage
 - [Math/rand](https://golang.org/pkg/math/rand/)
 - [Bcrypt](https://godoc.org/golang.org/x/crypto/bcrypt)
 - [Flag](https://golang.org/pkg/flag/)
+- [streadway/amqp](https://godoc.org/github.com/streadway/amqp)
 
 [Go package example files](../src/08-external-packages/)
 
@@ -224,3 +225,8 @@ fork: true
 - [Dealing with Command Line Options in Golang: flag package](https://medium.com/what-i-talk-about-when-i-talk-about-technology/dealing-with-command-line-options-in-golang-flag-package-e5fb6ef1a79e)
 
 [Cobra]: https://github.com/spf13/cobra
+
+
+#### Amqp
+Package amqp is an AMQP 0.9.1 client with RabbitMQ extensions
+- [RabbitMq and streadway/amqp](18-rabbitmq.md)

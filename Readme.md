@@ -27,7 +27,8 @@ Learning Golang, step by step:
 - [x] [Error handling](doc/10-error-handling.md)  
 - [x] [Testing](doc/11-testing.md)  
 - [x] [Working with files](doc/16-working-with-files.md)
-- [x] [Persistence with go, working with a database](doc/17-working-with-a-database-mysql.md)
+- [x] [Working with a database, connecting with mysql](doc/17-working-with-a-database-mysql.md)
+- [x] [RabbitMq](doc/18-rabbitmq.md)
 - [ ] [Web development, web server](doc/13-web-server-and-development.md)  
 
 

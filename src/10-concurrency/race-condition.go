@@ -34,4 +34,4 @@ func main() {
 
 // go run race-condition.go
 // vs
-// go run -race race-conditiongo
+// go run -race race-condition.go
